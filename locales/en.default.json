@@ -204,8 +204,8 @@
     },
     "login": {
       "title": "Login",
-      "email": "Your email",
-      "password": "Your password",
+      "email": "E-mail",
+      "password": "Password",
       "submit": "Login",
       "forgot_password": "Forgot your password?",
       "sign_up": "Sign up"
@@ -239,8 +239,8 @@
     },
     "reset_password": {
       "title": "Create a New Password",
-      "password": "Enter your new password",
-      "password_confirmation": "Confirm your new password",
+      "password": "New Password",
+      "password_confirmation": "Confirm Password",
       "submit": "Reset Password"
     },
     "order": {

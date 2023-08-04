@@ -9,7 +9,7 @@
             <slot part="tab-panels" name="content"></slot>
           </template>
 
-          <button type="button" slot="title" class="{{ title | escape }} tabs-nav__button bold text-subdued text-center" {{ block.shopify_attributes }}>
+          <button type="button" slot="title" class="{{ title | escape }} login-btn tabs-nav__button bold text-subdued text-center" {{ block.shopify_attributes }}>
             {%- assign login-content = 'customer.login.title' | t -%}
             {%- render 'styled-text', content: login-content, gradient: section.settings.heading_gradient -%}
           </button>
@@ -63,7 +63,7 @@
             </div>
           </div>
 
-          <button type="button" slot="title" class="{{ title | escape }} tabs-nav__button bold text-subdued text-center" {{ block.shopify_attributes }}>
+          <button type="button" slot="title" class="{{ title | escape }} signup-btn tabs-nav__button bold text-subdued text-center" {{ block.shopify_attributes }}>
             {%- assign register-content = 'customer.register.title' | t -%}
             {%- render 'styled-text', content: register-content, gradient: section.settings.heading_gradient -%}
           </button>
@@ -275,8 +275,8 @@
             {%- assign submit_label = 'customer.recover_password.submit' | t -%}
             {%- render 'button', content: submit_label, type: 'submit', size: 'xl', stretch: true, secondary: false, background: section.settings.button_background, text_color: section.settings.button_text_color -%}
           {%- endunless -%}
-          <div>
-            <a href="#login" class="link text-subdued">{{ 'customer.recover_password.back_to_login' | t }}</a>
+          <div class="recover-signup-wrapper text-sm">
+            Forgot your email? you can <a style="color:rgb(var(--button-background-primary));" href="#login" class="link text-subdued">sign-up</a>
           </div>
         </div>
       {%- endform -%}
