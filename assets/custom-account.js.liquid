@@ -48,15 +48,16 @@ jQuery(document).ready(function () {
 
   navigation_html += '<div class="next_link">Next</div>';
   $('#page_navigation').html(navigation_html);
+  $('#page_navigation').show();
 
   //add active_page class to the first page link
   $('#page_navigation .page_link:first').addClass('active_page');
 
   //hide all the elements inside pagingBox div
-  //$('.chContent-Body-Page-RecentOrders-Wrapper').children('.chContent-Body-Page-RecentOrders-Wrapper-Item').css('display', 'none');
+  $('.chContent-Body-Page-RecentOrders-Wrapper').children('.chContent-Body-Page-RecentOrders-Wrapper-Item').css('display', 'none');
 
   //and show the first n (show_per_page) elements
-  //$('.chContent-Body-Page-RecentOrders-Wrapper').children('.chContent-Body-Page-RecentOrders-Wrapper-Item').slice(0, show_per_page).css('display', 'flex');
+  $('.chContent-Body-Page-RecentOrders-Wrapper').children('.chContent-Body-Page-RecentOrders-Wrapper-Item').slice(0, show_per_page).css('display', 'flex');
 });
 
 //Pagination JS
@@ -85,9 +86,13 @@ function go_to_page(page_num){
 	
 	//get the element number where to end the slice
 	var end_on = start_from + show_per_page;
-	
+
+  console.log(page_num);
+  console.log(start_from);
+  console.log(end_on);
+
 	//hide all children elements of pagingBox div, get specific items and show them
-	$('.chContent-Body-Page-RecentOrders-Wrapper').children().css('display', 'none').slice(start_from, end_on).css('display', 'block');
+	$('.chContent-Body-Page-RecentOrders-Wrapper').children('.chContent-Body-Page-RecentOrders-Wrapper-Item').css('display', 'none').slice(start_from, end_on).css('display', 'block');
 	
 	/*get the page link that has longdesc attribute of the current page and add active_page class to it
 	and remove that class from previously active page link*/
@@ -105,18 +110,18 @@ function go_to_page(page_num){
   }
 }
 
-// $( document ).on('click', '.previous_link', function() {
-//   previous();
-// });
+ $( document ).on('click', '.previous_link', function() {
+   previous();
+ });
 
-// $( document ).on('click', '.next_link', function() {
-//   next();
-// });
+ $( document ).on('click', '.next_link', function() {
+   next();
+ });
 
-// $( document ).on('click', '.page_link', function() {
-//   var currentPageData = $(this).attr('data-link');
-//   go_to_page(currentPageData);
-// });
+ $( document ).on('click', '.page_link', function() {
+   var currentPageData = $(this).attr('data-link');
+   go_to_page(currentPageData);
+ });
 
 $(document).ready(function() {  
   $( ".chCBPROWID-Actions-OrderNo" ).each(function( index, element ) {
