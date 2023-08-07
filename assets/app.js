@@ -10839,6 +10839,12 @@ $(document).ready(function () {
   $('.chContent-BPCW-Order--Details-Ship .chos1:last-child p').html(billingAddress);
   $('.chContent-BPCW-Order--Details').prepend('<div class="back-to-orders-wrappers"><a href="/account?a=orders" class="back-to-orders">Back to Order history</a></div>');
   $('.chContent-BPCW-Order--Details-Price-Items .chContent-BPCW-Order--Details-Price-Value .cart-discount').siblings('span').addClass('discount');
+  $('.order-summary__body > tr').each(function () {
+    var title = $(this).find('.line-item-product-title').html();
+    var id = $(this).find('.line-item-product-title').data('productid');
+    $('.chContent-BPCW-Order--Details-Product-Id-' + id).find('.chPDL .chProductLink > i:first-child').html(title);
+  });
+
   //DASHBOARD SECTION
   var queryString = window.location.search;
   var urlParams = new URLSearchParams(queryString);

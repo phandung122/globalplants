@@ -30,7 +30,7 @@ Supported variables
     <div class="v-stack gap-0.5">
       {%- if line_item.url != blank -%}
         <a href="{{ line_item.url }}" class="bold">
-          <span class="reversed-link hover:show">{{ line_item.product.title | default: line_item.title }}</span>
+          <span data-productid="{{ line_item.product_id }}" class="line-item-product-title reversed-link hover:show">{{ line_item.product.title | default: line_item.title }}</span>
         </a>
       {%- else -%}
         <p class="bold">{{ line_item.product.title | default: line_item.title }}</p>
