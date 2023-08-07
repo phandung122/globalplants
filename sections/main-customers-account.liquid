@@ -107,6 +107,78 @@
     </div>
   {%- endif -%}
 </div>
+{% assign bought_products = ',' %}
+{% assign bought_tags = ',' %}
+{%- for order in customer.orders -%}
+  {%- for line_item in order.line_items -%}
+    {% assign bought_products = bought_products | append: line_item.product_id | append: ',' %}
+    {% assign bought_tags = bought_tags | append: line_item.product.tags | append: ',' %}
+  {%- endfor -%}
+{%- endfor -%}
+{% assign bought_tags = bought_tags | replace: '[', '' | replace: ']', '' | split: "," | uniq %}
+
+{% assign poly_first = '' %}
+{% assign poly_second = '' %}
+{% assign bought_region = '' %}
+{% if bought_tags contains 'High Poly' %}
+  {% assign poly_first = 'High Poly' %}
+  {% if bought_tags contains 'Low Poly' %}
+    {% assign poly_second = 'Low Poly' %}
+  {% else %}
+    {% assign poly_second = '2D Images' %}
+  {% endif %}
+{% else %}
+  {% assign poly_first = 'Low Poly' %}
+  {% assign poly_second = '2D Images' %}
+{% endif %}
+
+  {% assign poly_first = 'Low Poly' %}
+  {% assign poly_second = '2D Images' %}
+  
+<div class="acount-upsell-container">
+  {% assign counter = 0 %}
+  <product-list class="product-list">
+  {% assign products = collections.all.products | sort: 'best-selling' %}
+  {% for product in products %}   
+    {% if bought_products contains product.id %}
+      {% continue %}
+    {% endif %}
+    {% if counter < 4 and product.tags contains poly_first %}
+      {%- render 'product-card', product: product, stacked: true, background: "#ffffff", text_color: "#1a1a1a", show_badges: true -%}
+      {% assign counter = counter | plus: 1 %}
+    {% endif %}
+    {% if counter >= 4 %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% for product in products %}   
+    {% if bought_products contains product.id %}
+      {% continue %}
+    {% endif %}
+    {% if counter < 4 and product.tags contains poly_second %}
+      {%- render 'product-card', product: product, stacked: true, background: "#ffffff", text_color: "#1a1a1a", show_badges: true -%}
+      {% assign counter = counter | plus: 1 %}
+    {% endif %}
+    {% if counter >= 4 %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% for product in products %}   
+    {% if bought_products contains product.id %}
+      {% continue %}
+    {% endif %}
+    {% if counter < 4 and product.tags %}
+      {%- render 'product-card', product: product, stacked: true, background: "#ffffff", text_color: "#1a1a1a", show_badges: true -%}
+      {% assign counter = counter | plus: 1 %}
+    {% endif %}
+    {% if counter >= 4 %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  </product-list>
+</div>
 
 {% schema %}
 {

@@ -10832,6 +10832,109 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
+  //ORDER DETAIL SECTION
+  var billingAddress = $('.customer-billing-address').prop('outerHTML');
+  $('.chContent-BPCW-Order--Details-Ship .chos1:first-child p').html(billingAddress);
+  var shippingAddress = $('.customer-shipping-address').prop('outerHTML');
+  $('.chContent-BPCW-Order--Details-Ship .chos1:last-child p').html(billingAddress);
+  $('.chContent-BPCW-Order--Details').prepend('<div class="back-to-orders-wrappers"><a href="/account?a=orders" class="back-to-orders">Back to Order history</a></div>');
+  $('.chContent-BPCW-Order--Details-Price-Items .chContent-BPCW-Order--Details-Price-Value .cart-discount').siblings('span').addClass('discount');
+  //DASHBOARD SECTION
+  var queryString = window.location.search;
+  var urlParams = new URLSearchParams(queryString);
+  var a = urlParams.get('a');
+  if (window.location.pathname == '/account' && a != 'orders') {
+    $('#ChRecentOrders').addClass('is-dashboard-page');
+    //show first 5 orders.
+    $('.chContent-Body-Page-RecentOrders-Wrapper').children('.chContent-Body-Page-RecentOrders-Wrapper-Item').css('display', 'none');
+    $('.chContent-Body-Page-RecentOrders-Wrapper').children('.chContent-Body-Page-RecentOrders-Wrapper-Item').slice(0, 5).css('display', 'flex');
+    //remove pagination and add view orders
+    $('#ChRecentOrders').find('#page_navigation').remove();
+    if ($('.chContent-Body-Page-RecentOrders-Wrapper').children('.chContent-Body-Page-RecentOrders-Wrapper-Item').length) {
+      $('#ChRecentOrders').append('<div class="manage-order-wrappers"><a href="/account?a=orders" class="button">View & manage all orders</a></div>');
+    }
+  }
+  var upsellProducts = $('.acount-upsell-container').html();
+  $('.chContent-BPCBI-Content').html(upsellProducts);
+
+  //ORDERS SECTION
+  $('.os4').each(function () {
+    var link = $(this).closest('.chContent-Body-Page-RecentOrders-Wrapper-Item').find('.chCBPROWID-Actions .chButton-VO').attr('href');
+    var name = $(this).html();
+    $(this).html('<a href="' + link + '">' + name + '</a>');
+  });
+  $('.os5').each(function () {
+    var html = $(this).html();
+    if (html.indexOf('1 items') != -1) {
+      html = html.replace('1 items', '1 item');
+      $(this).html(html);
+    }
+  });
+  $(".chCBPROWID-Actions-OrderNo").each(function (index, element) {
+    var valueId = $(this).text();
+    var valueDownload = $(valueId).attr('data-download');
+    var htmlActionDownload = '<a alt="download link" class="chButton download" target="_blank" href="' + valueDownload + '"><span>Download Models</span></a>';
+    $(this).parents('.chCBPROWID-Actions').find('.cho-pu').prepend(htmlActionDownload);
+  });
+
+  //ORDER SUMMARY
+  if ($('.container.order').length > 0) {
+    var valueDownload = $('.container.order').attr('data-download');
+    var htmlActionDownload = '<a alt="download link" class="chButton download" target="_blank" href="' + valueDownload + '"><span>Download Models</span></a>';
+    $('.chContent-BPCW-Order--Details-OtherActions').prepend(htmlActionDownload);
+    $('.chContent-BPCW-Order--Details-Table-Headings').append('<span class="format">Format</span>');
+    $('a.chProductLink').each(function (index, element) {
+      var allIElements = $(this).find('i');
+      var secondIElement = allIElements.eq(1);
+      var textContent = secondIElement.text();
+      // Convert the text to lowercase and replace whitespace with hyphen
+      var modifiedText = textContent.toLowerCase().replace(/[0-9]/g, '').replace(/\s+/g, '-').replaceAll(',', '').replaceAll('(', '').replaceAll(')', '').replaceAll('+', '').replaceAll('&', '');
+      secondIElement.addClass('format-element');
+      $(this).parents('.chContent-BPCW-Order--Details-Product').append('<div class="chProductFormat"><span class="' + modifiedText + '"><span class="text">' + textContent + '</span></span></div>');
+    });
+    $('.order-summary__body tr').each(function (index, element) {
+      var targetSku = $(this).attr('data-sku');
+      // Filter the div elements to find the one containing the SKUs
+      var tagValue = $(this).attr('data-poly').toLowerCase().split('poly')[0].trim();
+      var productDetailsDiv = $('.chProductSku').filter(function () {
+        return $(this).text().trim() === targetSku;
+      }).closest('.chContent-BPCW-Order--Details-Product');
+      productDetailsDiv.find('.chProductDetails .chPDL').prepend('<div class="product-tag tag-' + tagValue + '"><span>' + $(this).attr('data-poly') + '</span></div>');
+    });
+
+    /*
+    let billing = window.billingAddress; 
+    let customer = window.customerInfo;
+    const billingAddressDiv = document.querySelector('.chos1 p');
+    const { first_name, address1, phone } = JSON.parse(billing);
+    const { email, vatNumber } = customer;
+    console.log(customer);
+    const html = `
+        <b>${first_name}</b>
+        <span class="icon"><i class="fas fa-address-card"></i>${address1}</span>
+        <span class="icon"><i class="fas fa-envelope"></i>${email}</span>
+        <span class="icon"><i class="fas fa-phone"></i>${phone}</span>
+        <span class="icon"><i class="fas fa-vat"></i>${vatNumber}</span>
+      `;
+    billingAddressDiv.innerHTML = html;
+    */
+    var chflElements = document.querySelectorAll('.chContent-BPCW-Order--Details-Status i');
+    // Loop through each element and capitalize the text within the <i> tag
+    chflElements.forEach(function (chflElement) {
+      var capitalizedText = chflElement.textContent.toLowerCase();
+      chflElement.textContent = capitalizedText;
+    });
+    var statusElements = document.querySelectorAll('.chContent-BPCW-Order--Details-Status-Info');
+    // Loop through each element and capitalize the text within the <i> tag
+    statusElements.forEach(function (statusElements) {
+      var iTagText = statusElements.querySelector('i').textContent.trim();
+      var contentText = statusElements.textContent.replace(iTagText, '').trim();
+      var newDiv = document.createElement('div');
+      newDiv.textContent = contentText;
+      statusElements.innerHTML = "<i>".concat(iTagText, "</i>").concat(newDiv.outerHTML);
+    });
+  }
+
   //ACCOUNT PROFILE FLOW
   $('#chMfHolder_vat label').html('VAT Number');
   $('#chPersonalInfoForm').find('button[type="submit"]').attr('disabled', '');
@@ -10853,7 +10956,7 @@ $(document).ready(function () {
     if ($(this).find('button[id^="EditFormButton_"]').attr('id') != null) {
       id = $(this).find('button[id^="EditFormButton_"]').attr('id').replace('EditFormButton_', '');
     }
-    console.log(id);
+    //console.log(id);
     if (id != '') {
       var addressContent = $('.customer-address-' + id).prop('outerHTML');
       $('#chEditAddress_' + id).prepend(addressContent);
@@ -10915,6 +11018,10 @@ $(document).ready(function () {
     }, "fast");
   });
 });
+function isHidden(el) {
+  var style = window.getComputedStyle(el);
+  return style.display === 'none';
+}
 
 /***/ }),
 

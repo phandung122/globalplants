@@ -397,6 +397,13 @@
   }
 }
 
+@media screen and (max-width: 899px) {
+  #CustomerHubApp.customerHub .chContent {
+    margin-top: 75px;
+    padding: 0;
+  }
+}
+
 #CustomerHubApp.customerHub .chContent .chContent-Wrapper {
   width: 100%;
   max-width: 1800px;
@@ -404,8 +411,10 @@
   margin: auto;
 }
 
-#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Menu {
-  width: 25%;
+@media screen and (min-width: 900px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Menu {
+    width: 25%;
+  }
 }
 
 #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Menu .chContent-Body-Menu-Customer .chContent-Body-Page-Customer-Name {
@@ -487,6 +496,12 @@
   width: 75%;
 }
 
+@media screen and (max-width: 899px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page {
+    width: 100%;
+  }
+}
+
 #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page.chProfilePage {
   flex-direction: row;
   gap: 40px 24px;
@@ -561,6 +576,12 @@
   margin: 0;
   width: calc(33.33% - var(--spacing-4) * 2 / 3);
   flex: 0 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page.chProfilePage #chShowAddresses-Block .chContent-Body-Page-Content-Wrapper .chEditAddresses .chEditAddress {
+    width: calc(50% - var(--spacing-4) * 1 / 2);
+  }
 }
 
 #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page.chProfilePage #chShowAddresses-Block .chContent-Body-Page-Content-Wrapper .chEditAddresses .chEditAddress.chAdA {
@@ -1025,7 +1046,7 @@
 #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page.chProfilePage #chShowAddresses-Block .chNA .chContent-BPPS-Info-Addresses .chAddAddress form[id^=address_form_] .chField[name="address[last_name]"],
 #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page.chProfilePage #chShowAddresses-Block .chNA .chContent-BPPS-Info-Addresses .chAddAddress form[id=address_form_new] .chField[name="address[first_name]"],
 #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page.chProfilePage #chShowAddresses-Block .chNA .chContent-BPPS-Info-Addresses .chAddAddress form[id=address_form_new] .chField[name="address[last_name]"] {
-  width: calc(50% - 8px);
+  width: calc(50% - 8px) !important;
 }
 
 #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page.chProfilePage #chShowAddresses-Block .chaEa .chaEa2 .chEditAddressForm form[id^=address_form_] .chField[name="address[city]"],
@@ -1060,7 +1081,7 @@
 #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page.chProfilePage #chShowAddresses-Block .chNA .chContent-BPPS-Info-Addresses .chAddAddress form[id^=address_form_] .chField[name="address[country]"],
 #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page.chProfilePage #chShowAddresses-Block .chNA .chContent-BPPS-Info-Addresses .chAddAddress form[id=address_form_new] .chField[name="address[city]"],
 #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page.chProfilePage #chShowAddresses-Block .chNA .chContent-BPPS-Info-Addresses .chAddAddress form[id=address_form_new] .chField[name="address[country]"] {
-  width: calc(50% - 8px);
+  width: calc(50% - 8px) !important;
 }
 
 #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page.chProfilePage #chShowAddresses-Block .chaEa .chaEa2 .chEditAddressForm form[id^=address_form_] .chField[name="address[province]"],
@@ -1095,7 +1116,7 @@
 #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page.chProfilePage #chShowAddresses-Block .chNA .chContent-BPPS-Info-Addresses .chAddAddress form[id^=address_form_] .chField[name="address[zip]"],
 #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page.chProfilePage #chShowAddresses-Block .chNA .chContent-BPPS-Info-Addresses .chAddAddress form[id=address_form_new] .chField[name="address[province]"],
 #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page.chProfilePage #chShowAddresses-Block .chNA .chContent-BPPS-Info-Addresses .chAddAddress form[id=address_form_new] .chField[name="address[zip]"] {
-  width: calc(50% - 8px);
+  width: calc(50% - 8px) !important;
 }
 
 #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page.chProfilePage #chShowAddresses-Block .chaEa .chaEa2 .chEditAddressForm form[id^=address_form_] .chField[name="address[address2]"],
@@ -1586,6 +1607,835 @@
 #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General .chContent-Body-Page-Profile .chContent-BPPS-Info-Addresses .chAddAddress .chContent-BPG-group-Action .chButton[disabled] {
   color: var(--alias-disabled, rgba(0, 0, 0, 0.15)) !important;
   background: var(--alias-disabled-variant, rgba(0, 0, 0, 0.05)) !important;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders.is-dashboard-page .chContent-Body-Page-General-Title {
+  height: auto;
+  display: block !important;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders.is-dashboard-page .chContent-Body-Page-General-Title .chCBPROT-Heading {
+  color: var(--gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  /* 24px */
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-6);
+}
+
+@media screen and (max-width: 768px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders.is-dashboard-page .chContent-Body-Page-General-Title .chCBPROT-Heading {
+    margin-top: 25px;
+  }
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders.is-dashboard-page .manage-order-wrappers {
+  text-align: center;
+  margin: var(--spacing-6) 0;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders.is-dashboard-page .manage-order-wrappers a {
+  padding: 12px;
+  color: var(--global-grayscale-white, #FFF);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 22.4px */
+  text-transform: capitalize;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-osearch {
+  padding: 16px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-osearch .os1 {
+  margin-top: 0;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-osearch .os1 #cho-search {
+  padding: 8px 16px 8px 48px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-osearch .os1 .chicon-osearch {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-RecentOrders-Wrapper .chContent-Body-Page-RecentOrders-None {
+  margin: 0;
+  padding: 16px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-RecentOrders-Wrapper .chContent-Body-Page-More-Link {
+  display: none !important;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-RecentOrders-Wrapper .chContent-Body-Page-RecentOrders-Wrapper-Item {
+  flex-direction: row;
+}
+
+@media screen and (max-width: 767px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-RecentOrders-Wrapper .chContent-Body-Page-RecentOrders-Wrapper-Item {
+    flex-wrap: nowrap;
+  }
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-RecentOrders-Wrapper .chContent-Body-Page-RecentOrders-Wrapper-Item .chContent-Body-Page-RecentOrders-Wrapper-Item-Delivery .os2 .os5 {
+  align-items: center;
+  line-height: 28px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-RecentOrders-Wrapper .chContent-Body-Page-RecentOrders-Wrapper-Item .chContent-Body-Page-RecentOrders-Wrapper-Item-Delivery .os2 .os5 b {
+  line-height: 28px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-RecentOrders-Wrapper .chContent-Body-Page-RecentOrders-Wrapper-Item .chContent-Body-Page-RecentOrders-Wrapper-Item-Delivery .os2 .os6 {
+  font-size: 14px;
+  line-height: 140%;
+  text-transform: uppercase;
+  height: auto;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-RecentOrders-Wrapper .chContent-Body-Page-RecentOrders-Wrapper-Item .chContent-Body-Page-RecentOrders-Wrapper-Item-Delivery .os2 .os7 {
+  display: none;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-RecentOrders-Wrapper .chContent-Body-Page-RecentOrders-Wrapper-Item .chContent-Body-Page-RecentOrders-Wrapper-Item-Details {
+  max-width: 200px;
+}
+
+@media screen and (max-width: 767px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-RecentOrders-Wrapper .chContent-Body-Page-RecentOrders-Wrapper-Item .chContent-Body-Page-RecentOrders-Wrapper-Item-Details {
+    padding: 16px;
+  }
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-RecentOrders-Wrapper .chContent-Body-Page-RecentOrders-Wrapper-Item .chContent-Body-Page-RecentOrders-Wrapper-Item-Details .chCBPROWID-Actions {
+  display: flex;
+  max-width: 200px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-RecentOrders-Wrapper .chContent-Body-Page-RecentOrders-Wrapper-Item .chContent-Body-Page-RecentOrders-Wrapper-Item-Details .chCBPROWID-Actions .chButton-VO {
+  padding: 8px 12px;
+  color: var(--alias-primary-on-theme, #222);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 19.6px */
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-RecentOrders-Wrapper .chContent-Body-Page-RecentOrders-Wrapper-Item .chContent-Body-Page-RecentOrders-Wrapper-Item-Details .chCBPROWID-Actions .chCBPROWID-Actions-Buttons .chButtton-Mt5 {
+  padding: 8px 12px;
+  color: #E29C16;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 19.6px */
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General#ChRecentOrders .chContent-Body-Page-RecentOrders-Wrapper .chContent-Body-Page-RecentOrders-Wrapper-Item .chContent-Body-Page-RecentOrders-Wrapper-Item-Details .chCBPROWID-Actions .chCBPROWID-Actions-Buttons .chButton.download {
+  padding: 8px 12px;
+  color: var(--green-1, #608239);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 19.6px */
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .back-to-orders-wrappers .back-to-orders {
+  position: absolute;
+  top: 18px;
+  left: 0px;
+  transform: translateY(-50%);
+  padding-left: 32px;
+  color: var(--gray-3, #6B6B6B);
+  text-align: right;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .back-to-orders-wrappers .back-to-orders:before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNTMwMzMgNC41MzAzM0M3LjgyMzIyIDQuMjM3NDQgNy44MjMyMiAzLjc2MjU2IDcuNTMwMzMgMy40Njk2N0M3LjIzNzQ0IDMuMTc2NzggNi43NjI1NiAzLjE3Njc4IDYuNDY5NjcgMy40Njk2N0wwLjQ2OTY3IDkuNDY5NjdDMC4zMjMyMjMgOS42MTYxMiAwLjI1IDkuODA4MDYgMC4yNSAxMEMwLjI1IDEwLjEwMTcgMC4yNzAyMzkgMTAuMTk4NyAwLjMwNjkwOSAxMC4yODcxQzAuMzQzNTA5IDEwLjM3NTUgMC4zOTc3NjMgMTAuNDU4NCAwLjQ2OTY3IDEwLjUzMDNMNi40Njk2NyAxNi41MzAzQzYuNzYyNTYgMTYuODIzMiA3LjIzNzQ0IDE2LjgyMzIgNy41MzAzMyAxNi41MzAzQzcuODIzMjIgMTYuMjM3NCA3LjgyMzIyIDE1Ljc2MjYgNy41MzAzMyAxNS40Njk3TDIuODEwNjYgMTAuNzVIMTlDMTkuNDE0MiAxMC43NSAxOS43NSAxMC40MTQyIDE5Ljc1IDEwQzE5Ljc1IDkuNTg1NzkgMTkuNDE0MiA5LjI1IDE5IDkuMjVIMi44MTA2Nkw3LjUzMDMzIDQuNTMwMzNaIiBmaWxsPSIjMTIxMjEyIi8+Cjwvc3ZnPg==");
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-OtherActions {
+  gap: 8px;
+  order: 1;
+  border: 0;
+}
+
+@media screen and (max-width: 525px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-OtherActions {
+    margin-top: 40px;
+  }
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-OtherActions .chButton {
+  min-width: unset;
+  max-width: 200px;
+  width: 200px;
+  padding: 8px 12px;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 19.6px */
+  border-radius: 10px;
+  border: 0px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-OtherActions .chButton span {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-OtherActions .chButton span:after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 8px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-OtherActions .chButton.download {
+  color: var(--green-1, #608239);
+  background: #D0E7B5;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-OtherActions .chButton.download span:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 2.25C12.4142 2.25 12.75 2.58579 12.75 3V13.1893L15.4697 10.4697C15.7626 10.1768 16.2374 10.1768 16.5303 10.4697C16.8232 10.7626 16.8232 11.2374 16.5303 11.5303L12.5303 15.5303C12.4584 15.6022 12.3755 15.6565 12.2871 15.6931C12.1987 15.7298 12.1017 15.75 12 15.75C11.8983 15.75 11.8013 15.7298 11.7129 15.6931C11.6245 15.6565 11.5416 15.6022 11.4697 15.5303L7.46967 11.5303C7.17678 11.2374 7.17678 10.7626 7.46967 10.4697C7.76256 10.1768 8.23744 10.1768 8.53033 10.4697L11.25 13.1893V3C11.25 2.58579 11.5858 2.25 12 2.25ZM4 14.25C4.41421 14.25 4.75 14.5858 4.75 15V18.3333C4.75 18.5861 4.84668 18.8227 5.00967 18.9924C5.17166 19.1612 5.38467 19.25 5.6 19.25H18.4C18.6153 19.25 18.8283 19.1612 18.9903 18.9924C19.1533 18.8227 19.25 18.5861 19.25 18.3333V15C19.25 14.5858 19.5858 14.25 20 14.25C20.4142 14.25 20.75 14.5858 20.75 15V18.3333C20.75 18.9646 20.5095 19.5759 20.0724 20.0312C19.6343 20.4876 19.0334 20.75 18.4 20.75H5.6C4.96663 20.75 4.36572 20.4876 3.92759 20.0312C3.49046 19.5759 3.25 18.9646 3.25 18.3333V15C3.25 14.5858 3.58579 14.25 4 14.25Z' fill='%23608239'/%3E%3C/svg%3E");
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-OtherActions .chButton.chButton-Auto {
+  color: #E29C16;
+  background: #FFFAC9;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-OtherActions .chButton.chButton-Auto span:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 2.25C12.4142 2.25 12.75 2.58579 12.75 3V13.1893L15.4697 10.4697C15.7626 10.1768 16.2374 10.1768 16.5303 10.4697C16.8232 10.7626 16.8232 11.2374 16.5303 11.5303L12.5303 15.5303C12.4584 15.6022 12.3755 15.6565 12.2871 15.6931C12.1987 15.7298 12.1017 15.75 12 15.75C11.8983 15.75 11.8013 15.7298 11.7129 15.6931C11.6245 15.6565 11.5416 15.6022 11.4697 15.5303L7.46967 11.5303C7.17678 11.2374 7.17678 10.7626 7.46967 10.4697C7.76256 10.1768 8.23744 10.1768 8.53033 10.4697L11.25 13.1893V3C11.25 2.58579 11.5858 2.25 12 2.25ZM4 14.25C4.41421 14.25 4.75 14.5858 4.75 15V18.3333C4.75 18.5861 4.84668 18.8227 5.00967 18.9924C5.17166 19.1612 5.38467 19.25 5.6 19.25H18.4C18.6153 19.25 18.8283 19.1612 18.9903 18.9924C19.1533 18.8227 19.25 18.5861 19.25 18.3333V15C19.25 14.5858 19.5858 14.25 20 14.25C20.4142 14.25 20.75 14.5858 20.75 15V18.3333C20.75 18.9646 20.5095 19.5759 20.0724 20.0312C19.6343 20.4876 19.0334 20.75 18.4 20.75H5.6C4.96663 20.75 4.36572 20.4876 3.92759 20.0312C3.49046 19.5759 3.25 18.9646 3.25 18.3333V15C3.25 14.5858 3.58579 14.25 4 14.25Z' fill='%23E29C16'/%3E%3C/svg%3E");
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-Status {
+  background-color: white;
+  border: 0;
+  margin-bottom: var(--spacing-6);
+  border-radius: var(--spacing-6);
+  padding: var(--spacing-4);
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-Status > * {
+  flex: 1 0 auto;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-Status .chod1 {
+  order: 4;
+  display: flex;
+  align-items: flex-end !important;
+  margin-right: 0;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-Status .chod1 i {
+  color: var(--gray-4, #9C9C9C);
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 14px */
+  text-transform: capitalize;
+  margin: 0;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-Status .chod1 b {
+  color: var(--gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 22.4px */
+}
+
+@media screen and (max-width: 525px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-Status .chod1 {
+    order: 2;
+  }
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-Status .chod2 {
+  order: 1;
+  margin: 0 !important;
+  align-items: flex-start !important;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-Status .chod2 i {
+  color: var(--gray-4, #9C9C9C);
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 14px */
+  text-transform: capitalize;
+  margin: 0;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-Status .chod2 div {
+  color: var(--gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 22.4px */
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-Status .chContent-BPCW-Order--Details-Status-Info {
+  order: 2;
+  margin-right: 0;
+  align-items: center !important;
+}
+
+@media screen and (max-width: 525px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-Status .chContent-BPCW-Order--Details-Status-Info {
+    order: 4;
+    margin-bottom: 0 !important;
+  }
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-Status .chContent-BPCW-Order--Details-Status-Info i {
+  color: var(--gray-4, #9C9C9C);
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 14px */
+  text-transform: capitalize;
+  margin: 0;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-Status .chContent-BPCW-Order--Details-Status-Info div {
+  color: var(--gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 22.4px */
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-Status .chContent-BPCW-Order--Details-Status-Info:nth-child(2) div {
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: #AFFFA1;
+  color: var(--green, #005742);
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chContent-BPCW-Order--Details-Status .chContent-BPCW-Order--Details-Status-Info:nth-child(3) div {
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: var(--gray-6, #F4F4F4);
+  color: var(--gray-2, #383838);
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x {
+  border-radius: 16px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Table {
+  border-bottom: 0;
+}
+
+@media screen and (max-width: 525px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Table {
+    display: none;
+  }
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Table .chContent-BPCW-Order--Details-Table-Headings > * {
+  flex: 1 0 auto;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Table .chContent-BPCW-Order--Details-Table-Headings .chProductDetails {
+  color: var(--gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 22.4px */
+  padding: 0 16px;
+  text-transform: capitalize;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Table .chContent-BPCW-Order--Details-Table-Headings span {
+  color: var(--gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 22.4px */
+  padding: 0 16px;
+  text-transform: capitalize;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Table .chContent-BPCW-Order--Details-Table-Headings span:nth-child(3) {
+  order: 3;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Table .chContent-BPCW-Order--Details-Table-Headings span:nth-child(4),
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Table .chContent-BPCW-Order--Details-Table-Headings span:nth-child(5) {
+  display: none;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Table .chContent-BPCW-Order--Details-Table-Headings .format {
+  order: 2;
+  text-align: center;
+  color: var(--gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 22.4px */
+  padding: 0 16px;
+  text-transform: capitalize;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products {
+  border-bottom: 1px solid var(--gray-5, #CCC);
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product:after {
+  display: none;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product:nth-child(2n+1) {
+  background: var(--gray-7, #FAFAFA);
+}
+
+@media screen and (max-width: 525px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product > * {
+  flex: 1 0 auto;
+}
+
+@media screen and (max-width: 525px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product .chProductDetails {
+    width: 100% !important;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product .chProductDetails .chPDL {
+    width: auto;
+  }
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product .chProductDetails .chPDL .product-tag {
+  position: relative;
+  width: auto;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product .chProductDetails .chPDL .chProductLink {
+  color: var(--gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 19.6px */
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product .chProductDetails .chPDL .chProductLink i.format-element {
+  display: none;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product .chProductPrice {
+  order: 3;
+  color: var(--gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 22.4px */
+  padding: 0 16px;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 525px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product .chProductPrice {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 50%;
+  }
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product .chProductQuantity {
+  display: none;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product .chProductTotal {
+  display: none;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product .chProductFormat {
+  order: 2;
+  text-align: center;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+
+@media screen and (max-width: 525px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product .chProductFormat {
+    text-align: left;
+  }
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product .chProductFormat > span {
+  padding-top: 48px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: auto 40px;
+  background-position: top center;
+}
+
+@media screen and (max-width: 525px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product .chProductFormat > span {
+    background-position: left 4px;
+  }
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product .chProductFormat > span .text {
+  display: inline-block;
+  color: var(--gray-2, #383838);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 16.8px */
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: var(--gray-6, #F4F4F4);
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship {
+  background: var(--gray-6, #F4F4F4);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+}
+
+@media screen and (max-width: 999px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship {
+    width: 100%;
+  }
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1:last-child {
+  display: none;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > strong {
+  color: var(--gray-4, #9C9C9C);
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 14px */
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p .customer-billing-address > *:not(.name),
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p customer-billing-address > *:not(.name) {
+  color: var(--gray-3, #6B6B6B);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  /* 24px */
+  padding-left: 32px;
+  position: relative;
+  min-height: 24px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p .customer-billing-address > *:not(.name):before,
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p customer-billing-address > *:not(.name):before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNzUgOC43MTAxM1Y4LjcwMjc1QzMuNzYyNTYgNS40NDg3NyA2LjYwMjEgMi43Mzg1OSAxMC4xOTYzIDIuNzUwMDRDMTMuNzkwNyAyLjc2MTQ4IDE2LjYxMDMgNS40OTAwOCAxNi41OTg1IDguNzQ0MzNMMTYuNTk4NSA4Ljc0NzA1VjguODE1MzdDMTYuNTUyNyAxMC45NDI1IDE1LjI3MzcgMTIuOTk0NCAxMy41NzMzIDE0LjY3NjlDMTIuNjA3IDE1LjYxNzEgMTEuNTI3MSAxNi40NTA0IDEwLjM1NDcgMTcuMTU5OEMxMC4zMjU0IDE3LjE3NzUgMTAuMjk3MyAxNy4xOTczIDEwLjI3MDcgMTcuMjE4OUMxMC4yNDkyIDE3LjIzNjMgMTAuMjE1OCAxNy4yNSAxMC4xNzQzIDE3LjI1QzEwLjEzMjcgMTcuMjUgMTAuMDk5NCAxNy4yMzYzIDEwLjA3NzggMTcuMjE4OUMxMC4wNTE5IDE3LjE5NzggMTAuMDI0NiAxNy4xNzg2IDkuOTk2MTIgMTcuMTYxMkM4LjI0ODQ4IDE2LjA5NSA2LjcxNzE4IDE0Ljc1MDUgNS40NzA5MiAxMy4xOTA3TDUuNDcwOTUgMTMuMTkwNkw1LjQ2NTg5IDEzLjE4NDRDNC40MDg4OSAxMS44OTAxIDMuODEyMiAxMC4zMjYyIDMuNzUgOC43MTAxM1pNMTAuMjAxIDEuMjUwMDRDNS44NzExOSAxLjIzNjI2IDIuMjY1MTMgNC41MjU5IDIuMjUgOC42OTg2NEgyLjI1VjguNzAxMzZWOC43MjQyQzIuMjUgOC43MzMzNiAyLjI1MDE3IDguNzQyNTIgMi4yNTA1IDguNzUxNjhDMi4zMjIxNiAxMC43MDY2IDMuMDQxOTYgMTIuNTg2MyA0LjMwMTQ3IDE0LjEzQzUuNjUwMTUgMTUuODE3MyA3LjMwMTA2IDE3LjI2ODQgOS4xNzgzNCAxOC40MTkzQzkuNzYyNzEgMTguODU5OSAxMC41ODQyIDE4Ljg2MDIgMTEuMTY4OSAxOC40MjAzQzEyLjQyMzggMTcuNjU3MiAxMy41ODIzIDE2Ljc2MTMgMTQuNjIxNyAxNS43NDk4TDE0LjYyMTcgMTUuNzQ5OEwxNC42MjYgMTUuNzQ1NUMxNi40NDg4IDEzLjk0MjYgMTguMDQzOSAxMS41MzU3IDE4LjA5ODQgOC44MzgzNEwxOC4wOTg1IDguODIzMlY4Ljc0ODQyQzE4LjExMjkgNC41NzYgMTQuNTMwNiAxLjI2MzgzIDEwLjIwMSAxLjI1MDA0Wk04LjYyNDkzIDkuMjg4MDVDOC42MjQ5MyA4LjQzMjM3IDkuMzE4NTkgNy43Mzg3MSAxMC4xNzQzIDcuNzM4NzFDMTEuMDI5OSA3LjczODcxIDExLjcyMzYgOC40MzIzNyAxMS43MjM2IDkuMjg4MDVDMTEuNzIzNiAxMC4xNDM3IDExLjAyOTkgMTAuODM3NCAxMC4xNzQzIDEwLjgzNzRDOS4zMTg1OSAxMC44Mzc0IDguNjI0OTMgMTAuMTQzNyA4LjYyNDkzIDkuMjg4MDVaTTEwLjE3NDMgNi4yMzg3MUM4LjQ5MDE3IDYuMjM4NzEgNy4xMjQ5MyA3LjYwMzk0IDcuMTI0OTMgOS4yODgwNUM3LjEyNDkzIDEwLjk3MjIgOC40OTAxNyAxMi4zMzc0IDEwLjE3NDMgMTIuMzM3NEMxMS44NTg0IDEyLjMzNzQgMTMuMjIzNiAxMC45NzIyIDEzLjIyMzYgOS4yODgwNUMxMy4yMjM2IDcuNjAzOTQgMTEuODU4NCA2LjIzODcxIDEwLjE3NDMgNi4yMzg3MVoiIGZpbGw9IiMyQjJCMkIiLz4KPC9zdmc+");
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p .customer-billing-address .name,
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p customer-billing-address .name {
+  color: var(--gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  /* 25.6px */
+  text-align: left;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p .customer-billing-address .address,
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p customer-billing-address .address {
+  margin-top: 9px;
+  border: 0;
+  padding: 0;
+  padding-left: 32px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p .customer-billing-address .address:before,
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p customer-billing-address .address:before {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNzUgOC43MTAxM1Y4LjcwMjc1QzMuNzYyNTYgNS40NDg3NyA2LjYwMjEgMi43Mzg1OSAxMC4xOTYzIDIuNzUwMDRDMTMuNzkwNyAyLjc2MTQ4IDE2LjYxMDMgNS40OTAwOCAxNi41OTg1IDguNzQ0MzNMMTYuNTk4NSA4Ljc0NzA1VjguODE1MzdDMTYuNTUyNyAxMC45NDI1IDE1LjI3MzcgMTIuOTk0NCAxMy41NzMzIDE0LjY3NjlDMTIuNjA3IDE1LjYxNzEgMTEuNTI3MSAxNi40NTA0IDEwLjM1NDcgMTcuMTU5OEMxMC4zMjU0IDE3LjE3NzUgMTAuMjk3MyAxNy4xOTczIDEwLjI3MDcgMTcuMjE4OUMxMC4yNDkyIDE3LjIzNjMgMTAuMjE1OCAxNy4yNSAxMC4xNzQzIDE3LjI1QzEwLjEzMjcgMTcuMjUgMTAuMDk5NCAxNy4yMzYzIDEwLjA3NzggMTcuMjE4OUMxMC4wNTE5IDE3LjE5NzggMTAuMDI0NiAxNy4xNzg2IDkuOTk2MTIgMTcuMTYxMkM4LjI0ODQ4IDE2LjA5NSA2LjcxNzE4IDE0Ljc1MDUgNS40NzA5MiAxMy4xOTA3TDUuNDcwOTUgMTMuMTkwNkw1LjQ2NTg5IDEzLjE4NDRDNC40MDg4OSAxMS44OTAxIDMuODEyMiAxMC4zMjYyIDMuNzUgOC43MTAxM1pNMTAuMjAxIDEuMjUwMDRDNS44NzExOSAxLjIzNjI2IDIuMjY1MTMgNC41MjU5IDIuMjUgOC42OTg2NEgyLjI1VjguNzAxMzZWOC43MjQyQzIuMjUgOC43MzMzNiAyLjI1MDE3IDguNzQyNTIgMi4yNTA1IDguNzUxNjhDMi4zMjIxNiAxMC43MDY2IDMuMDQxOTYgMTIuNTg2MyA0LjMwMTQ3IDE0LjEzQzUuNjUwMTUgMTUuODE3MyA3LjMwMTA2IDE3LjI2ODQgOS4xNzgzNCAxOC40MTkzQzkuNzYyNzEgMTguODU5OSAxMC41ODQyIDE4Ljg2MDIgMTEuMTY4OSAxOC40MjAzQzEyLjQyMzggMTcuNjU3MiAxMy41ODIzIDE2Ljc2MTMgMTQuNjIxNyAxNS43NDk4TDE0LjYyMTcgMTUuNzQ5OEwxNC42MjYgMTUuNzQ1NUMxNi40NDg4IDEzLjk0MjYgMTguMDQzOSAxMS41MzU3IDE4LjA5ODQgOC44MzgzNEwxOC4wOTg1IDguODIzMlY4Ljc0ODQyQzE4LjExMjkgNC41NzYgMTQuNTMwNiAxLjI2MzgzIDEwLjIwMSAxLjI1MDA0Wk04LjYyNDkzIDkuMjg4MDVDOC42MjQ5MyA4LjQzMjM3IDkuMzE4NTkgNy43Mzg3MSAxMC4xNzQzIDcuNzM4NzFDMTEuMDI5OSA3LjczODcxIDExLjcyMzYgOC40MzIzNyAxMS43MjM2IDkuMjg4MDVDMTEuNzIzNiAxMC4xNDM3IDExLjAyOTkgMTAuODM3NCAxMC4xNzQzIDEwLjgzNzRDOS4zMTg1OSAxMC44Mzc0IDguNjI0OTMgMTAuMTQzNyA4LjYyNDkzIDkuMjg4MDVaTTEwLjE3NDMgNi4yMzg3MUM4LjQ5MDE3IDYuMjM4NzEgNy4xMjQ5MyA3LjYwMzk0IDcuMTI0OTMgOS4yODgwNUM3LjEyNDkzIDEwLjk3MjIgOC40OTAxNyAxMi4zMzc0IDEwLjE3NDMgMTIuMzM3NEMxMS44NTg0IDEyLjMzNzQgMTMuMjIzNiAxMC45NzIyIDEzLjIyMzYgOS4yODgwNUMxMy4yMjM2IDcuNjAzOTQgMTEuODU4NCA2LjIzODcxIDEwLjE3NDMgNi4yMzg3MVoiIGZpbGw9IiMyQjJCMkIiLz4KPC9zdmc+");
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p .customer-billing-address .company,
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p customer-billing-address .company {
+  margin-top: 3px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p .customer-billing-address .company:before,
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p customer-billing-address .company:before {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTQuMjUgMUM0LjI1IDAuNTg1Nzg2IDQuNTg1NzkgMC4yNSA1IDAuMjVIMTRDMTQuNDE0MiAwLjI1IDE0Ljc1IDAuNTg1Nzg2IDE0Ljc1IDFWNC43NUMxNC43NSA1LjE2NDIxIDE0LjQxNDIgNS41IDE0IDUuNUMxMy41ODU4IDUuNSAxMy4yNSA1LjE2NDIxIDEzLjI1IDQuNzVWMS43NUg1Ljc1VjdDNS43NSA3LjQxNDIxIDUuNDE0MjEgNy43NSA1IDcuNzVDNC41ODU3OSA3Ljc1IDQuMjUgNy40MTQyMSA0LjI1IDdWMVpNOC43NSAxNy4yNVYxMEM4Ljc1IDkuNTg1NzkgOC40MTQyMSA5LjI1IDggOS4yNUgxQzAuNTg1Nzg2IDkuMjUgMC4yNSA5LjU4NTc5IDAuMjUgMTBWMThDMC4yNSAxOC40MTQyIDAuNTg1Nzg2IDE4Ljc1IDEgMTguNzVIOEgxMUgxOEMxOC40MTQyIDE4Ljc1IDE4Ljc1IDE4LjQxNDIgMTguNzUgMThWN0MxOC43NSA2LjU4NTc5IDE4LjQxNDIgNi4yNSAxOCA2LjI1SDExQzEwLjU4NTggNi4yNSAxMC4yNSA2LjU4NTc5IDEwLjI1IDdWMTIuMTI1VjE3LjI1SDguNzVaTTEuNzUgMTcuMjVWMTAuNzVINy4yNVYxNy4yNUgxLjc1Wk0xMS43NSA3Ljc1VjE3LjI1SDE3LjI1VjcuNzVIMTEuNzVaTTE0IDkuMjVDMTMuNTg1OCA5LjI1IDEzLjI1IDkuNTg1NzkgMTMuMjUgMTBDMTMuMjUgMTAuNDE0MiAxMy41ODU4IDEwLjc1IDE0IDEwLjc1SDE1QzE1LjQxNDIgMTAuNzUgMTUuNzUgMTAuNDE0MiAxNS43NSAxMEMxNS43NSA5LjU4NTc5IDE1LjQxNDIgOS4yNSAxNSA5LjI1SDE0Wk0xMy4yNSAxM0MxMy4yNSAxMi41ODU4IDEzLjU4NTggMTIuMjUgMTQgMTIuMjVIMTVDMTUuNDE0MiAxMi4yNSAxNS43NSAxMi41ODU4IDE1Ljc1IDEzQzE1Ljc1IDEzLjQxNDIgMTUuNDE0MiAxMy43NSAxNSAxMy43NUgxNEMxMy41ODU4IDEzLjc1IDEzLjI1IDEzLjQxNDIgMTMuMjUgMTNaTTE0IDE0LjI1QzEzLjU4NTggMTQuMjUgMTMuMjUgMTQuNTg1OCAxMy4yNSAxNUMxMy4yNSAxNS40MTQyIDEzLjU4NTggMTUuNzUgMTQgMTUuNzVIMTVDMTUuNDE0MiAxNS43NSAxNS43NSAxNS40MTQyIDE1Ljc1IDE1QzE1Ljc1IDE0LjU4NTggMTUuNDE0MiAxNC4yNSAxNSAxNC4yNUgxNFpNMy4yNSAxNUMzLjI1IDE0LjU4NTggMy41ODU3OSAxNC4yNSA0IDE0LjI1SDVDNS40MTQyMSAxNC4yNSA1Ljc1IDE0LjU4NTggNS43NSAxNUM1Ljc1IDE1LjQxNDIgNS40MTQyMSAxNS43NSA1IDE1Ljc1SDRDMy41ODU3OSAxNS43NSAzLjI1IDE1LjQxNDIgMy4yNSAxNVpNNCAxMi4yNUMzLjU4NTc5IDEyLjI1IDMuMjUgMTIuNTg1OCAzLjI1IDEzQzMuMjUgMTMuNDE0MiAzLjU4NTc5IDEzLjc1IDQgMTMuNzVINUM1LjQxNDIxIDEzLjc1IDUuNzUgMTMuNDE0MiA1Ljc1IDEzQzUuNzUgMTIuNTg1OCA1LjQxNDIxIDEyLjI1IDUgMTIuMjVINFoiIGZpbGw9IiMyQjJCMkIiLz4KPC9zdmc+");
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p .customer-billing-address .email,
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p customer-billing-address .email {
+  margin-top: 3px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p .customer-billing-address .email:before,
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p customer-billing-address .email:before {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIuODg4OTQgMy4yNUMyLjAwOTc1IDMuMjUgMS4yNTAwNSAzLjk0NDA3IDEuMjUwMDUgNC44NTcxNFY0Ljk5MDQxQzEuMjQ5OTggNC45OTYzOSAxLjI0OTk4IDUuMDAyMzcgMS4yNTAwNSA1LjAwODM0VjE1LjE0MjlDMS4yNTAwNSAxNi4wNTU5IDIuMDA5NzUgMTYuNzUgMi44ODg5NCAxNi43NUgxNy4xMTEyQzE3Ljk5MDQgMTYuNzUgMTguNzUwMSAxNi4wNTU5IDE4Ljc1MDEgMTUuMTQyOVY1LjAwNjYxQzE4Ljc1MDEgNS4wMDE4NCAxOC43NTAxIDQuOTk3MDcgMTguNzUwMSA0Ljk5MjNWNC44NTcxNEMxOC43NTAxIDMuOTQ0MDcgMTcuOTkwNCAzLjI1IDE3LjExMTIgMy4yNUgyLjg4ODk0Wk0xNy4wOTY2IDQuNzVIMi45MzAxOEwxMC4yMTU4IDEwLjA2MjRMMTcuMDk2NiA0Ljc1Wk0yLjc1MDA1IDYuNDc1MDhWMTUuMTQyOUMyLjc1MDA1IDE1LjE3NjYgMi43ODYyOSAxNS4yNSAyLjg4ODk0IDE1LjI1SDE3LjExMTJDMTcuMjEzOCAxNS4yNSAxNy4yNTAxIDE1LjE3NjYgMTcuMjUwMSAxNS4xNDI5VjYuNTI2NTVMMTAuNjg3IDExLjU5MzZDMTAuNDIzIDExLjc5NzQgMTAuMDU2MiAxMS44MDI1IDkuNzg2NzQgMTEuNjA2TDIuNzUwMDUgNi40NzUwOFoiIGZpbGw9IiMyQjJCMkIiLz4KPC9zdmc+");
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p .customer-billing-address .phone,
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p customer-billing-address .phone {
+  margin-top: 3px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p .customer-billing-address .phone:before,
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p customer-billing-address .phone:before {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTYuMTE0IDIuMjk2QzYuNDM2NzkgMi4yMTA2OCA2Ljc3OTQ5IDIuMjQ0MTYgNy4wNzk2NSAyLjM5MDM0QzcuMzc5ODIgMi41MzY1MyA3LjYxNzQ4IDIuNzg1NjkgNy43NDkzMiAzLjA5MjQzTDkuMjg5NTMgNi42ODI1MUM5LjM5ODE1IDYuOTM2NTYgOS40MjkxMSA3LjIxODA0IDkuMzc3NzggNy40ODk1MkM5LjMyNjQ2IDcuNzYxIDkuMTk1NTQgOC4wMTEwOSA5LjAwMTY3IDguMjA3OTVMNy45NDQzOSA5LjI4MDc3QzguMzEyODUgOS44MjY0IDguNzI3MzkgMTAuMzM5OSA5LjE4MzYzIDEwLjgxNTVDOS42NTgwNyAxMS4yNzIxIDEwLjE3MDkgMTEuNjg2NCAxMC43MTYyIDEyLjA1NDJMMTEuNzg5MiAxMC45OTU3QzExLjk4NjggMTAuODAxMSAxMi4yMzg1IDEwLjY2OTUgMTIuNTExMSAxMC42MTg3QzEyLjc4MzEgMTAuNTY4IDEzLjA2NDEgMTAuNTk5NSAxMy4zMTgxIDEwLjcwOTJDMTMuMzE4NyAxMC43MDk0IDEzLjMxOTIgMTAuNzA5NiAxMy4zMTk3IDEwLjcwOTlMMTYuOTA3MyAxMi4yNDhDMTcuMjE0MiAxMi4zNzk5IDE3LjQ2NDEgMTIuNjE4MSAxNy42MTAxIDEyLjkxODVDMTcuNzU2MSAxMy4yMTg5IDE3Ljc4OTIgMTMuNTYxNyAxNy43MDM1IDEzLjg4NDVDMTcuNzAzNSAxMy44ODQ1IDE3LjcwMzUgMTMuODg0NCAxNy43MDM1IDEzLjg4NDVMMTYuOTU4MSAxNi43MDY1QzE2Ljg3OSAxNy4wMTIgMTYuNjk4MyAxNy4yODE1IDE2LjQ0NTcgMTcuNDcwN0MxNi4xOTIzIDE3LjY2MDYgMTUuODgxOCAxNy43NTgzIDE1LjU2NTMgMTcuNzQ3NkwxNS41NDk2IDE3Ljc0NjlDMTIuMDgzMSAxNy41NTc3IDguODAzMTggMTYuMTE2NCA2LjMxOTMgMTMuNjkwOUw2LjMwNjY0IDEzLjY3ODNDMy44ODE5NSAxMS4xOTQ4IDIuNDQwOTggNy45MTU4MSAyLjI1MTM5IDQuNDUwMTdMMi4yNTA1OCA0LjQzMDc1QzIuMjQxNTEgNC4xMTUzNyAyLjMzOTc2IDMuODA2MjQgMi41MjkyNCAzLjU1Mzk2QzIuNzE4MjkgMy4zMDIyNiAyLjk4Njk4IDMuMTIyMDIgMy4yOTE1MyAzLjA0MjU1TDYuMTE0IDIuMjk2Wk02LjQwNzc1IDMuNzY5ODlMMy43NTUyMSA0LjQ3MTQ5QzMuOTQ3NDYgNy41MzMyMSA1LjIzMDYzIDEwLjQyNiA3LjM3MzY3IDEyLjYyNEM5LjU3MjMxIDE0Ljc2NzkgMTIuNDY2MiAxNi4wNTE0IDE1LjUyOTEgMTYuMjQzMkwxNi4yMjk5IDEzLjU4OTZMMTIuNzkwNSAxMi4xMTVMMTEuMzQzOSAxMy41NDJDMTEuMDk5OCAxMy43ODI3IDEwLjcyMzUgMTMuODI3MyAxMC40Mjk5IDEzLjY1MDNDOS42MDAyIDEzLjE1IDguODI5NCAxMi41NTggOC4xMzIwOCAxMS44ODUzQzguMTI1MzIgMTEuODc4OCA4LjExODY4IDExLjg3MjEgOC4xMTIxNyAxMS44NjU0QzcuNDQxMDQgMTEuMTY3NCA2Ljg0OTUyIDEwLjM5NzEgNi4zNDg0OSA5LjU2ODVDNi4xNzA5NyA5LjI3NDkzIDYuMjE1MjggOC44OTgzMiA2LjQ1NjEgOC42NTM5N0w3Ljg4MjI3IDcuMjA2ODVMNi40MDc3NSAzLjc2OTg5WiIgZmlsbD0iIzJCMkIyQiIvPgo8L3N2Zz4=");
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p .customer-billing-address .vat,
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p customer-billing-address .vat {
+  margin-top: 3px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p .customer-billing-address .vat:before,
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Ship .chos1 > p customer-billing-address .vat:before {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSJub25lIj4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMuMTAzMjQgMTQuNEMzLjY4OTQ2IDE0LjQgNC4xNTY5IDE0LjI5MjQgNC40NDYwNiAxNC4wMjQ3TDQuNDQ4MzcgMTQuMDIyNUM0LjcyMzUzIDEzLjc1OTYgNC45MDE2OCAxMy4zNDUyIDUuMDA2NTggMTIuODE1NUw2LjE4MDg0IDYuNjc1NjNDNi4xOTQ5NyA2LjYwNzk0IDYuMjA2NDcgNi41NDE0MyA2LjIwNjQ3IDYuNDkwOTFDNi4yMDY0NyA2LjQyMDM5IDYuMTg2MTIgNi4zNTA4MiA2LjE0MTY5IDYuMjkwNDlDNi4wOTg5MyA2LjIzMjQzIDYuMDQyMTIgNi4xOTQwMSA1Ljk4NTY0IDYuMTY4NDRDNS44Nzc1NCA2LjExOTUyIDUuNzM5ODUgNi4xMDM5IDUuNTkzMjggNi4xMDM5QzUuNDQwNjggNi4xMDM5IDUuMjk2NzUgNi4xMjUyMyA1LjE3OTc5IDYuMTg2NDNDNS4wNTMyMyA2LjI1MjY1IDQuOTY2NTUgNi4zNjIwMyA0Ljk0MDAyIDYuNTA1OTVMMy43NjU3OSAxMi42MjQ2TDMuNzY1MDkgMTIuNjI4N0MzLjcxNjQ3IDEyLjkxNDEgMy42NDExIDEzLjA3ODkgMy41NjUyMiAxMy4xNjA0QzMuNTE2MTggMTMuMjEzNSAzLjM4ODA5IDEzLjI3MjcgMy4xMDMyNCAxMy4yNzI3QzIuODI2ODMgMTMuMjcyNyAyLjY4OTk0IDEzLjIxNyAyLjYyOTk3IDEzLjE1OTdDMi41NTk1NiAxMy4wNzU4IDIuNDg5NCAxMi45MTAzIDIuNDQxNDMgMTIuNjI4N0wxLjI2NjQ1IDYuNTA1OTdDMS4yMzk5MiA2LjM2MjA0IDEuMTUzMjQgNi4yNTI2NSAxLjAyNjY4IDYuMTg2NDNDMC45MDk3MiA2LjEyNTIzIDAuNzY1NzkyIDYuMTAzOSAwLjYxMzE5MiA2LjEwMzlDMC40NjY2MjEgNi4xMDM5IDAuMzI4OTI3IDYuMTE5NTIgMC4yMjA4MjkgNi4xNjg0NEMwLjE2NDM0OSA2LjE5NDAxIDAuMTA3NTM5IDYuMjMyNDMgMC4wNjQ3ODI3IDYuMjkwNDlDMC4wMjAzNTE1IDYuMzUwODIgLTMuMDM5ODRlLTA2IDYuNDIwMzkgLTMuMDM5ODRlLTA2IDYuNDkwOTFDLTMuMDM5ODRlLTA2IDYuNTQxNDMgMC4wMTE0OTgxIDYuNjA3OTMgMC4wMjU2MjUzIDYuNjc1NjFMMS4xOTk2NCAxMi44MTQyTDEuMTk5OSAxMi44MTU1QzEuMzA0NzkgMTMuMzQ1MiAxLjQ4MjkyIDEzLjc1OTYgMS43NTgwOSAxNC4wMjI1TDEuNzYwNDEgMTQuMDI0N0MyLjA0OTU3IDE0LjI5MjQgMi41MTcwMSAxNC40IDMuMTAzMjQgMTQuNFpNMTIuOTMyNiAxNC4wNjU0QzEyLjk3MjIgMTQuMDAwMSAxMi45ODg4IDEzLjkyODMgMTIuOTg4OCAxMy44NTcxVjcuODQxNTZDMTIuOTg4OCA3LjIzNjI4IDEyLjc1NzUgNi43NTkzOCAxMi4yODU1IDYuNDQ0MDhDMTEuODI3OCA2LjEzODMyIDExLjE2NjQgNiAxMC4zMzEzIDZDOS44MTg3OSA2IDkuMzY1MzkgNi4wNTMwNyA4Ljk3NDA4IDYuMTYyODNDOC41NzI0NCA2LjI2ODQ4IDguMjM0NjYgNi40NjI4MSA3Ljk2Nzg1IDYuNzQ4MjZDNy42ODkwNyA3LjAzOTM4IDcuNTU0MzEgNy40MDk0MyA3LjU1NDMxIDcuODQxNTZWMTMuODU3MUM3LjU1NDMxIDEzLjkyODMgNy41NzA4NyAxNC4wMDAxIDcuNjEwNTEgMTQuMDY1NEM3LjY0OTkxIDE0LjEzMDQgNy43MDU0MyAxNC4xNzggNy43NjY3NCAxNC4yMTE2QzcuODgzMzMgMTQuMjc1NyA4LjAzMjUxIDE0LjI5NjEgOC4xODkyNSAxNC4yOTYxQzguMzQ2IDE0LjI5NjEgOC40OTUxOCAxNC4yNzU3IDguNjExNzYgMTQuMjExNkM4LjY3MzA3IDE0LjE3OCA4LjcyODYgMTQuMTMwNCA4Ljc2OCAxNC4wNjU0QzguODA3NjQgMTQuMDAwMSA4LjgyNDE5IDEzLjkyODMgOC44MjQxOSAxMy44NTcxVjExLjI0MTZIMTEuNzE4OVYxMy44NTcxQzExLjcxODkgMTMuOTI4MyAxMS43MzU0IDE0LjAwMDEgMTEuNzc1MSAxNC4wNjU0QzExLjgxNDUgMTQuMTMwNCAxMS44NyAxNC4xNzggMTEuOTMxMyAxNC4yMTE2QzEyLjA0NzkgMTQuMjc1NyAxMi4xOTcxIDE0LjI5NjEgMTIuMzUzOCAxNC4yOTYxQzEyLjUxMDYgMTQuMjk2MSAxMi42NTk3IDE0LjI3NTcgMTIuNzc2MyAxNC4yMTE2QzEyLjgzNzYgMTQuMTc4IDEyLjg5MzIgMTQuMTMwNCAxMi45MzI2IDE0LjA2NTRaTTExLjY1MDIgNy40OTU1NkMxMS42OTQyIDcuNTYwMzEgMTEuNzE4OSA3LjYzODQxIDExLjcxODkgNy43Mzc2NlYxMC4xMTQzSDguODI0MTlWNy43Mzc2NkM4LjgyNDE5IDcuNjM4MTMgOC44NDg3OSA3LjU1OTg1IDguODkyNTYgNy40OTUwNUM4LjkzNzI1IDcuNDI4ODcgOS4wMDk4OSA3LjM2NTE0IDkuMTIzMTkgNy4zMDkyMUM5LjM1NTM4IDcuMTk0NjIgOS43Mjg4MiA3LjEyNzI3IDEwLjI2NjEgNy4xMjcyN0MxMC44MDcxIDcuMTI3MjcgMTEuMTgzNSA3LjE5NDYzIDExLjQxNzYgNy4zMDk0NUMxMS41MzIgNy4zNjU1IDExLjYwNTIgNy40MjkzNiAxMS42NTAyIDcuNDk1NTZaTTE4Ljk4MjUgNi4xNTU4NEgxNC40MTU2QzE0LjI3NTEgNi4xNTU4NCAxNC4xNTQ0IDYuMjIxMTcgMTQuMDgwOSA2LjM0NDFDMTQuMDE3MSA2LjQ1MDcxIDEzLjk5ODIgNi41ODQ4NyAxMy45OTgyIDYuNzE5NDhDMTMuOTk4MiA2Ljg1NDEgMTQuMDE3MSA2Ljk4ODI1IDE0LjA4MDkgNy4wOTQ4NkMxNC4xNTQ0IDcuMjE3NzkgMTQuMjc1MSA3LjI4MzEyIDE0LjQxNTYgNy4yODMxMkgxNi4wNjQxVjEzLjg1NzFDMTYuMDY0MSAxMy45MjgzIDE2LjA4MDcgMTQuMDAwMSAxNi4xMjAzIDE0LjA2NTRDMTYuMTU5NyAxNC4xMzA0IDE2LjIxNTMgMTQuMTc4IDE2LjI3NjYgMTQuMjExNkMxNi4zOTMyIDE0LjI3NTcgMTYuNTQyMyAxNC4yOTYxIDE2LjY5OTEgMTQuMjk2MUMxNi44NTU4IDE0LjI5NjEgMTcuMDA1IDE0LjI3NTcgMTcuMTIxNiAxNC4yMTE2QzE3LjE4MjkgMTQuMTc4IDE3LjIzODQgMTQuMTMwNCAxNy4yNzc4IDE0LjA2NTRDMTcuMzE3NSAxNC4wMDAxIDE3LjMzNCAxMy45MjgzIDE3LjMzNCAxMy44NTcxVjcuMjgzMTJIMTguOTgyNUMxOS4xMjMxIDcuMjgzMTIgMTkuMjQzOCA3LjIxNzc5IDE5LjMxNzMgNy4wOTQ4NkMxOS4zODEgNi45ODgyNSAxOS40IDYuODU0MSAxOS40IDYuNzE5NDhDMTkuNCA2LjU4NDg3IDE5LjM4MSA2LjQ1MDcxIDE5LjMxNzMgNi4zNDQxQzE5LjI0MzggNi4yMjExNyAxOS4xMjMxIDYuMTU1ODQgMTguOTgyNSA2LjE1NTg0WiIgZmlsbD0iIzJCMkIyQiIvPgo8L3N2Zz4=");
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Price {
+  padding: 16px;
+  margin: 0px;
+  width: calc(50% - 32px);
+}
+
+@media screen and (max-width: 999px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Price {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Price {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Price .chContent-BPCW-Order--Details-Price-Items {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Price .chContent-BPCW-Order--Details-Price-Items .chContent-BPCW-Order--Details-Price-Key {
+  color: var(--gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 22.4px */
+  text-align: left;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Price .chContent-BPCW-Order--Details-Price-Items .chContent-BPCW-Order--Details-Price-Value {
+  color: var(--gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 22.4px */
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Price .chContent-BPCW-Order--Details-Price-Items .chContent-BPCW-Order--Details-Price-Value > span:first-child {
+  display: block;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Price .chContent-BPCW-Order--Details-Price-Items .chContent-BPCW-Order--Details-Price-Value > span.discount {
+  color: var(--green-1, #608239);
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Price .chContent-BPCW-Order--Details-Price-Items .chContent-BPCW-Order--Details-Price-Value .cart-discount {
+  color: var(--gray-2, #383838);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 19.6px */
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background: var(--gray-6, #F4F4F4);
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Price .chContent-BPCW-Order--Details-Price-Items .chContent-BPCW-Order--Details-Price-Value .cart-discount:empty {
+  display: none;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Price .chContent-BPCW-Order--Details-Price-Items.chIsTotal .chContent-BPCW-Order--Details-Price-Key {
+  color: var(--gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  /* 24px */
+  text-align: left;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Price .chContent-BPCW-Order--Details-Price-Items.chIsTotal .chContent-BPCW-Order--Details-Price-Value {
+  color: var(--gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  /* 28px */
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order #page_navigation {
+  display: none !important;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chodback {
+  display: none !important;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-ContentBlock#chShowPopular-Block {
+  margin-top: 48px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-ContentBlock#chShowPopular-Block .chContent-BPCBI-Heading {
+  margin-bottom: 20px;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-ContentBlock#chShowPopular-Block .chContent-BPCBI-Content {
+  padding: 0;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-ContentBlock#chShowPopular-Block .chContent-BPCBI-Content .product-list {
+  --product-list-items-per-row: 3;
+  --product-list-gap: var(--product-list-row-gap) var(--product-list-column-gap);
+  --product-list-grid: auto / repeat(var(--product-list-items-per-row), minmax(0, 1fr));
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-ContentBlock#chShowPopular-Block .chContent-BPCBI-Content .product-list product-card:nth-child(4) {
+  display: none;
+}
+
+@media screen and (min-width: 1600px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-ContentBlock#chShowPopular-Block .chContent-BPCBI-Content .product-list {
+    --product-list-items-per-row: 4;
+  }
+
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-ContentBlock#chShowPopular-Block .chContent-BPCBI-Content .product-list product-card:nth-child(4) {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-ContentBlock#chShowPopular-Block .chContent-BPCBI-Content .product-list {
+    --product-list-items-per-row: 2;
+  }
+
+  #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-ContentBlock#chShowPopular-Block .chContent-BPCBI-Content .product-list product-card:nth-child(4) {
+    display: flex;
+  }
 }
 
 .shopify-section--account-banner .content-over-media h1 span {
