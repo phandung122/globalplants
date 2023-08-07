@@ -2069,6 +2069,14 @@
   }
 }
 
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product .chProductDetails .chProductImage {
+  height: auto;
+}
+
+#CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product .chProductDetails .chProductImage a {
+  height: auto;
+}
+
 @media screen and (max-width: 525px) {
   #CustomerHubApp.customerHub .chContent .chContent-Wrapper .chContent-Body .chContent-Body-Page .chContent-Body-Page-General.chContent-Body-Page-Order .chContent-Body-Page-Content-Wrapper .chContent-BPCW-Order--Details .chfl-x .chContent-BPCW-Order--Details-Products .chContent-BPCW-Order--Details-Product .chProductDetails .chPDL {
     width: auto;

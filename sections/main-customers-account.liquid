@@ -175,6 +175,7 @@
           {% if bought_region contains tag %}
             {%- render 'product-card', product: product, stacked: true, background: "#ffffff", text_color: "#1a1a1a", show_badges: true -%}
             {% assign counter = counter | plus: 1 %}
+            {% break %}
           {% endif %}
         {% endfor %}
 
@@ -197,6 +198,7 @@
           {% if bought_region contains tag %}
             {%- render 'product-card', product: product, stacked: true, background: "#ffffff", text_color: "#1a1a1a", show_badges: true -%}
             {% assign counter = counter | plus: 1 %}
+            {% break %}
           {% endif %}
         {% endfor %}
 
@@ -205,7 +207,7 @@
         {% break %}
       {% endif %}
     {% endfor %}
-  {% endpaginate %}
+  {% endpaginate %} 
 
   {% paginate collections[collection_third].products by 500 %}
     {% assign products = collections[collection_third].products | sort: 'best-selling' %}
@@ -219,6 +221,7 @@
           {% if bought_region contains tag %}
             {%- render 'product-card', product: product, stacked: true, background: "#ffffff", text_color: "#1a1a1a", show_badges: true -%}
             {% assign counter = counter | plus: 1 %}
+            {% break %}
           {% endif %}
         {% endfor %}
 
