@@ -9,7 +9,6 @@ assets/mix-manifest.json
 # Node artifact files
 node_modules/
 dist/
-src/
 
 # Compiled Java class files
 *.class

@@ -215,7 +215,7 @@
       "email": "Enter your registered email address",
       "submit": "Send Reset Link",
       "back_to_login": "Back to login",
-      "success_message": "We've sent a reset link to your email. Click it to set a new password. Can't find it? Please check your spam/junk folder."
+      "success_message": "We've sent a reset link to your email. Click it to set a new password. Can't find it? Please check your spam\/junk folder."
     },
     "register": {
       "title": "Sign up",
