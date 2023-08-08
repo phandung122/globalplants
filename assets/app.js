@@ -10996,6 +10996,7 @@ $(document).ready(function () {
     chSHA();
     $('#chShowProfile-Block, #chShowPassword-Block').fadeIn();
     $('#chShowAddresses-Block .chContent-Body-Page-Content-Wrapper:first-child').fadeIn();
+    $('.back-to-profile').fadeOut();
     $("html, body").animate({
       scrollTop: 0
     }, "fast");
@@ -11005,6 +11006,7 @@ $(document).ready(function () {
     document.querySelector('.chNA').classList.remove('chAddNew');
     $('#chShowProfile-Block, #chShowPassword-Block').fadeIn();
     $('#chShowAddresses-Block .chContent-Body-Page-Content-Wrapper:first-child').fadeIn();
+    $('.back-to-profile').fadeOut();
     $("html, body").animate({
       scrollTop: 0
     }, "fast");
@@ -11012,6 +11014,9 @@ $(document).ready(function () {
   $('.chEditAddress').on('click', 'button[id^="EditFormButton_"]', function (event) {
     $('#chShowProfile-Block, #chShowPassword-Block').fadeOut();
     $('#chShowAddresses-Block .chContent-Body-Page-Content-Wrapper:first-child').fadeOut();
+    setTimeout(function () {
+      $('.back-to-profile').fadeIn();
+    }, 200);
     $("html, body").animate({
       scrollTop: 0
     }, "fast");
@@ -11019,6 +11024,9 @@ $(document).ready(function () {
   $('.chEditAddress').on('click', '[onclick="chPNA();"]', function (event) {
     $('#chShowProfile-Block, #chShowPassword-Block').fadeOut();
     $('#chShowAddresses-Block .chContent-Body-Page-Content-Wrapper:first-child').fadeOut();
+    setTimeout(function () {
+      $('.back-to-profile').fadeIn();
+    }, 200);
     $("html, body").animate({
       scrollTop: 0
     }, "fast");
@@ -11060,11 +11068,11 @@ function login(email, password) {
       //console.log(response);
       var form = $('.account-form#LoginForm');
       if (response.indexOf('Incorrect email or password.') !== -1) {
-        console.log('Incorrect email or password.');
+        //console.log('Incorrect email or password.');
         form.find('input[name="customer[email]"]').closest('.form-control').addClass('error');
         form.find('input[name="customer[email]"]').siblings('.form-control-error-status').html('Incorrect email or password.');
       } else {
-        console.log('success!');
+        //console.log('success!');
         window.location.href = "/account";
       }
     }
@@ -11091,12 +11099,12 @@ function recoverPassword(email) {
       //console.log(response);
       var form = $('.recover-form');
       if (response.indexOf('No account found') !== -1) {
-        console.log('No account found');
+        //console.log('No account found');
         form.find('input[name="email"]').closest('.form-control').addClass('error');
         form.find('input[name="email"]').siblings('.form-control-error-status').html('We could not find this email in our system');
         form.find('.recover-signup-wrapper').show();
       } else {
-        console.log('success!');
+        //console.log('success!');
         form.find('input[name="email"]').siblings('.form-control-error-status').html('');
         $('#recover .recover-icon-check').show();
         $('#recover .recover-titlte').html('Password Reset Requested');
@@ -11107,7 +11115,7 @@ function recoverPassword(email) {
       return response;
     },
     error: function error(request, status, _error) {
-      console.log(request.status);
+      //console.log(request.status);
       if (request.status == 429) {
         var form = $('.recover-form');
         form.find('input[name="email"]').closest('.form-control').addClass('error');
@@ -11141,7 +11149,7 @@ function register(email, password, firstName, lastName) {
       //console.log(response);
       var form = $('.account-form#RegisterForm');
       if (response.indexOf('This email address is already associated with an account.') !== -1) {
-        console.log('This email address is already associated with an account.');
+        //console.log('This email address is already associated with an account.');
         form.find('input[name="customer[email]"]').closest('.form-control').addClass('error');
         form.find('input[name="customer[email]"]').siblings('.form-control-error-status').html('This email already exists in our system. <a class="link" href="#" onclick="document.getElementsByClassName(\'login-btn\')[0].click();">Sign in here!</a>');
       } else {
@@ -11152,7 +11160,7 @@ function register(email, password, firstName, lastName) {
           var value = window.btoa(VAT);
           localStorage.setItem(key, value);
         }
-        console.log('success!');
+        //console.log('success!');
         window.location.href = "/account";
       }
     }
@@ -11182,7 +11190,7 @@ $(document).ready(function () {
   });
   $('.recover-form .button[type="submit"]').on('click', function (event) {
     event.preventDefault();
-    console.log('recover-form click');
+    //console.log('recover-form click');
     var form = $('.recover-form');
     var email = form.find('input[name="email"]').val();
     form.find('input[name="email"]').closest('.form-control').removeClass('error');
@@ -11201,7 +11209,7 @@ $(document).ready(function () {
   });
   $('.recover-form').submit(function (event) {
     event.preventDefault();
-    console.log('recover-form');
+    //console.log('recover-form');
     return 0;
   });
   $('.recover-signup-wrapper .link').click(function (event) {
@@ -11209,12 +11217,12 @@ $(document).ready(function () {
   });
   $('.account-form#LoginForm .button[type="submit"]').on('click', function (event) {
     event.preventDefault();
-    console.log('account-form click');
+    //console.log('account-form click');
     var form = $('.account-form#LoginForm');
     var email = form.find('input[name="customer[email]"]').val();
     var password = form.find('input[name="customer[password]"]').val();
-    console.log(email);
-    console.log(password);
+    //console.log(email);
+    //console.log(password);
     form.find('input[name="customer[email]"]').closest('.form-control').removeClass('error');
     form.find('input[name="customer[email]"]').siblings('.form-control-error-status').html('');
     form.find('input[name="customer[password]"]').closest('.form-control').removeClass('error');
@@ -11238,7 +11246,7 @@ $(document).ready(function () {
   });
   $('.password-recover-form .button[type="submit"]').on('click', function (event) {
     event.preventDefault();
-    console.log('password-recover-form click');
+    //console.log('password-recover-form click');
     var form = $('.password-recover-form');
     var password = form.find('input[name="customer[password]"]').val();
     var retypePassword = form.find('input[name="customer[password_confirmation]').val();
@@ -11268,7 +11276,7 @@ $(document).ready(function () {
   });
   $('.register-form .button[type="submit"]').on('click', function (event) {
     event.preventDefault();
-    console.log('register-form click');
+    //console.log('register-form click');
     var form = $('.register-form');
     var firstName = form.find('input[name="customer[first_name]"]').val();
     var lastName = form.find('input[name="customer[last_name]"]').val();
