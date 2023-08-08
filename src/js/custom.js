@@ -23,7 +23,9 @@ function login(email, password) {
       if (response.indexOf('Incorrect email or password.') !== -1 ) {
         //console.log('Incorrect email or password.');
         form.find('input[name="customer[email]"]').closest('.form-control').addClass('error');
-        form.find('input[name="customer[email]"]').siblings('.form-control-error-status').html('Incorrect email or password.');
+        form.find('input[name="customer[password]"]').closest('.form-control').addClass('error');
+        //form.find('input[name="customer[email]"]').siblings('.form-control-error-status').html('Incorrect email or password.');
+        $('.login-header').append('<span class="form-control-error-status">Incorrect email or password</span>')
       } else {
         //console.log('success!');
         window.location.href = "/account";
@@ -188,6 +190,7 @@ $( document ).ready(function() {
     var password =  form.find('input[name="customer[password]"]').val();
     //console.log(email);
     //console.log(password);
+    $('.login-header').find('.form-control-error-status').remove();
     form.find('input[name="customer[email]"]').closest('.form-control').removeClass('error');
     form.find('input[name="customer[email]"]').siblings('.form-control-error-status').html('');
     form.find('input[name="customer[password]"]').closest('.form-control').removeClass('error');
@@ -200,11 +203,11 @@ $( document ).ready(function() {
       }
     } else {
       form.find('input[name="customer[email]"]').closest('.form-control').addClass('error');
-      form.find('input[name="customer[email]"]').siblings('.form-control-error-status').html('Please enter a valid email');
+      form.find('input[name="customer[email]"]').siblings('.form-control-error-status').html('Email cannot be empty');
     }
     if ( password == '' ) {
       form.find('input[name="customer[password]"]').closest('.form-control').addClass('error');
-      form.find('input[name="customer[password]"]').siblings('.form-control-error-status').html('Please check your password.');
+      form.find('input[name="customer[password]"]').siblings('.form-control-error-status').html('Password cannot be empty');
     }
     if ( email.indexOf('@') !== -1 && email != '' && password != '' ) {
       login(email,password);

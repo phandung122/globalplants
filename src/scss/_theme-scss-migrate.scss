@@ -59,6 +59,15 @@
 										.login-content {
 											.login-header {
 												text-align: left;
+												margin-bottom: var(--spacing-8);
+												.form-control-error-status {
+													color: var(--input-text-error, #FF424F);
+													font-family: Poppins;
+													font-size: 12px;
+													font-style: normal;
+													font-weight: 400;
+													line-height: 150%; /* 18px */
+												}	
 											}
 											.login-content-title {
 												color: var(--gray-1, #2B2B2B);
@@ -79,7 +88,6 @@
 												font-style: normal;
 												font-weight: 400;
 												line-height: 120%; /* 19.2px */
-												margin-bottom: var(--spacing-8);
 											}
 											.account-form {
 												max-width: 320px;
