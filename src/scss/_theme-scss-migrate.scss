@@ -1726,13 +1726,119 @@
 	}
 }
 
-
 .shopify-section--account-banner {
 	.content-over-media {
 		h1 {
 			span {
 				font-weight: 600;
 			}
+		}
+	}
+}
+
+
+
+/* ARTICLE PAGE */
+.shopify-section--main-article {
+	.breadcrumbs {
+		.breadcrumbs__list {
+			.breadcrumbs__item {
+				svg {
+
+				}
+				.breadcrumbs__link {
+
+				}
+			}
+		}
+	}
+	.article {
+		.article-banner {
+			.article-banner__content {
+				h2 {
+
+				}
+				.article-tags {
+					.badge {
+
+					}
+				}
+				.article__meta {
+					.text-with-icon {
+						&.author {
+
+						}
+						time {
+
+						}
+					}
+
+				}
+			}
+			.article-banner__image {
+				img {
+
+				}
+			}
+		}
+		.article-content {
+			p {
+				img {
+
+				}
+				a {
+
+				}
+			}
+		}
+	}
+}
+.shopify-section--blog-social {
+	.article-content {
+		.share-buttons {
+			ul {
+				li {
+					a {
+						svg {
+
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.shopify-section--blog-navigation {
+	.section {
+		.article-navigation {
+			.article-navigation__title {
+
+			}
+			.article-prev-next {
+
+			}
+		}
+	}
+}
+
+/* BLOG PAGE */
+.blog-post-card {
+	.blog-post-card__figure {
+		img {
+
+		}
+	}
+	.blog-post-card__info {
+		.blog-post-card__meta {
+			.text-with-icon {
+
+			}
+		}
+		.h5 {
+
+		}
+		.blog-tags {
+			
 		}
 	}
 }
