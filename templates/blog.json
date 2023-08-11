@@ -16,7 +16,7 @@
         "banner_text_color": "#383838",
         "button_background": "",
         "button_text_color": "",
-        "articles_per_page": 9,
+        "articles_per_page": 21,
         "feature_first_article": true,
         "feature_article_background": "rgba(0,0,0,0)",
         "feature_article_text_color": "#ffffff",

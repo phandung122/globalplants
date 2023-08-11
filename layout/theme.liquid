@@ -113,5 +113,9 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
         <script src="{{ 'customers-account.js' | asset_url }}" defer="defer"></script>
       {% endif %}
     {%- endif -%}
+
+    {% if template contains 'blog' %}
+      <script type="module" src="{{ 'app-blog.js' | asset_url }}"></script>
+    {% endif %}
   </body>
 </html>
