@@ -58,7 +58,7 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     {{- 'main.css' | asset_url | stylesheet_tag: preload: true -}}
     {{- 'app.css' | asset_url | stylesheet_tag: preload: true -}}
 
-    {% if template contains 'blog' %}
+    {% if template contains 'blog' or template contains 'article' %}
       {{- 'app-blog.css' | asset_url | stylesheet_tag: preload: true -}}
     {% endif %}
   </head>
@@ -118,7 +118,7 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
       {% endif %}
     {%- endif -%}
 
-    {% if template contains 'blog' %}
+    {% if template contains 'blog' or template contains 'article' %}
       <script type="module" src="{{ 'app-blog.js' | asset_url }}"></script>
     {% endif %}
   </body>

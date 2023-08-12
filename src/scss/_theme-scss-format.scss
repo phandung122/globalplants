@@ -279,7 +279,7 @@
 										margin-bottom: var(--spacing-4);
 									}
 									.format-guide-item-text {
-										p {
+										p, ul, ol {
 											color: var(--gray-1, #2B2B2B);
 											font-family: Poppins;
 											font-size: 14px;
@@ -289,6 +289,10 @@
 											&:not(:last-child) {
 												margin-bottom: var(--spacing-4);
 											}
+										}
+										ul, ol {
+											list-style: initial;
+											padding-left: 16px;
 										}
 									}
 								}
