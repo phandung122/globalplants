@@ -56,7 +56,7 @@
           "settings": {
             "models_type": "high",
             "title": "CPU(Processor)",
-            "content": "<p>Intel\/AMD Processor with benchmark score of 2000 or higher here<\/p>",
+            "content": "<p>Intel\/AMD Processor with benchmark score of 2500 or higher here<\/p>",
             "image": "shopify:\/\/shop_images\/cpu_1.png"
           }
         },
@@ -93,7 +93,7 @@
             "models_type": "high",
             "image": "shopify:\/\/shop_images\/Sketchup_1.png",
             "title": "SketchUp (V-Ray + Fullgeometry SKP Mesh)",
-            "content": "<p>Only choose this format if quality is your concern and you want our models to look the best they can be. You must also have a high-end hardware requirement to in order to support the models properly. This format is best used for SketchUp.We include .skp proxy files for rendering engines V-Ray as well as Full Geometry .skp files with materials embedded into the models.We include a ‘README’ file when downloaded for instructions on how to import and use our models<\/p>"
+            "content": "<p>Only choose this format if quality is your concern and you want our models to look the best they can be. You must also have a high-end hardware requirement to in order to support the models properly. This format is best used for SketchUp.<\/p><p>We include <strong>.skp proxy<\/strong> files for rendering engines V-Ray as well as <strong>Full Geometry .skp<\/strong> files with materials embedded into the models.<\/p><p>We include a ‘README’ file when downloaded for instructions on how to import and use our models<\/p>"
           }
         },
         "d59f8f36-8adb-4371-8ae7-096cc2c116ae": {
@@ -138,7 +138,7 @@
             "models_type": "high",
             "image": "shopify:\/\/shop_images\/image_45_234bd6b4-6f85-45fe-bca1-a898bf0184bc.png",
             "title": "Twinmotion",
-            "content": "<p>A .tmi format specifically made for Epic Games' Twinmotion with native support for Ray Tracing. Users can import our .tmi files directly into User Library, found in:Windows: C:\\Users\\[username]\\Documents\\Twinmotion[version]\\UserLibraryMacOS: HD:Users:[username]:Documents:Twinmotion[version]:UserLibrary<\/p>"
+            "content": "<p>A .tmi format specifically made for Epic Games' Twinmotion with native support for Ray Tracing. Users can import our .tmi files directly into User Library, found in:<\/p><ul><li>Windows: C:\\Users\\[username]\\Documents\\Twinmotion[version]\\UserLibrary<\/li><li>MacOS: HD:Users:[username]:Documents:Twinmotion[version]:UserLibrary<\/li><\/ul>"
           }
         },
         "704501f0-8374-456a-a195-0575557a350c": {
