@@ -170,6 +170,7 @@
 			align-items: stretch;
 			gap: 32px;
 			position: relative;
+			margin-bottom: 10px;
 			@media screen and (max-width: 767px) {
 				border-radius: 0;
 				box-shadow: unset;
@@ -337,6 +338,9 @@
 		background: var(--gray-6, #F4F4F4);
 		.article-navigation {
 			gap: var(spacing-6);
+			max-width: 1800px;
+			margin-left: auto;
+			margin-right: auto;
 			.article-navigation__title {
 				color: var(--gray-1, #2B2B2B);
 				font-family: Montserrat;
@@ -597,6 +601,9 @@
 		.blog-posts__container {
 			padding: 0 var(--spacing-16) var(--spacing-20);
 			margin-bottom: 0;
+			max-width: 1800px;
+			margin-left: auto;
+			margin-right: auto;
 			@media screen and (max-width: 1200px) {
 				padding: 0 var(--spacing-8) var(--spacing-20);
 			}

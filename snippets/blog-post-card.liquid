@@ -104,7 +104,7 @@ Supported parameters
       {%- if show_category and article.tags.size > 0 -%}
         <div class="blog-tags v-stack gap-3">
         {% for tags in article.tags %}
-          <span class="badge badge--current badge--lg">{{ tags }}</span>
+          <a href="{{ blog.url }}/tagged/{{ tags | handle }}" class="badge badge--current badge--lg">{{ tags }}</a>
         {% endfor %}
         </div>
       {%- endif -%}
