@@ -30,11 +30,11 @@
     "product_on_sale_accent": "#56842c",
     "product_sold_out_badge_background": "#ffffff",
     "product_primary_badge_background": "#803cee",
-    "heading_font": "poppins_n5",
+    "heading_font": "poppins_n6",
     "heading_font_size": "large",
-    "heading_letter_spacing": -2,
+    "heading_letter_spacing": 0,
     "text_font": "poppins_n4",
-    "currency_code_enabled": false,
+    "currency_code_enabled": true,
     "show_page_transition": true,
     "heading_apparition": "fade",
     "image_swatch_3ds": "shopify:\/\/shop_images\/format-3DS-Max.png",
@@ -57,6 +57,9 @@
     "social_facebook": "https:\/\/www.facebook.com\/globeplants",
     "social_instagram": "https:\/\/www.instagram.com\/globe_plants\/",
     "social_youtube": "https:\/\/www.youtube.com\/channel\/UCnnpHDnUkjNOYQ1nYzfxrdA",
+    "favicon": "shopify:\/\/shop_images\/Favicon.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Logo_Black.png",
+    "checkout_logo_size": "small",
     "checkout_accent_color": "#56842c",
     "checkout_button_color": "#56842c",
     "social_messenger": "https:\/\/www.messenger.com\/t\/1069234473465695",
@@ -242,6 +245,21 @@
           "proxy_element": "",
           "mount_json_code": ""
         }
+      },
+      "6279071938380501511": {
+        "type": "shopify:\/\/apps\/powerful-contact-form-builder\/blocks\/app-embed\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+        "disabled": false,
+        "settings": {}
+      },
+      "319724205969189013": {
+        "type": "shopify:\/\/apps\/hulk-form-builder\/blocks\/app-embed\/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+        "disabled": false,
+        "settings": {}
+      },
+      "43034bfa-b90a-4a14-aaa8-527eac735f6f": {
+        "type": "shopify:\/\/apps\/dialogue-ai-personalization\/blocks\/dialogueai-embed\/43034bfa-b90a-4a14-aaa8-527eac735f6f",
+        "disabled": false,
+        "settings": {}
       }
     }
   },

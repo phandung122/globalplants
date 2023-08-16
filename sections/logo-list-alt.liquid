@@ -13,14 +13,42 @@
         --logo-list-grid: auto-flow 1fr / repeat(var(--logo-list-items-per-row), minmax(0, var(--logo-list-item-max-size)));
       }
     }
-  </style>
 
-  <div {% render 'section-properties' %}>
-    <div class="section-stack {% if section.settings.text_alignment == 'center' %}sm:justify-items-center{% endif %}">
+    .logo-list-alt__custom .logo-list--alt{
+      justify-content: space-between;
+    }
+    .section-stack.logo-list-alt__custom .logo-list--alt .logo-list__image {
+      filter: none;
+    }
+
+    .logo-list--alt__content-bottom {
+      padding: 4px 12px;
+      border-radius: 12px;
+      background: #F4F4F4;
+      font-size: 14px;
+      text-align: center;
+      width: fit-content;
+      margin: auto;
+    }
+
+    @media only screen and (min-width: 1600px){
+      #logo-list-alt__custom--{{section.id}}.section.section-full {
+        padding-inline-start: max(var(--calculated-section-spacing-inline),50% - var(--container-max-width) / 2);
+        padding-inline-end: max(var(--calculated-section-spacing-inline),50% - var(--container-max-width) / 2);
+      }
+    }
+
+  </style>
+  <div id="{{ section.settings.classname_logolist_alt }}--{{section.id}}" {% render 'section-properties' %}>
+    <div class="section-stack {{ section.settings.classname_logolist_alt }} {% if section.settings.text_alignment == 'center' %}sm:justify-items-center{% endif %}">
       {%- if section.settings.title != blank -%}
         <div class="prose {% if section.settings.text_alignment == 'center' %}text-center{% endif %}">
           <h2 class="h2">
-            {%- render 'styled-text', content: section.settings.title, text_color: section.settings.heading_color, gradient: section.settings.heading_gradient -%}
+            {%- render 'styled-text',
+              content: section.settings.title,
+              text_color: section.settings.heading_color,
+              gradient: section.settings.heading_gradient
+            -%}
           </h2>
           {{- section.settings.content -}}
         </div>
@@ -54,6 +82,12 @@
           {%- endif -%}
         {%- endfor -%}
       </reveal-items>
+
+      {%- if section.settings.content_bottom != blank -%}
+        <div class="logo-list--alt__content-bottom">
+          {{- section.settings.content_bottom -}}
+        </div>
+      {%- endif -%}
     </div>
   </div>
 {%- endif -%}
@@ -91,6 +125,11 @@
       "label": "Content"
     },
     {
+      "type": "richtext",
+      "id": "content_bottom",
+      "label": "Content bottom"
+    },
+    {
       "type": "select",
       "id": "text_alignment",
       "label": "Text alignment",
@@ -105,6 +144,15 @@
         }
       ],
       "default": "start"
+    },
+    {
+      "type": "header",
+      "content": "Class name of section"
+    },
+    {
+      "type": "text",
+      "id": "classname_logolist_alt",
+      "label": "Class Name"
     },
     {
       "type": "header",

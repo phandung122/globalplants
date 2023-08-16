@@ -384,8 +384,8 @@ var boostPFSFilterConfig = {
         break;
       } else if(data.tags[i].includes('High Poly')) {
         tagLabel = `<div class="product-tag tag-high">
-            <span>High Poly</span>
-          </div>`;
+                      <span>High Poly</span>
+                    </div>`;
         break;
       }
     }

@@ -23,14 +23,14 @@
             "selector_mode": "block",
             "color_mode": "color",
             "formats_guide_text": "Formats Guide",
-            "formats_guide_link": "shopify:\/\/pages\/format-guide",
+            "formats_guide_link": "shopify:\/\/pages\/formats-guide",
             "size_chart_page": ""
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_payment_button": true,
+            "show_payment_button": false,
             "atc_button_background": "#56842c",
             "atc_button_text_color": "#ffffff",
             "payment_button_background": "",
@@ -97,24 +97,24 @@
             "support_3ds-max_logo": "shopify:\/\/shop_images\/formats-3DsMax.png",
             "support_3ds-max_title_line1": "2018+",
             "support_3ds-max_media_line2": "shopify:\/\/shop_images\/formats-VRay.png",
-            "support_3ds-max_title_line2": "V-Ray text",
+            "support_3ds-max_title_line2": "V-Ray 5 or above",
             "support_3ds-max_media_line3": "shopify:\/\/shop_images\/formats-Corona.png",
-            "support_3ds-max_title_line3": "Corona text",
+            "support_3ds-max_title_line3": "Corona 6 or above",
             "support_3ds-max_title_line4": "",
             "support_3ds-max_title_line5": "",
             "support_3ds-max_title_line6": "",
-            "support_3ds-max_title_window": "Text for Window",
+            "support_3ds-max_title_window": "Windows 10 & 11 in 64-bit version",
             "support_3ds-max_title_mac": "",
             "support_growfx_logo": "shopify:\/\/shop_images\/formats-Growfx.png",
             "support_growfx_title_line1": "GFX 1.99 SP11+",
             "support_growfx_media_line2": "shopify:\/\/shop_images\/formats-VRay.png",
-            "support_growfx_title_line2": "V-Ray text",
+            "support_growfx_title_line2": "V-Ray 5 or above",
             "support_growfx_media_line3": "shopify:\/\/shop_images\/formats-Corona.png",
-            "support_growfx_title_line3": "Corona text..",
+            "support_growfx_title_line3": "Corona 6 or above",
             "support_growfx_title_line4": "",
             "support_growfx_title_line5": "",
             "support_growfx_title_line6": "",
-            "support_growfx_title_window": "Text for Window",
+            "support_growfx_title_window": "Windows 10 & 11 in 64-bit version",
             "support_growfx_title_mac": "",
             "support_fbx_logo": "shopify:\/\/shop_images\/formats-FBX.png",
             "support_fbx_title_line1": "",
@@ -122,34 +122,34 @@
             "support_fbx_title_line3": "",
             "support_fbx_title_line4": "",
             "support_fbx_media_line5": "shopify:\/\/shop_images\/formats-importable-Twinmotion.png",
-            "support_fbx_title_line5": "Twinmotion text ...",
+            "support_fbx_title_line5": "FBX can be imported into Twinmotion",
             "support_fbx_media_line6": "shopify:\/\/shop_images\/formats-importable-Lumion.png",
-            "support_fbx_title_line6": "Lumion text...",
-            "support_fbx_title_window": "Text for Window",
-            "support_fbx_title_mac": "Text for Mac",
+            "support_fbx_title_line6": "FBX can be imported into Lumion",
+            "support_fbx_title_window": "Windows 10 & 11 in 64-bit version",
+            "support_fbx_title_mac": "MacOS Monterey 12.x",
             "support_cinema-4d_logo": "shopify:\/\/shop_images\/formats-Cinema-4D.png",
             "support_cinema-4d_title_line1": "R19+",
             "support_cinema-4d_media_line2": "shopify:\/\/shop_images\/formats-VRay.png",
-            "support_cinema-4d_title_line2": "V-Ray for text",
+            "support_cinema-4d_title_line2": "V-Ray 3.7 or above",
             "support_cinema-4d_media_line3": "shopify:\/\/shop_images\/formats-Corona.png",
-            "support_cinema-4d_title_line3": "Corona for text..",
+            "support_cinema-4d_title_line3": "Corona 6 or above",
             "support_cinema-4d_title_line4": "",
             "support_cinema-4d_title_line5": "",
             "support_cinema-4d_title_line6": "",
-            "support_cinema-4d_title_window": "Text for Window",
-            "support_cinema-4d_title_mac": "Text for Mac",
+            "support_cinema-4d_title_window": "Windows 10 & 11 in 64-bit version",
+            "support_cinema-4d_title_mac": "MacOS Monterey 12.x",
             "support_sketchup_logo": "shopify:\/\/shop_images\/formats-Sketchup.png",
             "support_sketchup_title_line1": "2018+",
             "support_sketchup_media_line2": "shopify:\/\/shop_images\/formats-VRay.png",
-            "support_sketchup_title_line2": "V-Ray for text",
+            "support_sketchup_title_line2": "V-Ray 5 or above",
             "support_sketchup_title_line3": "",
             "support_sketchup_title_line4": "",
             "support_sketchup_media_line5": "shopify:\/\/shop_images\/formats-importable-Twinmotion.png",
-            "support_sketchup_title_line5": "Twinmotion for text",
+            "support_sketchup_title_line5": "Import via .SKP Fullgeometry files",
             "support_sketchup_media_line6": "shopify:\/\/shop_images\/formats-importable-Lumion.png",
-            "support_sketchup_title_line6": "Lumion Text",
-            "support_sketchup_title_window": "Text for Window",
-            "support_sketchup_title_mac": "Text for Mac",
+            "support_sketchup_title_line6": "Import via .SKP Fullgeometry files",
+            "support_sketchup_title_window": "Windows 10 & 11 in 64-bit version",
+            "support_sketchup_title_mac": "MacOS Monterey 12.x",
             "support_blender_logo": "shopify:\/\/shop_images\/formats-Blender.png",
             "support_blender_title_line1": "2.8+",
             "support_blender_title_line2": "",
@@ -157,8 +157,8 @@
             "support_blender_title_line4": "Cycles Renderer",
             "support_blender_title_line5": "",
             "support_blender_title_line6": "",
-            "support_blender_title_window": "Text for Window",
-            "support_blender_title_mac": "Text for Mac",
+            "support_blender_title_window": "Windows 10 & 11 in 64-bit version",
+            "support_blender_title_mac": "MacOS Monterey 12.x",
             "support_twinmotion_logo": "shopify:\/\/shop_images\/formats-TWINMOTION.png",
             "support_twinmotion_title_line1": "2022+",
             "support_twinmotion_title_line2": "",
@@ -166,18 +166,18 @@
             "support_twinmotion_title_line4": ".tmi for User Library",
             "support_twinmotion_title_line5": "",
             "support_twinmotion_title_line6": "",
-            "support_twinmotion_title_window": "Text for Window",
-            "support_twinmotion_title_mac": "Text for Mac",
+            "support_twinmotion_title_window": "Windows 10 & 11 in 64-bit version",
+            "support_twinmotion_title_mac": "MacOS Monterey 12.x",
             "support_rhino3d_logo": "shopify:\/\/shop_images\/formats-RHINOCEROS.png",
             "support_rhino3d_title_line1": "Rhino 7+",
             "support_rhino3d_media_line2": "shopify:\/\/shop_images\/formats-VRay.png",
-            "support_rhino3d_title_line2": "V-Ray for text",
+            "support_rhino3d_title_line2": "V-Ray 5 or above",
             "support_rhino3d_title_line3": "",
             "support_rhino3d_title_line4": "Rhino Renderer",
             "support_rhino3d_title_line5": "",
             "support_rhino3d_title_line6": "",
-            "support_rhino3d_title_window": "Text for Window",
-            "support_rhino3d_title_mac": "Text for Mac",
+            "support_rhino3d_title_window": "Windows 10 & 11 in 64-bit version",
+            "support_rhino3d_title_mac": "MacOS Monterey 12.x",
             "support_unreal-engine_logo": "shopify:\/\/shop_images\/formats-UNREAL.png",
             "support_unreal-engine_title_line1": "Unreal Engine 5+",
             "support_unreal-engine_title_line2": "",
@@ -185,7 +185,7 @@
             "support_unreal-engine_title_line4": "Lumen",
             "support_unreal-engine_title_line5": "",
             "support_unreal-engine_title_line6": "",
-            "support_unreal-engine_title_window": "Text for Window",
+            "support_unreal-engine_title_window": "Windows 10 & 11 in 64-bit version",
             "support_unreal-engine_title_mac": "",
             "support_enscape_logo": "shopify:\/\/shop_images\/formats-ENSCAPE-2.png",
             "support_enscape_title_line1": "3.4+",
@@ -196,10 +196,10 @@
             "support_enscape_media_line4": "shopify:\/\/shop_images\/formats-RHINOCEROS-3D.png",
             "support_enscape_title_line4": "Rhinoceros 3D",
             "support_enscape_media_line5": "shopify:\/\/shop_images\/formats-Archicad.png",
-            "support_enscape_title_line5": "Archicad Enscape",
+            "support_enscape_title_line5": "Enscape for ArchiCAD",
             "support_enscape_media_line6": "shopify:\/\/shop_images\/formats-Vectorworks.png",
-            "support_enscape_title_line6": "Vectorworks Enscape",
-            "support_enscape_title_window": "Text for Window",
+            "support_enscape_title_line6": "Enscape for Vectorworks",
+            "support_enscape_title_window": "Windows 10 & 11 in 64-bit version",
             "support_enscape_title_mac": "",
             "support_redshift_logo": "shopify:\/\/shop_images\/formats-Redshift.png",
             "support_redshift_title_line1": "RS 1.5+",
@@ -210,8 +210,8 @@
             "support_redshift_title_line4": "",
             "support_redshift_title_line5": "",
             "support_redshift_title_line6": "",
-            "support_redshift_title_window": "Title for Window",
-            "support_redshift_title_mac": "Title for Mac"
+            "support_redshift_title_window": "Windows 10 & 11 in 64-bit version",
+            "support_redshift_title_mac": ""
           }
         },
         "a64dc731-7431-4079-86da-6523132172b8": {
@@ -219,11 +219,11 @@
           "settings": {
             "text_general": "Please check the requirements below to find out if your PC can give you a good Globe Plants experience.",
             "text_recommended": "If your hardware configuration does not meet the requirements below, we have a LOW POLY format product available #here!",
-            "text_table_cpu": "Intel\/AMD processor scoring a single thread CPUMark of 2,200 or higher. (Such as the AMD Ryzen 5 1600X, Intel Core i7-4790S or better)",
+            "text_table_cpu": "Intel or AMD processor with a single-thread CPUMark rating of 3,000 or above is needed (such as AMD Ryzen 5 5500, Intel Core i7-11700T, or better)",
             "text_table_ram": "16 GB or more",
-            "text_table_graphics-card": "GPU scoring a G3DMark of 9,000 or higher with up-to-date drivers. (Such as the Nvidia GeForce RTX 3060, Quadro RTX 4000, AMD Radeon RX 5700, or better)",
-            "text_table_graphics-card-memory": "6 GB or more*",
-            "text_table_space": "Minimum 75 GB of free disk space in the drives where the Windows User Account and Documents folder are located in."
+            "text_table_graphics-card": "GPU that achieves a G3DMark score of at least 15,000, accompanied by the latest drivers, is required. Examples include the Nvidia GeForce RTX 3080, AMD Radeon RX 6800 XT or superior models",
+            "text_table_graphics-card-memory": "12 GB or more",
+            "text_table_space": "Minimum 50 GB of free disk space"
           }
         },
         "3d0644d0-f7a2-457f-9be7-eb9b5ef898ae": {
@@ -234,8 +234,8 @@
             "text_table_cpu": "Intel\/AMD processor scoring a single thread CPUMark of 2,200 or higher. (Such as the AMD Ryzen 5 1600X, Intel Core i7-4790S or better)",
             "text_table_ram": "16 GB or more",
             "text_table_graphics-card": "GPU scoring a G3DMark of 9,000 or higher with up-to-date drivers. (Such as the Nvidia GeForce RTX 3060, Quadro RTX 4000, AMD Radeon RX 5700, or better)",
-            "text_table_graphics-card-memory": "6 GB or more*",
-            "text_table_space": "Minimum 75 GB of free disk space in the drives where the Windows User Account and Documents folder are located in."
+            "text_table_graphics-card-memory": "6 GB or more",
+            "text_table_space": "Minimum 50 GB of free disk space."
           }
         },
         "b023a9d6-fbd4-466a-a9fa-00dfe291f655": {
@@ -253,36 +253,57 @@
         "4fafc046-f4a5-4db6-8712-b1c1ab3ab8a8": {
           "type": "high",
           "settings": {
-            "title": "How can I extract 7zip files with numbers in extensions?",
-            "content": "<p>Write content to help your customers to better understand your products or policies.<\/p>"
+            "title": "Should I choose High Poly or Low Poly Models?",
+            "content": "<p>High Poly and Low Poly models differ primarily in their polygon count and compatible software\/formats, which directly impacts the level of detail and computational requirements.<\/p><p><\/p><ul><li>High Poly models at Globe Plants contain a large number of polygons, resulting in a higher level of detail. This makes them ideal for high-resolution renders or close-up views where every leaf and branch detail can contribute to the overall realism. However, these models are more computationally intensive and may require more advanced hardware for smooth rendering<\/li><\/ul><p><\/p><ul><li>On the other hand, Low Poly models have a reduced polygon count, which makes them less detailed but also less demanding on your system. These models are optimized for efficiency\/performance and are ideal for creating larger scenes, backgrounds, real time rendering or when working on hardware with limited processing power. They allow for faster rendering times while still providing a visually pleasing representation of each 3D plant model.<\/li><\/ul>"
           }
         },
         "ed022ef4-9471-4886-b52c-b00da1a668d2": {
           "type": "high",
           "settings": {
-            "title": "What can I do if my purchased 3d models are corrupted?",
-            "content": "<p>Write content to help your customers to better understand your products or policies.<\/p>"
+            "title": "Can I get both High Poly and Low Poly with 1 purchase?",
+            "content": "<p>While we understand the appeal of having both high poly and low poly models, we currently do not offer both formats for just one price. The process of creating each type of model is distinct and requires separate workflows.<\/p><p>We encourage you to choose the model type that best suits your project needs and resources. If you need both high poly and low poly models, they would need to be purchased separately. We appreciate your understanding and are here to assist you in making the best choice for your project.<\/p>"
           }
         },
         "8598ef4c-58e6-473e-924c-3f51d6522251": {
           "type": "high",
           "settings": {
-            "title": "Do I have to register an account to make a purchase?",
-            "content": "<p>Write content to help your customers to better understand your products or policies.<\/p>"
+            "title": "How many formats can I purchase per order? Can I download a different format?",
+            "content": "<p>At Globe Plants, we dedicate significant time and effort to optimize each format individually for its intended software, which is why we offer each format separately per order. We steer clear of quick auto-convert tools to ensure the highest quality. For any secondary format of the same model quality - High Poly or Low Poly, we offer a 50% discount. Please contact us for more details.<\/p>"
           }
         },
         "02e38b31-cb4a-4fbd-a34e-5f2da8baf4d1": {
           "type": "high",
           "settings": {
-            "title": "How can I pay for my order?",
-            "content": "<p>Write content to help your customers to better understand your products or policies.<\/p>"
+            "title": "I use Twinmotion, should I choose FBX or Twinmotion format?",
+            "content": "<p>It depends on your needs. In theory, you can self-import FBX or SketchUp files into Twinmotion. However, our Twinmotion files are further optimized in terms of materials, such as roughness, bump, and two-sided materials as well as being much easier to import via User Library.<\/p>"
           }
         },
         "eea267ac-b204-45f7-bb29-a06a97c7ae12": {
           "type": "high",
           "settings": {
-            "title": "How can I receive purchased products?",
-            "content": "<p>Write content to help your customers to better understand your products or policies.<\/p>"
+            "title": "I'm still confused about which format to choose. Can you provide further guidance?",
+            "content": "<p>Absolutely, we wrote a comprehensive format guide for you <a href=\"https:\/\/globeplants.com\/pages\/formats-guide\" target=\"_blank\" title=\"Globe Plants Formats Guide\">here<\/a> with most of your questions answered.<\/p>"
+          }
+        },
+        "79c2c2e5-6581-47f6-8c33-cc83a33d7445": {
+          "type": "low",
+          "settings": {
+            "title": "Can I get both High Poly and Low Poly with 1 purchase?",
+            "content": "<p>While we understand the appeal of having both high poly and low poly models, we currently do not offer both formats for just one price. The process of creating each type of model is distinct and requires separate workflows.<\/p><p>We encourage you to choose the model type that best suits your project needs and resources. If you need both high poly and low poly models, they would need to be purchased separately. We appreciate your understanding and are here to assist you in making the best choice for your project.<\/p>"
+          }
+        },
+        "8c50e859-c51b-4cdb-8cd9-6d08a7c2b724": {
+          "type": "low",
+          "settings": {
+            "title": "I use Enscape, should I select the SketchUp or Enscape format?",
+            "content": "<p>For best use in Enscape, you must select our Enscape format as you can import the models into Enscape Asset Library. Our SketchUp format only support V-Ray for SketchUp.<\/p>"
+          }
+        },
+        "b050a177-10f5-4711-96a7-497fd8a4ddeb": {
+          "type": "low",
+          "settings": {
+            "title": "I'm still confused about which format to choose. Can you provide further guidance?",
+            "content": "<p>Absolutely, we wrote a comprehensive format guide for you <a href=\"https:\/\/globeplants.com\/pages\/formats-guide\" target=\"_blank\" title=\"Globe Plants Formats Guide\">here<\/a> with most of your questions answered.<\/p>"
           }
         }
       },
@@ -296,7 +317,10 @@
         "ed022ef4-9471-4886-b52c-b00da1a668d2",
         "8598ef4c-58e6-473e-924c-3f51d6522251",
         "02e38b31-cb4a-4fbd-a34e-5f2da8baf4d1",
-        "eea267ac-b204-45f7-bb29-a06a97c7ae12"
+        "eea267ac-b204-45f7-bb29-a06a97c7ae12",
+        "79c2c2e5-6581-47f6-8c33-cc83a33d7445",
+        "8c50e859-c51b-4cdb-8cd9-6d08a7c2b724",
+        "b050a177-10f5-4711-96a7-497fd8a4ddeb"
       ],
       "settings": {
         "full_width": false,

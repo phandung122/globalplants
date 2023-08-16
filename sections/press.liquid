@@ -29,8 +29,14 @@
         height: 100%;
         max-width: 100%;
         object-fit: cover;
+        width: 100%;
       }
     {%- endif -%}
+    @media (max-width: 500px) {
+      #shopify-section-{{ section.id }} > .section > .section-stack .prose h2 {
+        font-size: 1.5rem;
+      }
+    }
   </style>
 
   {%- comment -%}
@@ -38,9 +44,8 @@
   LIQUID
   ------------------------------------------------------------------------------------------------------------------------
   {%- endcomment -%}
-
   <div {% render 'section-properties' %}>
-    {%- if section.settings.background_image != blank -%}
+      {%- if section.settings.background_image != blank -%}
       {%- capture sizes -%}{% if section.settings.full_width %}100vw{% else %}(max-width: 740px) calc(100vw - 40px), (max-width: 999px) calc(100vw - 64px), min({{ settings.page_width }}px, 100vw - 96px){% endif %}{%- endcapture -%}
 
       {{- section.settings.background_image | image_url: width: section.settings.background_image.width | image_tag: loading: 'lazy', sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
@@ -91,7 +96,13 @@
                   {%- endif -%}
 
                   {%- if block.settings.author != blank -%}
-                    <p class="press__author semibold">{{ block.settings.author }}</p>
+                    {% assign author = block.settings.author | split: '-' %}
+                    <div class="press__info">
+                      <p class="press__author block">{{ author | first }}</p>
+                      {% if author.size > 1 %}
+                        <p class="press__author semibold block">{{ author | last }}</p>
+                      {% endif %}
+                    </div>
                   {%- endif -%}
                 </div>
               {%- endif -%}
@@ -167,7 +178,7 @@
       "default": "medium"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id": "title",
       "label": "Heading"
     },

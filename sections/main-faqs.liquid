@@ -1,0 +1,135 @@
+<style>
+  .main-faqs .main-faqs-box {
+    max-width: 644px;
+    padding: 24px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 24px
+  }
+  .main-faqs .main-product-tabs__title {
+    font-size: 1.5rem;
+    line-height: 160%;
+    margin-bottom: 24px;
+  }
+  .main-faqs .main-product-tabs__context .accordion__content {
+    padding-left: 16px;
+  }
+
+  @media (min-width: 700px) {
+    .main-faqs {
+      background-image: url("{{ section.settings.bg_main_faqs | img_url: 'master' }}");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 603px;
+      padding: 48px 0;
+    }
+    .main-faqs .main-product-tabs__context .accordion__toggle {
+      padding: 16px;
+    }
+    .main-faqs .main-product-tabs__title {
+      padding: 0 24px;
+    }
+    .main-faqs .main-product-tabs__context .accordion__content {
+      padding-left: 32px;
+    }
+  }
+
+  @media (min-width: 644px) {
+    .main-faqs .main-faqs-box {
+      padding: 24px 0;
+    }
+  }
+</style>
+<div class="main-faqs">
+  <div class="main-faqs-box main-product-tabs__box main-product-tabs__box--bg">
+    <h2 class="main-product-tabs__title">{{ section.settings.title_faqs }}</h2>
+    <div class="main-product-tabs__context">
+      {%- for block in section.blocks -%}
+        {%- capture accordion_content -%}
+          <div class="prose">{{ block.settings.answer_faqs }}</div>
+        {%- endcapture -%}
+
+        {%- render 'accordion', title: block.settings.question_faqs, content: accordion_content, block: block -%}
+      {%- endfor -%}
+      <div class="chat-here v-stack gap-2 justify-items-center">
+        {%- render 'icon' with 'question-circle' -%}
+        <h3>{{ section.settings.title_faqs_note }}</h3>
+        <p>{{ section.settings.content_faqs_note }} <a class="link" href="{{ section.settings.link_faqs | default: '#' }}" onclick="Chatra('openChat', true); return false;">{{ 'here' }}</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Main FAQs",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg_main_faqs",
+        "label": "Background"
+      },
+      {
+        "type": "textarea",
+        "id": "title_faqs",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "title_faqs_note",
+        "label": "Title FAQs note",
+        "default": "Still have question?"
+      },
+      {
+        "type": "text",
+        "id": "content_faqs_note",
+        "label": "Content FAQs note",
+        "default": "Chat with us"
+      },
+      {
+        "type": "url",
+        "id": "link_faqs",
+        "label": "Link FAQs note"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "faqs",
+        "name": "faqs",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question_faqs",
+            "label": "Question FAQs",
+            "default": "Lorem?"
+          },
+          {
+            "type": "richtext",
+            "id": "answer_faqs",
+            "label": "Answer FAQs",
+            "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Main FAQs",
+        "blocks": [
+          {
+            "type": "faqs"
+          },
+          {
+            "type": "faqs"
+          },
+          {
+            "type": "faqs"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,681 @@
+<style>
+  .section-multi-column-out-service {
+    background-image: url('https://cdn.shopify.com/s/files/1/0150/1583/7782/files/plan_bg.png?v=1690774267');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom center;
+    position: relative;
+    bottom: -2px;
+  }
+
+  .out-service__plans {
+    display: grid;
+    grid-gap: 21px;
+    margin-top: 10px;
+  }
+  .out-service__plan {
+    width: 100%;
+    display: grid;
+    border-radius: 16px;
+    padding: 24px 24px 16px;
+    grid-gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    z-index: 2;
+  }
+
+  .out-service__plan--card {
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+  .out-service__plan--shape {
+    width: 100%;
+    height: 24px;
+    position: absolute;
+    background: #ccc;
+    border-radius: 16px 16px 0px 0px;
+    top: -4px;
+    left: 0;
+    right: 0;
+  }
+  .out-service__plan--card:nth-child(2) {
+    bottom: 0;
+  }
+
+  .out-service__plan--card:nth-child(2) .out-service__plan--shape {
+    background: #608239;
+  }
+
+  .out-service__plan--card:nth-child(2) .out-service__plan {
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  .out-service__plan-header {
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding-bottom: 16px;
+  }
+  .out-service__plan--title {
+    color: #6b6b6b;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .out-service__plan--card:nth-child(2) .out-service__plan--title {
+    color: #608239;
+  }
+  .out-service__plan--price {
+    margin-bottom: 4px;
+    color: #2b2b2b;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 48px */
+  }
+  .out-service__plan--subtext_price {
+    color: #9c9c9c;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 19.2px */
+  }
+
+  .out-service__plan-body {
+    display: grid;
+    grid-gap: 16px;
+  }
+
+  .out-service__plan-body .plan-content {
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 140%;
+  }
+
+  .out-service__plan-body .plan-content__heading {
+    color: #608239;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+
+  .out-service__plan-body .plan-content__heading svg {
+    margin-right: 12px;
+  }
+
+  .out-service__plan-body .plan-content__subheading {
+    color: #2b2b2b;
+    padding-left: 32px;
+  }
+
+  .out-service__plan-footer {
+    width: 100%;
+  }
+  .out-service__plan-footer .btn {
+    width: 100%;
+    border: 1px solid #222;
+    font-size: 1rem;
+    color: #222;
+    background: transparent;
+    cursor: pointer;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .out-service__plan-footer .btn:hover {
+    background: #383838;
+    color: #fff;
+  }
+
+  .out-service__plan--card:nth-child(2) .out-service__plan-footer .btn {
+    border: 1px solid #608239;
+    background: #608239;
+    color: #ffffff;
+  }
+
+  .out-service__plan--card:nth-child(2) .out-service__plan-footer .btn:hover {
+    border: 1px solid rgba(96, 130, 57, 0.8);
+    background: rgba(96, 130, 57, 0.8);
+  }
+
+  .out-service__plan-btn_collapse {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+  }
+
+  .out-service__plan--card:nth-child(2) .out-service__plan-footer .btn .out-service__plan-btn_collapse {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+  }
+  @media (min-width: 992px) {
+    .out-service__plan-header {
+      padding-bottom: 24px;
+    }
+    .out-service__plan-body--content {
+      min-height: 88px;
+    }
+    .out-service__plan-body--content:first-child {
+      min-height: 110px;
+    }
+    .out-service__plan--title {
+      font-size: 1.5rem;
+    }
+    .out-service__plan--price {
+      font-size: 2.5rem;
+    }
+    .out-service__plan-body {
+      gap: 34px;
+      padding-bottom: 78px;
+    }
+
+    .out-service__plans {
+      grid-template-columns: repeat(3, auto);
+      margin-top: 60px;
+    }
+    .out-service__plan {
+      grid-gap: 24px;
+      padding: 40px;
+    }
+    .out-service__plan--card:nth-child(2) {
+      bottom: 40px;
+    }
+    .out-service__plan-footer {
+      width: 100%;
+      position: absolute;
+      bottom: 40px;
+      padding: 0 24px;
+      left: 0;
+      right: 0;
+    }
+    .out-service__plan-footer .btn {
+      height: 54px;
+    }
+    .out-service__plan-btn_collapse {
+      display: none;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1350px) {
+    .out-service__plan {
+      padding: 30px;
+    }
+    .out-service__plan-footer {
+      padding: 0 30px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .out-service__plan-body,
+    .out-service__plan-footer {
+      display: none;
+    }
+    .out-service__plan-body.active {
+      display: grid;
+    }
+    .out-service__plan-footer.active {
+      display: block;
+    }
+
+    .out-service__plan--card:nth-child(1) {
+      order: 2;
+    }
+    .out-service__plan--card:nth-child(2) {
+      order: 1;
+    }
+    .out-service__plan--card:nth-child(3) {
+      order: 3;
+    }
+    .out-service__plan-btn_collapse {
+      transition: transform 0.3s ease;
+    }
+    .out-service__plan-btn_collapse.active svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  /* out service features */
+  .out-service__features {
+    margin-top: 40px;
+    padding: 40px;
+  }
+  .out-service__features .out-service__features--title {
+    color: #6b6b6b;
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 28.8px */
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .out-service__feature--box_content {
+    margin-top: 16px;
+    display: grid;
+    row-gap: 12px;
+  }
+
+  .out-service__feature {
+    color: #2b2b2b;
+  }
+
+  .out-service__feature--heading {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+  }
+  .out-service__feature--heading svg {
+    margin-right: 12px;
+  }
+
+  .out-service__feature--description {
+    margin-left: 32px;
+  }
+
+  .hidden-mob {
+    display: none;
+  }
+
+  .btn-out-service--feauture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: #222;
+    line-height: 140%;
+    margin-top: 16px;
+    gap: 8px;
+  }
+
+  @media (min-width: 992px) {
+    .out-service__features {
+      margin-top: 109px;
+      padding-bottom: 100px;
+    }
+    .out-service__features .out-service__features--title {
+      font-size: 1.5rem;
+    }
+    .out-service__feature--box_content {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 24px;
+    }
+    .hidden-mob {
+      display: block;
+    }
+    .btn-out-service--feauture {
+      display: none;
+    }
+  }
+
+  /*out-service__popup*/
+  .out-service__popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1002;
+    max-width: 644px;
+    margin: auto;
+    max-height: fit-content;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    padding: 15px;
+  }
+
+  .out-service__popup.active {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+
+  .bg-overlay-popup {
+    background: #2b2b2b;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .bg-overlay-popup.active {
+    opacity: 0.8;
+    visibility: visible;
+  }
+  .btn-close-popup {
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    cursor: pointer;
+  }
+  .form-plan {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .btn-close-popup {
+      top: -35px;
+      right: 0;
+    }
+    .out-service__popup {
+      max-height: 600px;
+    }
+  }
+</style>
+
+<div style="background-color: {{ section.settings.background_section }}">
+  <div
+    class="section section-multi-column-out-service"
+    style="background-color: {{ section.settings.background_section }}"
+  >
+    <div class="out-service__plans">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {%- when 'plan' -%}
+            <div class="out-service__plan--card">
+              <div class="out-service__plan--shape"></div>
+              <div class="out-service__plan">
+                <div class="out-service__plan-header">
+                  <div class="out-service__plan--title">{{ block.settings.title }}</div>
+                  <div class="out-service__plan--price">{{ block.settings.price }}</div>
+                  <div class="out-service__plan--subtext_price">{{ block.settings.subtext_price }}</div>
+                </div>
+                <div class="out-service__plan-body {% if forloop.index == 2 %}active{% endif %}">
+                  {% assign plan_content = block.settings.plan_content | strip | split: '<h5>' %}
+                  {% for plan_content_split in plan_content %}
+                    {% assign plan_content_split_close = plan_content_split | strip | split: '</h5>' %}
+
+                    {% if plan_content_split_close.first != blank %}
+                      <div class="out-service__plan-body--content">
+                        <div class="plan-conten plan-content__heading">
+                          {% render 'checked-icon' %}
+                          {{ plan_content_split_close.first }}
+                        </div>
+                        {% if plan_content_split_close.size == 2 %}
+                          <div class="plan-conten plan-content__subheading">{{ plan_content_split_close.last }}</div>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+                <div class="out-service__plan-footer {% if forloop.index == 2 %}active{% endif %}">
+                  <div class="btn" data-plan="{{ block.settings.form_name }}">{{ block.settings.button }}</div>
+                </div>
+
+                <div class="out-service__plan-btn_collapse {% if forloop.index == 2 %}active{% endif %}">
+                  {% render 'chevron-down-icon' %}
+                </div>
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+    <div class="out-service__features">
+      {% if section.settings.title_block_feature != blank %}
+        <div class="out-service__features--title">{{ section.settings.title_block_feature }}</div>
+      {% endif %}
+      <div class="out-service__feature--box_content">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {%- when 'feature' -%}
+              {% if block.settings.feature_title != blank %}
+                <div class="out-service__feature">
+                  <div class="out-service__feature--heading">
+                    {% render 'checked-icon' %}
+                    {{ block.settings.feature_title }}
+                  </div>
+                  {% if block.settings.feature_description != blank %}
+                    <div class="out-service__feature--description hidden-mob">
+                      {{ block.settings.feature_description }}
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+          {% endcase %}
+        {% endfor %}
+        <div class="btn-out-service--feauture">View all {% render 'chevron-down-icon' %}</div>
+      </div>
+    </div>
+
+    <div id="out-service__popup" class="out-service__popup">
+      <div id="btn-close-popup" class="btn-close-popup">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="Live area">
+          <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M18.5303 2.53033C18.8232 2.23744 18.8232 1.76256 18.5303 1.46967C18.2374 1.17678 17.7626 1.17678 17.4697 1.46967L10 8.93934L2.53033 1.46967C2.23744 1.17678 1.76256 1.17678 1.46967 1.46967C1.17678 1.76256 1.17678 2.23744 1.46967 2.53033L8.93934 10L1.46967 17.4697C1.17678 17.7626 1.17678 18.2374 1.46967 18.5303C1.76256 18.8232 2.23744 18.8232 2.53033 18.5303L10 11.0607L17.4697 18.5303C17.7626 18.8232 18.2374 18.8232 18.5303 18.5303C18.8232 18.2374 18.8232 17.7626 18.5303 17.4697L11.0607 10L18.5303 2.53033Z" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      {% comment %} Standard Commercial {% endcomment %}
+      <div
+        style="margin:0 auto;"
+        class="pxFormGenerator form-plan"
+        data-plan="Standard Commercial"
+        id="i3wftBpPgdtS7koswvckpw"
+      ></div>
+
+      {% comment %} Exclusive Commercial {% endcomment %}
+      <div
+        style="margin:0 auto;"
+        class="pxFormGenerator form-plan"
+        data-plan="Exclusive Commercial"
+        id="C9eIo_IS_HN-DP3MB-27vw"
+      ></div>
+
+      {% comment %} Edit existing plants {% endcomment %}
+      <div
+        style="margin:0 auto;"
+        class="pxFormGenerator form-plan"
+        data-plan="Edit Existing Plants"
+        id="hmhv0Wytnl5FDqoZIy9O3Q"
+      ></div>
+    </div>
+    <div class="bg-overlay-popup"></div>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const btnColapse = document.querySelectorAll('.out-service__plan-btn_collapse');
+    const plansBody = document.querySelectorAll('.out-service__plan-body');
+    const plansFooter = document.querySelectorAll('.out-service__plan-footer');
+    const desFeatureEl = document.querySelectorAll('.out-service__feature--description');
+    const btnFeature = document.querySelector('.btn-out-service--feauture');
+    const btnPlanActivePopup = document.querySelectorAll('.out-service__plan-footer');
+    const outServicePopupEl = document.querySelector('.out-service__popup');
+    const bgOverlayEl = document.querySelector('.bg-overlay-popup');
+    const formPlan = document.querySelectorAll('.form-plan');
+
+    btnColapse.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        plansBody.forEach(function (planBody) {
+          if (planBody !== btn.closest('.out-service__plan').querySelector('.out-service__plan-body')) {
+            planBody.classList.remove('active');
+          }
+        });
+
+        plansFooter.forEach(function (planFooter) {
+          if (planFooter !== btn.closest('.out-service__plan').querySelector('.out-service__plan-footer')) {
+            planFooter.classList.remove('active');
+          }
+        });
+
+        btnColapse.forEach(function (otherButton) {
+          if (otherButton !== btn) {
+            otherButton.classList.remove('active');
+          }
+        });
+
+        const planBody = btn.closest('.out-service__plan').querySelector('.out-service__plan-body');
+        const planFooter = btn.closest('.out-service__plan').querySelector('.out-service__plan-footer');
+
+        btn.classList.toggle('active');
+        planBody.classList.toggle('active');
+        planFooter.classList.toggle('active');
+      });
+    });
+
+    btnFeature.addEventListener('click', function () {
+      desFeatureEl.forEach(function (item) {
+        item.classList.toggle('hidden-mob');
+      });
+    });
+
+    btnPlanActivePopup.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const dataPlan = btn.querySelector('.btn').dataset.plan;
+
+        outServicePopupEl.classList.add('active');
+        bgOverlayEl.classList.add('active');
+
+        formPlan.forEach(function (form) {
+          const typeForm = form.dataset.plan;
+          if (typeForm === dataPlan) {
+            form.style.display = 'block';
+          } else {
+            form.style.display = 'none';
+          }
+        });
+      });
+    });
+    document.getElementById('btn-close-popup').addEventListener('click', function () {
+      outServicePopupEl.classList.remove('active');
+      bgOverlayEl.classList.remove('active');
+    });
+  });
+</script>
+<style>
+  .pxFormGenerator {
+    width: 100%;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Multi column our service",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_section",
+      "label": "Background color",
+      "default": "#F4F4F4"
+    },
+    {
+      "type": "header",
+      "content": "Feature"
+    },
+    {
+      "type": "text",
+      "id": "title_block_feature",
+      "label": "Title block feature",
+      "default": "All features"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "plan",
+      "name": "Plan",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Header"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Title"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "$15 - $30"
+        },
+        {
+          "type": "text",
+          "id": "subtext_price",
+          "label": "Subtext price",
+          "default": "per unique species"
+        },
+        {
+          "type": "header",
+          "content": "Body"
+        },
+        {
+          "type": "textarea",
+          "id": "plan_content",
+          "label": "Plan Content",
+          "default": "<h5>Lorem Ipsum</h5><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
+        },
+        {
+          "type": "text",
+          "id": "button",
+          "label": "Text button",
+          "default": "Get Started"
+        },
+        {
+          "type": "text",
+          "id": "form_name",
+          "label": "Form name",
+          "info": "Don't change",
+          "default": "Form Name"
+        }
+      ]
+    },
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature_title",
+          "label": "Title",
+          "default": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "feature_description",
+          "label": "Description",
+          "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multi column our service",
+      "blocks": [
+        {
+          "type": "plan"
+        },
+        {
+          "type": "plan"
+        },
+        {
+          "type": "plan"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

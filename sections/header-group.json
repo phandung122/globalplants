@@ -17,7 +17,7 @@
         "message"
       ],
       "settings": {
-        "enable_sticky": false,
+        "enable_sticky": true,
         "enable_socials": true,
         "text_size": "text-xs",
         "navigation_mode": "arrows",
@@ -52,7 +52,7 @@
         "bc825dcc-cb7e-465c-918f-f03d02c170bb"
       ],
       "settings": {
-        "enable_sticky": false,
+        "enable_sticky": true,
         "hide_on_scroll": false,
         "logo": "shopify:\/\/shop_images\/gp-logo.png",
         "logo_max_width": 210,

@@ -166,12 +166,10 @@ LIQUID
     <div class="section">
       <div class="section-stack">
         <h2 class="h2 montserrat">{{ section.settings.search_form_title }}</h2>
-        <form class="main-search-form" action="{{ routes.search_url }}" method="get" role="search">
-          <input type="hidden" name="type" value="product">
-
+        <form class="main-search-form" action="#" method="post">
           <div class="search-input">
-            <button type="submit">{%- render 'icon' with 'search' -%}</button>
-            <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ section.settings.search_form_placeholder }}" autocomplete="off" autocorrect="off" spellcheck="false" aria-label="{{ 'search.general.title' | t | escape }}">
+            <button type="button">{%- render 'icon' with 'search' -%}</button>
+            <input type="text" value="{{ search.terms | escape }}" placeholder="{{ section.settings.search_form_placeholder }}" autocomplete="off" autocorrect="off" spellcheck="false" aria-label="{{ 'search.general.title' | t | escape }}">
           </div>
         </form>
       </div>

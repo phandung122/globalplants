@@ -1,0 +1,157 @@
+.form-image{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-image img{
+  max-width: 100%;
+  object-fit: cover;
+  height: 440px;
+  width: 100vw;
+}
+.text-form-image{
+  margin: -19.5rem 19.5rem 0;
+}
+
+.text-form-image_title{
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  color: #FFF;
+  text-align: center;
+  line-height: 120%;
+}
+
+.text-form-image_title span {
+  font-weight: 400;
+}
+
+.c-form-box .section-stack{
+  --section-stack-spacing-block: var(--spacing-4);
+  padding: 2rem 4.5rem 12rem;
+  background-color: rgb(var(--background-primary));
+  border-radius: 1.5rem;
+  margin: 0 100px;
+}
+
+.c-form-box .section-stack .h2-custom-title{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2B2B2B
+}
+/* 
+.section-stack{
+  margin : 0 130px;
+} */
+
+.h2-custom-title span{
+  color: #608239
+}
+
+.pxFormGenerator{
+  max-width: 100%;
+  width: calc( 100% - 8rem );
+  margin: 0 auto;
+}
+
+#PwscR1y24e0vuNdBXIJ4Kw{
+  display: none
+}
+
+#gcTXDkfpSSyxFzdRl0oLBw{
+  margin-top: -19rem;
+}
+
+#test{
+  display: none
+}
+
+@media screen and (min-width: 4440px) {
+  #gcTXDkfpSSyxFzdRl0oLBw{
+    margin-top: -19rem;
+  }
+}
+
+
+@media screen and (min-width: 2000px) {
+  #gcTXDkfpSSyxFzdRl0oLBw{
+    margin-top: -19rem;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .text-form-image {
+    margin: -18rem 11.5rem 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text-form-image_title {
+    margin-top: -40px;
+  }
+}
+@media (min-width: 992px) {
+}
+
+@media screen and (max-width: 991px){
+
+  .c-form-box .section-stack{
+    margin: 0 60px
+  }
+
+  .text-form-image{
+      margin: -18rem 5rem 0;
+  }
+  .text-form-image_title{
+      font-size: 2rem
+  }
+  #gcTXDkfpSSyxFzdRl0oLBw{
+      margin-top: -10rem;
+  }
+  .c-form-box .section-stack{
+    padding-bottom: 5rem
+  }
+
+}
+
+@media screen and (max-width: 698px) {
+  .pxFormGenerator{
+      width: 100%;
+  }
+  #gcTXDkfpSSyxFzdRl0oLBw{
+      display: none;
+  }
+  #PwscR1y24e0vuNdBXIJ4Kw{
+      display: block;
+  }
+
+  .text-form-image{
+      margin-bottom: 40px;
+      margin: -24rem 16px 40px;
+  }
+  .text-form-image_title{
+      font-size: 24px;
+      text-align: left;
+  }
+  .c-form-box{
+      width: 100%;
+  }
+
+  .c-form-box .section-stack{
+      padding: 0;
+      background: none;
+      box-shadow: none;
+      margin: 0
+  }
+
+  .section-stack{
+    margin: 0
+  }
+  .form-image .section{
+    padding: 0
+  }
+
+  .h2-custom-title{
+      display:none;
+  }
+}

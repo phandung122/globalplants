@@ -1,8 +1,8 @@
 {%- assign boost_settings = shop.metafields.bc-sf-filter.settings -%}
 {%- if boost_settings contains 'suggestionNoResult":' -%}
-	{%- assign boost_pfs_suggestion_no_result = boost_settings | split: 'suggestionNoResult":' | last | split: '}}' | first | strip -%}
+  {%- assign boost_pfs_suggestion_no_result = boost_settings | split: 'suggestionNoResult":' | last | split: '}}' | first | strip -%}
 {%- else -%}
-	{%- assign boost_pfs_suggestion_no_result = '' -%}
+  {%- assign boost_pfs_suggestion_no_result = '' -%}
 {%- endif -%}
 
 {%- assign boost_pfs_product_list = boost_pfs_suggestion_no_result | split: 'data":[' | last | split: ']' | first | replace: '"', '' | split: ',' -%}
@@ -12,21 +12,21 @@
 {%- assign availableProducts = '' -%}
 {%- for prodHandle in boost_pfs_product_list -%}
   {%- unless all_products[prodHandle] == blank  -%}
-  	{%- assign availableProducts = availableProducts | append: prodHandle | append: ' ' -%}
+    {%- assign availableProducts = availableProducts | append: prodHandle | append: ' ' -%}
   {%- endunless -%}
 {%- endfor -%}
 
 {%- assign availableProducts = availableProducts | split: ' ' -%}
 
-<script type="application/json" id="boost-pfs-instant-search-products-not-found-json">
-	{
-		"search_terms": {{ boost_pfs_suggest_list | json }},
-		"products": [
-		{%- for prodHandle in availableProducts -%}
-		{%- unless all_products[prodHandle] == blank  -%}
-		{{- all_products[prodHandle] | json -}}{%- if forloop.last == true -%}{%- else -%},{%- endif -%}
-		{%- endunless -%}
-		{%- endfor -%}
-		]
-	}
+<script type="application/json" id="c">
+  {
+    "search_terms": {{ boost_pfs_suggest_list | json }},
+    "products": [
+    {%- for prodHandle in availableProducts -%}
+    {%- unless all_products[prodHandle] == blank  -%}
+    {{- all_products[prodHandle] | json -}}{%- if forloop.last == true -%}{%- else -%},{%- endif -%}
+    {%- endunless -%}
+    {%- endfor -%}
+    ]
+  }
 </script>

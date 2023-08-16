@@ -263,7 +263,7 @@ the underlying logic of the menu.
             </div>
           {%- endif -%}
 
-          <a href="{{ routes.search_url }}" class="tap-area" aria-controls="search-drawer">
+          <a href="{{ routes.search_url }}" class="tap-area" aria-controls="search-popover" aria-expanded="false">
             <span class="sr-only">{{ 'header.general.open_search' | t }}</span>
             {%- render 'icon' with 'search' -%}
           </a>
@@ -288,6 +288,28 @@ the underlying logic of the menu.
         </div>
       </div>
     </div>
+
+    {%- comment -%}
+      SEARCH BAR
+    {%- endcomment -%}
+    <x-popover id="search-popover" class="search-popover popover" initial-focus="[type='search']" anchor-horizontal="end" anchor-vertical="end">
+      <div class="section">
+        <div class="search-popover__form">
+          <p class="montserrat search-popover__title">{{ section.settings.search_bar_title }}</p>
+          <form action="{{ routes.search_url }}" method="get" class="main-search-form" role="search">
+            <div class="search-input">
+              <button type="submit">{%- render 'icon' with 'search' -%}</button>
+              <input type="search" name="q" placeholder="{{ 'search.general.search_placeholder' | t }}" aria-label="{{ 'search.general.title' | t | escape }}" class="boost-pfs-search-input" />
+              <button type="reset" class="boost-pfs-search-form-btn-clear">
+                <span class="sr-only">{{ 'search.general.clear' | t }}</span>
+                {%- render 'icon' with 'close-small' -%}
+              </button>
+            </div>
+          </form>
+          <div class="boost-pfs-search-suggestion-wrapper" data-search-box-id="boost-pfs-search-box-0"></div>
+        </div>
+      </div>
+    </x-popover>
   </store-header>
 </height-observer>
 
@@ -462,6 +484,16 @@ the underlying logic of the menu.
         }
       ],
       "default": "logo_left_navigation_inline"
+    },
+    {
+      "type": "header",
+      "content": "Search"
+    },
+    {
+      "type": "text",
+      "id": "search_bar_title",
+      "label": "Search bar title",
+      "default": "Which plant species or software you are looking for today?"
     },
     {
       "type": "header",

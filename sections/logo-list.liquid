@@ -29,7 +29,7 @@
     }
   </style>
 
-  <div {% render 'section-properties' %}>
+  <div class="{% if section.settings.full_width %} section-full {% endif %} section section-blends ">
     <div class="section-stack {% if section.settings.text_alignment == 'center' %}sm:justify-items-center{% endif %}">
       <div class="prose {% if section.settings.text_alignment == 'center' %}text-center{% endif %}">
         {%- if section.settings.title != blank -%}

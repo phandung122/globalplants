@@ -11,7 +11,8 @@
         "show_collection_image": true,
         "collection_title_size": "h2",
         "image_size": "auto",
-        "image": "shopify:\/\/shop_images\/collection-banner-img.jpg",
+        "image": "shopify:\/\/shop_images\/globe-plants-collections-banner-1_8b6022d8-0d2f-4589-b596-3d6385ec6e6a.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/globe-plants-collections-banner-mobile.jpg",
         "mobile_text_position": "place-self-center text-center",
         "desktop_text_position": "sm:place-self-center-start sm:text-start",
         "featured_product": "",
@@ -23,7 +24,6 @@
     },
     "bc95c0c7-dabe-49b8-8515-cd3f56ce84b1": {
       "type": "list-box",
-      "disabled": true,
       "blocks": {
         "template--17872606265634__bc95c0c7-dabe-49b8-8515-cd3f56ce84b1-1678950771e06c98be-0": {
           "type": "item",
@@ -70,6 +70,7 @@
         "template--17872606265634__bc95c0c7-dabe-49b8-8515-cd3f56ce84b1-1678950771e06c98be-1",
         "template--17872606265634__bc95c0c7-dabe-49b8-8515-cd3f56ce84b1-1678950771e06c98be-2"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "stack_on_mobile": false,

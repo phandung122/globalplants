@@ -4,18 +4,31 @@
   "sections": {
     "newsletter-popup": {
       "type": "newsletter-popup",
-      "settings": {}
+      "disabled": true,
+      "settings": {
+        "apparition_delay": 5,
+        "show_only_on_index": true,
+        "show_only_for_visitors": true,
+        "show_only_once": true,
+        "title": "Signup for our newsletter",
+        "button_text": "Subscribe",
+        "subtext": "Subscribe to our newsletter to get the latest promotion and exiciting new releases"
+      }
     },
     "privacy-banner": {
       "type": "privacy-banner",
-      "settings": {}
+      "settings": {
+        "privacy_bar_title": "Cookie policy",
+        "privacy_bar_content": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.<\/p>"
+      }
     },
     "cart-drawer": {
       "type": "cart-drawer",
       "settings": {
-        "show_cart_note": true,
-        "show_shipping_text": true,
-        "show_checkout_button": true,
+        "show_cart_note": false,
+        "show_shipping_text": false,
+        "show_view_cart_button": true,
+        "show_checkout_button": false,
         "recommendations_title": "Trending this month",
         "products": [],
         "product_card_background": "#ffffff",
@@ -24,6 +37,7 @@
     },
     "search-drawer": {
       "type": "search-drawer",
+      "disabled": true,
       "settings": {
         "full_width": true,
         "show_article_category": true,

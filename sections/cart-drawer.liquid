@@ -18,70 +18,68 @@
       </div>
     </div>
   {%- else -%}
-    <div>
-      <div class="cart-drawer__top">
-        <div class="h-stack items-center justify-between">
-          <div class="h-stack gap-2 sm:gap-2.5">
-            <p class="h5">{{- 'cart.general.title' | t -}}</p>
-            <cart-count class="count-bubble count-bubble--md">{{ cart.item_count }}</cart-count>
-          </div>
-
-          <button type="button" is="close-button" class="drawer__close-icon">
-            <span class="sr-only">{{ 'general.accessibility.close' | t }}</span>
-            {%- render 'icon' with 'close' -%}
-          </button>
+    <div class="cart-drawer__top">
+      <div class="h-stack items-center justify-between">
+        <div class="h-stack gap-2">
+          <p class="h5">{{- 'cart.general.title' | t -}}</p>
+          <cart-count class="count-bubble count-bubble--md">{{ cart.item_count }}</cart-count>
         </div>
 
-        {%- if settings.cart_show_free_shipping_threshold -%}
-          {%- render 'free-shipping-bar' -%}
-        {%- endif -%}
+        <button type="button" is="close-button" class="drawer__close-icon">
+          <span class="sr-only">{{ 'general.accessibility.close' | t }}</span>
+          {%- render 'icon' with 'close' -%}
+        </button>
       </div>
 
-      <div class="v-stack gap-6 sm:gap-8">
-        <div class="cart-drawer__line-items">
-          {%- for line_item in cart.items -%}
-            {%- render 'line-item', line_item: line_item, show_desktop_quantity: true -%}
-          {%- endfor -%}
-        </div>
+      {%- if settings.cart_show_free_shipping_threshold -%}
+        {%- render 'free-shipping-bar' -%}
+      {%- endif -%}
+    </div>
 
-        {%- if section.settings.products.count > 0 -%}
-          <div class="cart-drawer__recommendations">
-            <div class="v-stack gap-2.5 sm:gap-4">
-              {%- capture carousel_id -%}cart-drawer-recommendations{%- endcapture -%}
+    <div class="v-stack gap-6 sm:gap-8">
+      <div class="cart-drawer__line-items">
+        {%- for line_item in cart.items -%}
+          {%- render 'line-item', line_item: line_item, show_desktop_quantity: true -%}
+        {%- endfor -%}
+      </div>
 
-              {%- if section.settings.recommendations_title != blank or section.settings.products.count > 1 -%}
-                <div class="h-stack justify-between gap-4">
-                  {%- if section.settings.recommendations_title != blank -%}
-                    <p>{{ section.settings.recommendations_title | escape }}</p>
-                  {%- endif -%}
+      {%- if section.settings.products.count > 0 -%}
+        <div class="cart-drawer__recommendations">
+          <div class="v-stack gap-2.5 sm:gap-4">
+            {%- capture carousel_id -%}cart-drawer-recommendations{%- endcapture -%}
 
-                  {%- if section.settings.products.count > 1 -%}
-                    <div class="h-stack gap-2 hidden sm:flex">
-                      <button is="prev-button" class="circle-chevron hover:colors" aria-controls="{{ carousel_id }}" aria-label="{{ 'general.accessibility.previous' | t | escape }}" disabled>{%- render 'icon' with 'chevron-left-small', direction_aware: true -%}</button>
-                      <button is="next-button" class="circle-chevron hover:colors" aria-controls="{{ carousel_id }}" aria-label="{{ 'general.accessibility.next' | t | escape }}">{%- render 'icon' with 'chevron-right-small', direction_aware: true -%}</button>
-                    </div>
-                  {%- endif -%}
-                </div>
-              {%- endif -%}
+            {%- if section.settings.recommendations_title != blank or section.settings.products.count > 1 -%}
+              <div class="h-stack justify-between gap-4">
+                {%- if section.settings.recommendations_title != blank -%}
+                  <p>{{ section.settings.recommendations_title | escape }}</p>
+                {%- endif -%}
 
-              {%- assign horizontal_products_blends = true -%}
-              {%- assign product_card_background = section.settings.product_card_background | default: product.settings.product_card_background -%}
+                {%- if section.settings.products.count > 1 -%}
+                  <div class="h-stack gap-2 hidden sm:flex">
+                    <button is="prev-button" class="circle-chevron hover:colors" aria-controls="{{ carousel_id }}" aria-label="{{ 'general.accessibility.previous' | t | escape }}" disabled>{%- render 'icon' with 'chevron-left-small', direction_aware: true -%}</button>
+                    <button is="next-button" class="circle-chevron hover:colors" aria-controls="{{ carousel_id }}" aria-label="{{ 'general.accessibility.next' | t | escape }}">{%- render 'icon' with 'chevron-right-small', direction_aware: true -%}</button>
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
 
-              {%- if product_card_background != 'rgba(0,0,0,0)' and product_card_background != blank and product_card_background != settings.dialog_background -%}
-                {%- assign horizontal_products_blends = false -%}
-              {%- endif -%}
+            {%- assign horizontal_products_blends = true -%}
+            {%- assign product_card_background = section.settings.product_card_background | default: product.settings.product_card_background -%}
 
-              <scroll-carousel selector=".horizontal-product" id="{{ carousel_id }}" class="horizontal-product-list-carousel {% unless horizontal_products_blends %}separate{% endunless %} scroll-area bleed">
-                <div class="horizontal-product-list {% if horizontal_products_blends %}divide-x{% else %}separate{% endif %}">
-                  {%- for recommended_product in section.settings.products -%}
-                    {%- render 'horizontal-product', product: recommended_product, show_add_to_cart: true, background: section.settings.product_card_background, text_color: section.settings.product_card_text_color -%}
-                  {%- endfor -%}
-                </div>
-              </scroll-carousel>
-            </div>
+            {%- if product_card_background != 'rgba(0,0,0,0)' and product_card_background != blank and product_card_background != settings.dialog_background -%}
+              {%- assign horizontal_products_blends = false -%}
+            {%- endif -%}
+
+            <scroll-carousel selector=".horizontal-product" id="{{ carousel_id }}" class="horizontal-product-list-carousel {% unless horizontal_products_blends %}separate{% endunless %} scroll-area bleed">
+              <div class="horizontal-product-list {% if horizontal_products_blends %}divide-x{% else %}separate{% endif %}">
+                {%- for recommended_product in section.settings.products -%}
+                  {%- render 'horizontal-product', product: recommended_product, show_add_to_cart: true, background: section.settings.product_card_background, text_color: section.settings.product_card_text_color -%}
+                {%- endfor -%}
+              </div>
+            </scroll-carousel>
           </div>
-        {%- endif -%}
-      </div>
+        </div>
+      {%- endif -%}
     </div>
 
     <div class="v-stack gap-4 sm:gap-6" slot="footer">

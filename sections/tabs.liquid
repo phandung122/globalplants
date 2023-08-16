@@ -50,7 +50,7 @@
                   <div class="main-product-tabs__box main-product-tabs__box--bg">
                     <h2 class="main-product-tabs__title">{{ 'Information' }}</h2>
                     <div class="main-product-tabs__details">
-                    {%- unless product.type == 'Bundle' -%}
+                    {%- unless product.type contains 'Bundles' -%}
                       {%- if product.metafields.custom.plants_name != blank -%}
                         <div class="item">
                           <span class="item-title">{{ 'Botanical Name' }}</span>
@@ -116,7 +116,7 @@
                         </div>
                       </div>
 
-                    {%- unless product.type == 'Bundle' -%}
+                    {%- unless product.type contains 'Bundles' -%}
                       <div class="item">
                         <span class="item-title">{{ 'Textures and Materials' }}</span>
                         <div class="item-content">
@@ -154,7 +154,7 @@
                         <span class="item-title">{{ 'Catalog Download' }}</span>
                         <div class="item-content">
                           <a href="{{ pdfURL }}" class="text-with-icon group justify-between gap-2 medium download-pdf" download="{{ pdfFilename }}" target="_blank">
-                            <span class="reversed-link">{{ pdfFilename | append: '.pdf' }}</span>
+                            <span><span class="reversed-link">{{ pdfFilename | remove: '.pdf' | append: '.pdf' }}</span></span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                               <path fill="#608239" fill-rule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v10.19l2.72-2.72a.75.75 0 1 1 1.06 1.06l-4 4a.748.748 0 0 1-1.06 0l-4-4a.75.75 0 1 1 1.06-1.06l2.72 2.72V3a.75.75 0 0 1 .75-.75Zm-8 12a.75.75 0 0 1 .75.75v3.333c0 .253.097.49.26.66a.818.818 0 0 0 .59.257h12.8a.818.818 0 0 0 .59-.258.952.952 0 0 0 .26-.659V15a.75.75 0 0 1 1.5 0v3.333c0 .632-.24 1.243-.678 1.698a2.318 2.318 0 0 1-1.672.719H5.6a2.318 2.318 0 0 1-1.672-.719 2.452 2.452 0 0 1-.678-1.698V15a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/>
                             </svg>
@@ -176,7 +176,7 @@
                 {%- comment -%} Gallery {%- endcomment -%}
                 {%- if product.metafields.custom.gallery.value != blank -%}
                   <div class="main-product-tabs__gallery">
-                    {%- unless product.type == 'Bundle' -%}
+                    {%- unless product.type contains 'Bundles' -%}
                       <h3 class="main-product-tabs__subtitle">{{ section.settings.title_gallery }}</h3>
                     {%- else -%}
                       <h3 class="main-product-tabs__subtitle">{{ section.settings.title_gallery_bundle }}</h3>
@@ -223,7 +223,12 @@
                 {%- comment -%} List of species {%- endcomment -%}
                 {%- if product.metafields.custom.bundles != blank -%}
                   <div class="main-product-tabs__list-species">
-                    <h3 class="main-product-tabs__subtitle">{{ 'List of species' }}</h3>
+                    {%- unless product.type == 'Low Poly Bundles' -%}
+                      <h3 class="main-product-tabs__subtitle">{{ 'List of species' }}</h3>
+                    {%- else -%}
+                      <h3 class="main-product-tabs__subtitle">{{ 'List of species & triangle counts' }}</h3>
+                    {%- endunless -%}
+
                     <div class="list-species__grid">
                       {%- for field in product.metafields.custom.bundles.value -%}
                         <div class="list-species__item{% if isHighPoly %} list-species__item--high{% elsif isLowPoly %} list-species__item--low{% endif %}">
@@ -238,7 +243,12 @@
                           {%- endif -%}
                           {{- field | image_url: width: 500 | image_tag: loading: 'lazy', widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: 'list-species__image', alt: field.metafields.custom.plants_name -}}
                           <a href="{{ field.url }}" class="text-with-icon group gap-2 justify-between animated-arrow-svg">
-                            <span>{{ field.metafields.custom.plants_name }}</span>
+                            <span>
+                              {{ field.metafields.custom.plants_name }}
+                              {%- if field.metafields.custom.triangle_count != blank -%}
+                                <span>({{ field.metafields.custom.triangle_count }})</span>
+                              {%- endif -%}
+                            </span>
                             {%- render 'icon' with 'chevron-right-alt', direction_aware: true -%}
                           </a>
                         </div>

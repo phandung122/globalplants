@@ -72,7 +72,7 @@
       "pre_order_button": "Pre-order",
       "sold_out_button": "Sold out",
       "unavailable_button": "Unavailable",
-      "added_to_cart": "Added to your cart!",
+      "added_to_cart": "Product added to your cart",
       "sold_out_badge": "Sold out",
       "on_sale_badge": "On sale",
       "discount_badge_html": "Save {{ savings }}",
@@ -294,14 +294,14 @@
   },
   "cart": {
     "general": {
-      "title": "Cart",
+      "title": "My Cart",
       "empty": "Your cart is empty",
       "continue_shopping": "Continue shopping",
       "weight": "Weight",
-      "subtotal": "Subtotal",
-      "total": "Total",
+      "subtotal": "Sub totals",
+      "total": "Order total",
       "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\" class=\"link\">shipping<\/a> calculated at checkout",
-      "taxes_included_but_shipping_at_checkout": "Tax included and shipping calculated at checkout",
+      "taxes_included_but_shipping_at_checkout": "Tax included and discount code to be entered at checkout",
       "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\" class=\"link\">Shipping<\/a> calculated at checkout.",
       "taxes_and_shipping_at_checkout": "Taxes and shipping calculated at checkout",
       "add_order_note": "Add order note",
@@ -406,13 +406,6 @@
         "one": "It has received {{ count }} review.",
         "other": "It has received {{ count }} reviews."
       }
-    }
-  },
-  "pages": {
-    "faq": {
-      "general_type": "General",
-      "technical_type": "Technical",
-      "account_type": "Account"
     }
   }
 }

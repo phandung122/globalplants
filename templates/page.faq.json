@@ -94,7 +94,7 @@
           "type": "text",
           "settings": {
             "question": "What's the difference between High Poly and Low Poly Models at Globe Plants?",
-            "answer": "<p>High Poly and Low Poly models differ primarily in their polygon count and compatible software\/formats, which directly impacts the level of detail and computational requirements.<\/p><p><\/p><ul><li>High Poly models at Globe Plants contain a large number of polygons, resulting in a higher level of detail. This makes them ideal for high-resolution renders or close-up views where every leaf and branch detail can contribute to the overall realism. However, these models are more computationally intensive and may require more advanced hardware for smooth rendering<\/li><\/ul><p><\/p><ul><li>On the other hand, Low Poly models have a reduced polygon count, which makes them less detailed but also less demanding on your system. These models are optimized for efficiency\/performance and are ideal for creating larger scenes, backgrounds, real time rendering or when working on hardware with limited processing power. They allow for faster rendering times while still providing a visually pleasing representation of each 3D plant model.<\/li><\/ul>",
+            "answer": "<p>High Poly and Low Poly models differ primarily in their polygon count and compatible software\/formats, which directly impacts the level of detail and computational requirements.<\/p><p><\/p><ul><li>High Poly models at Globe Plants contain a large number of polygons, resulting in a higher level of detail. This makes them ideal for high-resolution renders or close-up views where every leaf and branch detail can contribute to the overall realism. However, these models are more computationally intensive and may require more advanced hardware for smooth rendering<\/li><\/ul><p><\/p><ul><li>On the other hand, Low Poly models have a reduced polygon count, which makes them less detailed but also less demanding on your system. These models are optimized for efficiency\/performance and are ideal for creating larger scenes, backgrounds, real time rendering or when working on hardware with limited processing power. They allow for faster rendering times while still providing a visually pleasing representation of each 3D plant model.<\/li><\/ul><p>For further information on if high poly or low poly is more applicable to you. Please visit our format guide <a href=\"https:\/\/globeplants.com\/pages\/formats-guide\" target=\"_blank\" title=\"Globe Plants Format Guide\">here<\/a>.<\/p>",
             "question_type": "technical"
           }
         },
@@ -108,6 +108,7 @@
         },
         "c13fad20-0c50-43f4-9dbd-15df6ae9be70": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "question": "How can I get your models to work with SketchUp properly?",
             "answer": "<p>In order for Globe Plants' models to appear and render correctly in SketchUp, users need to:Create a new folder at the root of C:Drive called “Globeplants_Enscape”. It should be C:\\Globeplants_EnscapeCopy all files from folder SKETCHUP into the newly created folder. You can copy all the proxy files into other folders as you like as they won’t be affected by user path. The proxy files are SketchUp files without extended name “ _fullGeometry”This is an error from SketchUp and can only be fixed by the method above in order to use all the plant models correctly.Alternatively we also included the README file in our bundles and SketchUp format for users to follow.<\/p>",
@@ -262,6 +263,30 @@
           "settings": {
             "text": "SketchUp",
             "heading_image": "shopify:\/\/shop_images\/format-Sketchup.png"
+          }
+        },
+        "5ffa985d-9699-4e54-a57a-bde873c02b4f": {
+          "type": "richtext",
+          "settings": {
+            "question": "Which rendering engine can I use your SketchUp format in?",
+            "question_type": "sketchup",
+            "answer": "<p>Our SketchUp format comes with proxy files that supports V-Ray renderer. You need V-Ray 5 and above for our models to work and appear properly. <\/p>"
+          }
+        },
+        "c72a5367-a532-4771-a889-5453c10e7177": {
+          "type": "richtext",
+          "settings": {
+            "question": "After successfully loading the proxy and repathing, every time I open the file, all paths are lost and require repathing. What can I do?",
+            "question_type": "sketchup",
+            "answer": "<p>You need to run SketchUp as an administrator when working so that SketchUp has full permission to overwrite data on your hard drive.<\/p>"
+          }
+        },
+        "77b987c8-441e-48e4-8c1b-f125b8866953": {
+          "type": "richtext",
+          "settings": {
+            "question": "I don't use V-Ray. Can I still use your SketchUp format?",
+            "question_type": "sketchup",
+            "answer": "<p>Yes you can use our Full geometry .SKP file which typically used as an intermediate format to import into other software. It can also be used as a 3D object in SketchUp but not for rendering. Additionally, the Full geometry file is quite heavy and can affect your hardware performance.<\/p>"
           }
         },
         "9c2d1bcd-36da-421d-82b8-5e59fb5cb283": {
@@ -509,7 +534,7 @@
           "settings": {
             "question": "I don't see Lumion format on your website. Which format should I select if I use Lumion?",
             "question_type": "lumion",
-            "answer": "<p>All prices on our store are in USD by default. You can change currencies by clicking on the top right USD text in the menu and select the available currencies to be converted.<\/p>"
+            "answer": "<p>We do not offer Lumion as native file format. However you can import either our FBX or SketchUp full geometry .skp files into Lumion.<\/p><p>FBX will be lighter but slightly less in quality. You would also need to copy the FBX files directly into the maps folder for Lumion to recognise all textures properly<\/p><p>SketchUp fullgeometry skp is a lot heavier but also look better in quality. As our the textures are embeddeed into the file hence no need to reassign any textures.<\/p>"
           }
         }
       },
@@ -527,6 +552,9 @@
         "359f16cd-d6f9-4bc2-b6cf-088b3eb11525",
         "261781f9-199d-46c0-9174-59fdf07d2d49",
         "03d9e3ff-d172-49e4-b63a-cbcda8fdff42",
+        "5ffa985d-9699-4e54-a57a-bde873c02b4f",
+        "c72a5367-a532-4771-a889-5453c10e7177",
+        "77b987c8-441e-48e4-8c1b-f125b8866953",
         "9c2d1bcd-36da-421d-82b8-5e59fb5cb283",
         "8a60fc5f-6a9e-4f5a-a92d-9627a00532f4",
         "1e035091-93c1-4f53-8da6-88b6ec574065",

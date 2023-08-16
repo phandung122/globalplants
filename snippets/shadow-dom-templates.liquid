@@ -52,6 +52,10 @@ very valid reason to do so.
   <div part="content">
     <header part="title">
       <slot name="title"></slot>
+
+      <button part="close-button" is="close-button" aria-label="{{ 'general.accessibility.close' | t | escape }}">
+        {%- render 'icon' with 'close' -%}
+      </button>
     </header>
 
     <div part="body">

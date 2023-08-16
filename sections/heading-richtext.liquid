@@ -1,0 +1,155 @@
+<style>
+  .section.heading-richtext-section {
+    padding-bottom: 8px;
+  }
+  .heading-richtext__subtitle {
+    color: #608239;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    position: relative;
+    padding-left: 56px;
+    margin-bottom: 16px;
+  }
+  .heading-richtext__title {
+    color: #2B2B2B;
+    font-size: 1.5rem;
+    font-style: normal;
+    line-height: 120%;
+    max-width: 1000px;
+  }
+  .heading-richtext__title span {
+    color: #608239;
+  }
+
+  .heading-richtext__subtitle::after {
+    content: "";
+    background: #608239;
+    width: 40px;
+    height: 3px;
+    display: block;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 50%;
+  }
+
+  #shopify-section-{{ section.id }} .heading-richtext-section {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    {% if section.settings.bg_heading_richtext != blank %}
+      background: url({{ section.settings.bg_heading_richtext | img_url: 'master' }}), {{ section.settings.bg_color_heading_richtext }};
+      background-repeat: no-repeat;
+      background-size: 100%;
+    {% endif %}
+  }
+
+  @media (min-width: 750px) {
+    #shopify-section-{{ section.id }} .heading-richtext-section {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .heading-richtext__title {
+      color: #2B2B2B;
+      font-size: 3rem;
+    }
+    .heading-richtext__subtitle {
+      font-size: 1.5rem;
+      padding-left: 96px;
+      margin-bottom: 24px;
+    }
+    .heading-richtext__subtitle::after {
+      width: 80px;
+    }
+    .section.heading-richtext-section {
+      padding-bottom: 0;
+    }
+  }
+</style>
+
+<div class="section heading-richtext-section montserrat bold">
+  {% if section.settings.heading_richtext_subtitle != blank %}
+    <div class="heading-richtext__subtitle">{{ section.settings.heading_richtext_subtitle }}</div>
+  {% endif %}
+  {% if section.settings.heading_richtext_title != blank %}
+    <div class="heading-richtext__title">{{ section.settings.heading_richtext_title }}</div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Heading Richtext",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "heading_richtext_subtitle",
+      "label": "Sub Title",
+      "default": "Sub Title"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_richtext_title",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_heading_richtext",
+      "label": "Background"
+    },
+    {
+      "type": "color",
+      "id": "bg_color_heading_richtext",
+      "label": "Background color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top section",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom section",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top section mobile",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom section mobile",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Heading Richtext"
+    }
+  ]
+}
+{% endschema %}

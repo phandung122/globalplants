@@ -120,7 +120,7 @@ Supported variables
         {%- endif -%}
       </a>
 
-      <button type="button" aria-controls="quick-buy-{{ product.id }}" aria-expanded="false" is="custom-button" aria-busy="false" class="product-card__quickview">
+      <button type="button" aria-controls="quick-buy-{{ product.id }}{% if extend_class != blank %}-{{ extend_class }}{% endif %}" aria-expanded="false" is="custom-button" aria-busy="false" class="product-card__quickview">
         <span class="quickview__text"><span>{{ 'Quick view' }}</span></span>
         <span class="quickview__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none" viewBox="0 0 16 17">
@@ -168,7 +168,7 @@ Supported variables
             {%- if product.metafields.custom.plants_name != blank -%}
               {{ product.metafields.custom.plants_name }}
               {%- for field in product.metafields.custom.common_namess.value -%}
-                <span class="common_names">• {{ field }}</span>
+                <span class="common_names"> • {{ field }}</span>
               {%- endfor -%}
             {%- else -%}
               {{ product.title }}
@@ -257,7 +257,7 @@ Supported variables
     </div>
   </div>
   {%- if show_quick_buy and product.available -%}
-    {%- capture quick_buy_id -%}quick-buy-{{ product.id }}{%- endcapture -%}
+    {%- capture quick_buy_id -%}quick-buy-{{ product.id }}{% if extend_class != blank %}-{{ extend_class }}{% endif %}{%- endcapture -%}
 
     <quick-buy-drawer id="{{ quick_buy_id }}" header-bordered open-from="left" handle="{{ product.handle }}" role="region" aria-live="polite" class="quick-buy-drawer drawer">
       {%- comment -%}Quick buy content is filled on demand for performance reasons {%- endcomment -%}

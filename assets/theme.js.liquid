@@ -1663,6 +1663,11 @@ var Popover = class extends DialogElement {
         [content.children, { opacity: 1 }, { at: "<", duration: 0 }]
       ]);
     }
+
+    if (this.querySelector('[type="search"]') != null) {
+      this.querySelector('[type="search"]').click();
+    }
+
     animate11 ? animationControls.play() : animationControls.finish();
     return animationControls.finished;
   }
@@ -1803,6 +1808,19 @@ var CartDrawer = class extends Drawer {
     tempDiv.innerHTML = await (await fetch(`${window.Shopify.routes.root}?section_id=cart-drawer`)).text();
     this.replaceChildren(...tempDiv.querySelector("#cart-drawer").children);
   }
+
+  _getClipPathProperties() {
+    switch (this.openFrom) {
+      case "left":
+        return document.dir === "ltr" ? ["inset(0 100% 0 0 round 8px)", "inset(0 0 0 0 round 8px"] : ["inset(0 0 0 100% round 8px)", "inset(0 0 0 0 round 8px"];
+      case "right":
+        return document.dir === "ltr" ? ["inset(0 0 0 100% round 0 0 0 16px)", "inset(0 0 0 0 round 0 0 0 16px"] : ["inset(0 100% 0 0 round 8px)", "inset(0 0 0 0 round 8px"];
+      case "bottom":
+        return ["inset(100% 0 0 0 round 8px)", "inset(0 0 0 0 round 8px"];
+      case "top":
+        return ["inset(0 0 100% 0 round 8px)", "inset(0 0 0 0 round 8px"];
+    }
+  }
 };
 var CartNotificationDrawer = class extends Drawer {
   constructor() {
@@ -1834,6 +1852,10 @@ var CartNotificationDrawer = class extends Drawer {
     tempContent.innerHTML = event.detail.cart["sections"]["variant-added"];
     this.replaceChildren(...tempContent.querySelector(".shopify-section").children);
     this.show();
+
+    setTimeout(() => {
+      this.dispatchEvent(new CustomEvent("dialog:force-close", { bubbles: true, cancelable: true, composed: true }));
+    }, 2000);
   }
 };
 var LineItem = class extends HTMLElement {
@@ -1988,7 +2010,41 @@ var LineItemQuantity = class extends HTMLElement {
   }
   async _changeLineItemQuantity(lineKey, targetQuantity) {
     if (window.themeVariables.settings.pageType === "cart") {
-      window.location.href = `${Shopify.routes.root}cart/change?id=${lineKey}&quantity=${targetQuantity}`;
+      // window.location.href = `${Shopify.routes.root}cart/change?id=${lineKey}&quantity=${targetQuantity}`;
+
+      timeline2([
+        [this.querySelector('a > div'), { opacity: 0 }, { duration: 0.15 }],
+        [this.querySelector('a > .button__loader'), { opacity: 1 }, { duration: 0.15 }]
+      ]);
+      animate(this.querySelector('a > .button__loader').children, { opacity: [1, 0.1] }, { duration: 0.35, delay: stagger(0.35 / 3), direction: "alternate", repeat: Infinity });
+
+      const cartContent = await (await fetch(`${Shopify.routes.root}cart/change.js`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          id: lineKey,
+          quantity: targetQuantity
+        })
+      })).json();
+
+      const tempDiv = document.createElement("div");
+      tempDiv.innerHTML = await (await fetch(`${window.Shopify.routes.root}?section_id=main-cart`)).text();
+      const cartContentRender = await (await fetch(`${Shopify.routes.root}cart.js`)).json();
+
+      if (cartContentRender["item_count"] > 0) {
+        document.querySelector('.order-summary').replaceChildren(...tempDiv.querySelector(".order-summary").children);
+        document.querySelector('.cart-form__subtotal .money').innerHTML = formatMoney(cartContentRender["items_subtotal_price"], currencyFormat);
+        document.querySelector('.cart--form__total .money').innerHTML = formatMoney(cartContentRender["total_price"], currencyFormat);
+      } else {
+        document.querySelector('.shopify-section--main-cart').replaceChildren(...tempDiv.querySelector(".shopify-section--main-cart").children);
+      }
+
+      document.querySelectorAll('cart-count').forEach((cartCount) => {
+        cartCount.innerHTML = cartContentRender["item_count"];
+      });
+
     } else {
       const lineItem = this.closest("line-item");
       lineItem?.dispatchEvent(new CustomEvent("line-item:will-change", { bubbles: true, detail: { targetQuantity } }));
@@ -2701,53 +2757,79 @@ var ProductForm = class extends HTMLFormElement {
       this.reportValidity();
       return;
     }
+
+    // Validate existing item in cart
+    const cartContentBefore = await (await fetch(`${Shopify.routes.root}cart.js`)).json();
+    let existItem = false;
+    if (cartContentBefore.items.length > 0) {
+      cartContentBefore.items.forEach((item) => {
+        if(item.id == this.id.value) {
+          existItem = true;
+        }
+      });
+    }
+
     const submitButtons = Array.from(this.elements).filter((button) => button.type === "submit");
-    submitButtons.forEach((submitButton) => {
-      submitButton.setAttribute("disabled", "disabled");
-      submitButton.setAttribute("aria-busy", "true");
-    });
-    let sectionsToBundle = ["variant-added"];
-    document.documentElement.dispatchEvent(new CustomEvent("cart:prepare-bundled-sections", { bubbles: true, detail: { sections: sectionsToBundle } }));
-    const formData = new FormData(this);
-    formData.set("sections", sectionsToBundle.join(","));
-    formData.set("sections_url", `${Shopify.routes.root}variants/${this.id.value}`);
-    const response = await fetch(`${Shopify.routes.root}cart/add.js`, {
-      body: formData,
-      method: "POST",
-      headers: {
-        "X-Requested-With": "XMLHttpRequest"
-        // Needed for Shopify to check inventory
+    if (!existItem) {
+      submitButtons.forEach((submitButton) => {
+        submitButton.setAttribute("disabled", "disabled");
+        submitButton.setAttribute("aria-busy", "true");
+      });
+      let sectionsToBundle = ["variant-added"];
+      document.documentElement.dispatchEvent(new CustomEvent("cart:prepare-bundled-sections", { bubbles: true, detail: { sections: sectionsToBundle } }));
+      const formData = new FormData(this);
+      formData.set("sections", sectionsToBundle.join(","));
+      formData.set("sections_url", `${Shopify.routes.root}variants/${this.id.value}`);
+
+      const response = await fetch(`${Shopify.routes.root}cart/add.js`, {
+        body: formData,
+        method: "POST",
+        headers: {
+          "X-Requested-With": "XMLHttpRequest"
+          // Needed for Shopify to check inventory
+        }
+      });
+      submitButtons.forEach((submitButton) => {
+        submitButton.removeAttribute("disabled");
+        submitButton.removeAttribute("aria-busy");
+      });
+      const responseJson = await response.json();
+      if (response.ok) {
+        const cartContent = await (await fetch(`${Shopify.routes.root}cart.js`)).json();
+        cartContent["sections"] = responseJson["sections"];
+        this.dispatchEvent(new CustomEvent("variant:add", {
+          bubbles: true,
+          detail: {
+            items: responseJson.hasOwnProperty("items") ? responseJson["items"] : [responseJson],
+            cart: cartContent
+          }
+        }));
+        document.documentElement.dispatchEvent(new CustomEvent("cart:change", {
+          bubbles: true,
+          detail: {
+            baseEvent: "variant:add",
+            cart: cartContent
+          }
+        }));
+      } else {
+        this.dispatchEvent(new CustomEvent("cart:error", {
+          bubbles: true,
+          detail: {
+            error: responseJson["description"]
+          }
+        }));
       }
-    });
-    submitButtons.forEach((submitButton) => {
-      submitButton.removeAttribute("disabled");
-      submitButton.removeAttribute("aria-busy");
-    });
-    const responseJson = await response.json();
-    if (response.ok) {
-      const cartContent = await (await fetch(`${Shopify.routes.root}cart.js`)).json();
-      cartContent["sections"] = responseJson["sections"];
-      this.dispatchEvent(new CustomEvent("variant:add", {
-        bubbles: true,
-        detail: {
-          items: responseJson.hasOwnProperty("items") ? responseJson["items"] : [responseJson],
-          cart: cartContent
-        }
-      }));
-      document.documentElement.dispatchEvent(new CustomEvent("cart:change", {
-        bubbles: true,
-        detail: {
-          baseEvent: "variant:add",
-          cart: cartContent
-        }
-      }));
     } else {
       this.dispatchEvent(new CustomEvent("cart:error", {
         bubbles: true,
         detail: {
-          error: responseJson["description"]
+          error: 'You can not add more than 1 item to cart'
         }
       }));
+      submitButtons.forEach((submitButton) => {
+        submitButton.removeAttribute("disabled");
+        submitButton.removeAttribute("aria-busy");
+      });
     }
   }
 };
@@ -3379,6 +3461,33 @@ if (!window.customElements.get("quick-buy-drawer")) {
   window.customElements.define("quick-buy-drawer", QuickBuyDrawer);
 }
 
+// Quick Edit
+var QuickEditDrawer = class extends Drawer {
+  constructor() {
+    super();
+    this._hasLoaded = false;
+  }
+  async show() {
+    this.style.display = "block";
+    if (!this._hasLoaded) {
+      [this, ...this.controls].forEach((control) => control.setAttribute("aria-busy", "true"));
+      [this, ...this.controls].forEach((control) => control.setAttribute("aria-busy", "false"));
+      this._hasLoaded = true;
+
+      this.querySelector('[data-option-selector] input[checked="checked"]').click();
+    }
+    return super.show();
+  }
+  async hide() {
+    return super.hide()?.then(() => {
+      this.style.display = "none";
+    });
+  }
+};
+if (!window.customElements.get("quick-edit-drawer")) {
+  window.customElements.define("quick-edit-drawer", QuickEditDrawer);
+}
+
 // js/common/product/variant-picker.js
 var VariantPicker = class extends HTMLElement {
   async connectedCallback() {
@@ -3395,7 +3504,7 @@ var VariantPicker = class extends HTMLElement {
     });
     this.masterSelector.addEventListener("change", this._onMasterSelectorChanged.bind(this), { signal: this._abortController.signal });
     this._updateDisableSelectors();
-    this.selectVariant(this.selectedVariant["id"]);
+    // this.selectVariant(this.selectedVariant["id"]);
   }
   disconnectedCallback() {
     this._abortController.abort();
@@ -3420,9 +3529,9 @@ var VariantPicker = class extends HTMLElement {
       id = this._getFirstMatchingAvailableOrSelectableVariant()["id"];
     }
     const previousVariant = this.selectedVariant;
-    if (previousVariant && previousVariant.id === id) {
-      return;
-    }
+    // if (previousVariant && previousVariant.id === id) {
+    //   return;
+    // }
     this.masterSelector.value = id;
     this.masterSelector.dispatchEvent(new Event("change", { bubbles: true }));
     if (this.updateUrl && history.replaceState) {
@@ -3448,6 +3557,7 @@ var VariantPicker = class extends HTMLElement {
     if (!event.target.name.startsWith("option")) {
       return;
     }
+    this.querySelector("legend").innerHTML = "Formats selected:";
     this.selectVariant(this._getVariantFromOptions()?.id);
   }
   _onMasterSelectorChanged() {
@@ -3580,6 +3690,154 @@ if (!window.customElements.get("variant-picker")) {
 }
 if (!window.customElements.get("variant-option-value")) {
   window.customElements.define("variant-option-value", VariantOptionValue);
+}
+
+// Variant Update Picker
+var VariantUpdatePicker = class extends HTMLElement {
+  async connectedCallback() {
+    this._abortController = new AbortController();
+    this.optionSelectors = Array.from(this.querySelectorAll("[data-option-selector]"));
+    this.variantValue = this.querySelector("[data-variant-value]");
+    this.masterButton = document.querySelector(`${this.getAttribute("update-button")}`);
+    this.optionSelectors.forEach((optionSelector) => {
+      optionSelector.addEventListener("change", this._onOptionChanged.bind(this), { signal: this._abortController.signal });
+    });
+  }
+
+  disconnectedCallback() {
+    this._abortController.abort();
+  }
+
+  get selectedVariant() {
+    return this._getVariantById(parseInt(this.masterSelector.value));
+  }
+
+  _onOptionChanged(event) {
+    if (!event.target.name.startsWith("option")) {
+      return;
+    }
+
+    this.variantValue.innerHTML = this._getSelectedOptionValues();
+    this.masterButton.setAttribute("update-variant-id", this._getVariantFromOptions());
+  }
+
+  _getVariantFromOptions() {
+    return this.optionSelectors.map((optionSelector) => {
+      return parseInt(optionSelector.querySelector('input[name^="option"][type="hidden"], input[name^="option"]:checked, select[name^="option"]').getAttribute("variant-id"));
+    });
+  }
+
+  _getSelectedOptionValues() {
+    return this.optionSelectors.map((optionSelector) => {
+      return optionSelector.querySelector('input[name^="option"][type="hidden"], input[name^="option"]:checked, select[name^="option"]').value;
+    });
+  }
+};
+if (!window.customElements.get("variant-update-picker")) {
+  window.customElements.define("variant-update-picker", VariantUpdatePicker);
+}
+
+// Update Cart Button
+var UpdateCartButton = class extends HTMLButtonElement {
+  constructor() {
+    super();
+    this.addEventListener("click", this._updateVariant.bind(this));
+  }
+
+  async _updateVariant() {
+    let current_id = parseInt(this.getAttribute("current-variant-id")),
+        update_id = parseInt(this.getAttribute("update-variant-id"));
+
+    if (current_id === update_id) {
+      this._onCartError('You can not add more than 1 item to cart');
+      return;
+    }
+
+    const cartContentBefore = await (await fetch(`${Shopify.routes.root}cart.js`)).json();
+    let existItem = false;
+    if (cartContentBefore.items.length > 0) {
+      cartContentBefore.items.forEach((item) => {
+        if(item.id == update_id) {
+          existItem = true;
+        }
+      });
+    }
+
+    if(!existItem) {
+      this.setAttribute("disabled", "disabled");
+      this.setAttribute("aria-busy", "true");
+
+      timeline2([
+        [this.querySelector('div'), { opacity: 0 }, { duration: 0.15 }],
+        [this.querySelector('.button__loader'), { opacity: 1 }, { duration: 0.15 }]
+      ]);
+      animate(this.querySelector('.button__loader').children, { opacity: [1, 0.1] }, { duration: 0.35, delay: stagger(0.35 / 3), direction: "alternate", repeat: Infinity });
+
+      await fetch(`${Shopify.routes.root}cart/change.js`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          id: `${current_id}`,
+          quantity: 0
+        })
+      });
+
+      const response = await fetch(`${Shopify.routes.root}cart/add.js`, {
+        body: JSON.stringify({
+          form_type: 'product',
+          id: `${update_id}`,
+          quantity: 1
+        }),
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+      const responseJson = await response.json();
+      if (response.ok) {
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = await (await fetch(`${window.Shopify.routes.root}?section_id=main-cart`)).text();
+        document.querySelector('.order-summary').replaceChildren(...tempDiv.querySelector(".order-summary").children);
+
+        const cartContentAfter = await (await fetch(`${Shopify.routes.root}cart.js`)).json();
+        document.querySelector('.cart-form__subtotal .money').innerHTML = formatMoney(cartContentAfter["items_subtotal_price"], currencyFormat);
+        document.querySelector('.cart--form__total .money').innerHTML = formatMoney(cartContentAfter["total_price"], currencyFormat);
+
+        document.querySelector('[is="close-button"]').click();
+      } else {
+        this._onCartError(responseJson["description"]);
+      }
+
+    } else {
+      this._onCartError('You can not add more than 1 item to cart');
+    }
+  }
+
+  _onCartError(message) {
+    const errorBanner = document.createElement("div");
+    errorBanner.classList.add("banner", "banner--error", "justify-center");
+    errorBanner.setAttribute("role", "alert");
+    errorBanner.style.gridColumn = "1/-1";
+    errorBanner.style.marginBottom = "1rem";
+    errorBanner.innerHTML = `
+      <svg role="presentation" focusable="false" width="18" height="18" class="offset-icon icon icon-error" style="--icon-height: 18px" viewBox="0 0 18 18">
+        <path d="M0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9Z" fill="currentColor"></path>
+        <path d="M5.29289 6.70711L11.2929 12.7071L12.7071 11.2929L6.70711 5.29289L5.29289 6.70711ZM6.70711 12.7071L12.7071 6.70711L11.2929 5.2929L5.29289 11.2929L6.70711 12.7071Z" fill="#ffffff"></path>
+      </svg>
+
+      <p>${message}</p>
+    `;
+    this.before(errorBanner);
+    setTimeout(async () => {
+      await errorBanner.animate({ opacity: [1, 0] }, { duration: 250, fill: "forwards" }).finished;
+      errorBanner.remove();
+    }, 5e3);
+  }
+};
+if (!window.customElements.get("update-cart-button")) {
+  window.customElements.define("update-cart-button", UpdateCartButton, { extends: "button" });
 }
 
 // js/common/media/base-media.js
@@ -4221,6 +4479,8 @@ export {
   ProgressBar,
   QuantitySelector,
   QuickBuyDrawer,
+  QuickEditDrawer,
+  UpdateCartButton,
   ResizableTextarea,
   RevealItems,
   SafeSticky,
@@ -4240,6 +4500,7 @@ export {
   VariantInventory,
   VariantMedia,
   VariantPicker,
+  VariantUpdatePicker,
   VariantSku,
   VideoMedia,
   VisibilityProgress,

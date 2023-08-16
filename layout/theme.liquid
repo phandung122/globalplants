@@ -74,7 +74,7 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
       {%- sections 'overlay-group' -%}
 
       {%- if settings.cart_type == 'popover' -%}
-        <cart-notification-drawer open-from="bottom" class="quick-buy-drawer drawer"></cart-notification-drawer>
+        <cart-notification-drawer open-from="right" class="quick-buy-drawer quick-buy-drawer--added drawer"></cart-notification-drawer>
       {%- endif -%}
     {%- endif -%}
 
@@ -98,7 +98,11 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     {%- if request.page_type == 'collection' or request.page_type == 'search' -%}
     {%- endif -%}
 
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    {% if template contains 'customers' %}
+      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+      <script type="module" src="{{ 'app.js' | asset_url }}"></script>
+    {% endif %}
+
     {%- if request.page_type == 'customers/account' or request.page_type == 'customers/order' or request.page_type == 'customers/addresses' -%}
       <script type="module" src="{{ 'custom-account.js' | asset_url }}"></script>
     {%- endif -%}
@@ -106,7 +110,6 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     {%- if request.page_type == 'customers/register' or request.page_type == 'customers/login'  -%}
       <script src="{{ 'customers-register.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    <script type="module" src="{{ 'app.js' | asset_url }}"></script>
 
     {%- if request.page_type == 'customers/account' or request.page_type == 'customers/addresses' or request.page_type == 'customers/login' or request.page_type == 'customers/order' -%}
       {% if customer %}

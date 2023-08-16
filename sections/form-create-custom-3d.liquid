@@ -1,0 +1,135 @@
+{{- 'form-image.css' | asset_url | stylesheet_tag: preload: true -}}
+<div class="form-image">
+  <div>
+    {%- capture sizes -%}
+      {% if section.settings.full_width %}100vw{% else %}min({{ settings.page_width }}px, 100vw){% endif %}
+    {%- endcapture -%}
+    {% if section.settings.image != blank %}
+      {%- capture loading_strategy -%}
+        {% if forloop.first %}eager{% else %}lazy{% endif %}
+      {%- endcapture -%}
+      {%- capture fetch_priority -%}
+        {% if forloop.first %}high{% else %}low{% endif %}
+      {%- endcapture -%}
+
+      {%- if section.settings.mobile_image == blank -%}
+        {{-
+          section.settings.image
+          | image_url: width: section.settings.image.width
+          | image_tag:
+            loading: loading_strategy,
+            fetchpriority: fetch_priority,
+            sizes: sizes,
+            widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200'
+        -}}
+      {%- else -%}
+        {{-
+          section.settings.image
+          | image_url: width: section.settings.image.width
+          | image_tag:
+            loading: loading_strategy,
+            fetchpriority: fetch_priority,
+            sizes: sizes,
+            widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200',
+            class: 'hidden sm:block'
+        -}}
+        {{-
+          section.settings.mobile_image
+          | image_url: width: section.settings.mobile_image.width
+          | image_tag:
+            loading: loading_strategy,
+            fetchpriority: fetch_priority,
+            sizes: sizes,
+            widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200',
+            class: 'sm:hidden'
+        -}}
+      {%- endif -%}
+    {% else %}
+      {%- capture placeholder_image -%}
+        {% cycle 'placeholder': 'lifestyle-1', 'lifestyle-2' %}{%- endcapture -%}
+      {{-
+        placeholder_image
+        | placeholder_svg_tag: 'placeholder'
+        | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"'
+      -}}
+    {% endif %}
+  </div>
+  <div class="text-form-image">
+    <div class="text-form-image_title montserrat">
+      {{ section.settings.title }}
+    </div>
+  </div>
+  {%- if section.settings.show_custom_form -%}
+    <div class="c-form-box section">
+      <div class="section-stack">
+        <h2 class="h2-custom-title">{{ section.settings.custom_3D_form }}</h2>
+        <div class="pxFormGenerator" style="width: 100%;" id="PwscR1y24e0vuNdBXIJ4Kw"></div>
+      </div>
+    </div>
+    <div class="pxFormGenerator section" style="width: 100%;" id="gcTXDkfpSSyxFzdRl0oLBw"></div>
+  {%- endif -%}
+</div>
+
+<style>
+  .form_title_div h3 {
+    color: red;
+  }
+  .c-form-box {
+    width: 100%;
+    text-align: center;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Form Create custom 3D",
+  "class": "shopify-section--form-image",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "info": "2800 x 1000px .jpg recommended",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile image",
+      "info": "1200 x 1600px .jpg recommended"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "default": "Image title.",
+      "label": "Image title"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_custom_form",
+      "label": "Show form custom 3D",
+      "default": false
+    },
+    {
+      "type": "textarea",
+      "id": "custom_3D_form",
+      "label": "Custom 3D form",
+      "default": "<p>Create Custom 3D Plant Models with Globe Plants in Just Two Steps</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Form Create custom 3D"
+    }
+  ]
+}
+{% endschema %}

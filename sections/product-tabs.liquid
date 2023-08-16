@@ -53,7 +53,7 @@
               <div role="tabpanel" class="tab-content" slot="content" {% cycle '', 'hidden', 'hidden', 'hidden', 'hidden' %}>
                 <product-list class="product-list scroll-area bleed md:unbleed">
                   {%- for product in collections[block.settings.product_list_collection].products limit: section.settings.products_count -%}
-                    {%- render 'product-card', product: product, stacked: true, show_badges: true -%}
+                    {%- render 'product-card', product: product, stacked: true, show_badges: true, extend_class: block.id -%}
                   {%- else -%}
                     {%- for i in (1..section.settings.products_count) -%}
                       {%- capture placeholder_image -%}product-{% cycle '1', '2', '3', '4', '5', '6' %}{%- endcapture -%}

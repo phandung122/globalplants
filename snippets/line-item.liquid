@@ -17,30 +17,94 @@ Supported variables
   {%- assign line_max_quantity = line_item.variant.inventory_quantity -%}
 {%- endif -%}
 
+{%- assign isHighPoly = false -%}
+{%- assign isLowPoly = false -%}
+{%- assign is2DImages = false -%}
+
+{%- assign card_class = 'line-item__media-wrapper' -%}
+{%- for tag in line_item.product.tags -%}
+  {%- case tag -%}
+    {%- when "High Poly"-%}
+      {%- assign card_class = card_class | append: ' line-item__media-wrapper--high-poly' -%}
+      {%- assign isHighPoly = true -%}
+      {%- break -%}
+    {%- when "Low Poly"-%}
+      {%- assign card_class = card_class | append: ' line-item__media-wrapper--low-poly' -%}
+      {%- assign isLowPoly = true -%}
+      {%- break -%}
+    {%- when "2D Images"-%}
+      {%- assign card_class = card_class | append: ' line-item__media-wrapper--2d-images' -%}
+      {%- assign is2DImages = true -%}
+      {%- break -%}
+  {%- endcase -%}
+{%- endfor -%}
+
+{%- capture productTag -%}
+  {%- if isLowPoly -%}
+    <div class="product-tag tag-low">
+      <span>{{ 'Low Poly' }}</span>
+    </div>
+  {%- elsif is2DImages -%}
+    <div class="product-tag tag-2d">
+      <span>{{ '2D Images' }}</span>
+    </div>
+  {%- else -%}
+    <div class="product-tag tag-high">
+      <span>{{ 'High Poly' }}</span>
+    </div>
+  {%- endif -%}
+{%- endcapture -%}
+
 <line-item class="line-item">
   {%- if line_item.image != blank -%}
-    <div class="line-item__media-wrapper">
-      {{- line_item.image | image_url: width: line_item.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) 80px, 96px', widths: '80,96,160,192', class: 'line-item__media rounded-xs' -}}
+    <div class="{{ card_class }}">
+      {%- if template.name != 'cart' -%}
+        {{ productTag }}
+      {%- endif -%}
+      {{- line_item.image | image_url: width: line_item.image.width | image_tag: loading: 'lazy', sizes: '142px', widths: '284', class: 'line-item__media rounded-xs' -}}
 
       <pill-loader class="pill-loader"></pill-loader>
     </div>
   {%- endif -%}
 
   <div class="line-item__info">
-    <div class="v-stack gap-0.5">
-      {%- if line_item.url != blank -%}
-        <a href="{{ line_item.url }}" class="bold">
-          <span data-productid="{{ line_item.product_id }}" class="line-item-product-title reversed-link hover:show">{{ line_item.product.title | default: line_item.title }}</span>
-        </a>
-      {%- else -%}
-        <p class="bold">{{ line_item.product.title | default: line_item.title }}</p>
+    <div class="v-stack gap-2 justify-items-start">
+      {%- if template.name == 'cart' -%}
+        {{ productTag }}
       {%- endif -%}
 
-      {%- render 'price-list', line_item: line_item -%}
+      {%- if line_item.url != blank -%}
+        <a data-productid="{{ line_item.product_id }}" href="{{ line_item.url }}" class="semibold line-item-product-title">
+          {%- if line_item.product.metafields.custom.plants_name != blank -%}
+            {{ line_item.product.metafields.custom.plants_name }}
+            {%- for field in line_item.product.metafields.custom.common_namess.value -%}
+              <span class="common_names"> • {{ field }}</span>
+            {%- endfor -%}
+          {%- else -%}
+            {{ line_item.product.title | default: line_item.title }}
+          {%- endif -%}
+        </a>
+      {%- else -%}
+        <p class="semibold">{{ line_item.product.title | default: line_item.title }}</p>
+      {%- endif -%}
+
+      {%- if template.name != 'cart' -%}
+        {%- render 'price-list', line_item: line_item -%}
+      {%- else -%}
+        <ul class="product-tags">
+          {%- for tag in line_item.product.tags -%}
+            {%- if tag contains 'Asia' or tag contains 'Europe' or tag contains 'America' or tag contains 'Middle East' or tag contains 'Oceania' or tag contains 'Africa' -%}
+              <li class="{{ tag }}">{{ tag }}</li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
     </div>
 
     {%- unless line_item.product.has_only_default_variant or line_item.gift_card -%}
-      <p class="text-sm text-subdued">{{ line_item.variant.title }}</p>
+      {%- if template.name != 'cart' -%}
+        <p class="line-item__variant">{{ line_item.variant.title }}</p>
+      {%- endif -%}
     {%- endunless -%}
 
     {%- if line_item.selling_plan_allocation -%}
@@ -69,12 +133,13 @@ Supported variables
 
     <div class="text-sm text-subdued sm:hidden">
       {%- if line_item.url_to_remove -%}
-        <line-item-quantity class="h-stack justify-center gap-3">
-          <input class="quantity-input" type="text" is="quantity-input" inputmode="numeric" {% if line_max_quantity %}max="{{ line_max_quantity }}"{% endif %} data-line-key="{{ line_item.key }}" aria-label="{{ 'cart.order.change_quantity' | t | escape }}" value="{{ line_item.quantity }}">
+        <line-item-quantity class="h-stack">
+          <input class="quantity-input" type="hidden" is="quantity-input" inputmode="numeric" {% if line_max_quantity %}max="{{ line_max_quantity }}"{% endif %} data-line-key="{{ line_item.key }}" aria-label="{{ 'cart.order.change_quantity' | t | escape }}" value="{{ line_item.quantity }}">
 
-          <span class="text-xs">
-            <a href="{{ line_item.url_to_remove }}" class="link">{{ 'cart.order.remove' | t }}</a>
-          </span>
+          <a href="{{ line_item.url_to_remove }}" class="link">
+            <span class="sr-only">{{ 'cart.order.remove' | t }}</span>
+            {%- render 'icon' with 'trash' -%}
+          </a>
         </line-item-quantity>
       {%- else -%}
         {{- 'customer.order.quantity' | t }}: {{ line_item.quantity -}}
@@ -95,10 +160,13 @@ Supported variables
   {%- if show_desktop_quantity -%}
     <div class="line-item__actions text-subdued hidden sm:block">
       <line-item-quantity class="v-stack gap-2">
-        <input class="quantity-input" type="text" is="quantity-input" inputmode="numeric" {% if line_max_quantity %}max="{{ line_max_quantity }}"{% endif %} data-line-key="{{ line_item.key }}" aria-label="{{ 'cart.order.change_quantity' | t | escape }}" value="{{ line_item.quantity }}">
+        <input class="quantity-input" type="hidden" is="quantity-input" inputmode="numeric" {% if line_max_quantity %}max="{{ line_max_quantity }}"{% endif %} data-line-key="{{ line_item.key }}" aria-label="{{ 'cart.order.change_quantity' | t | escape }}" value="{{ line_item.quantity }}">
 
         <span class="text-xs text-center">
-          <a href="{{ line_item.url_to_remove }}" class="link">{{ 'cart.order.remove' | t }}</a>
+          <a href="{{ line_item.url_to_remove }}" class="link">
+            <span class="sr-only">{{ 'cart.order.remove' | t }}</span>
+            {%- render 'icon' with 'trash' -%}
+          </a>
         </span>
       </line-item-quantity>
     </div>

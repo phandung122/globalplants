@@ -1,0 +1,589 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "80ch"
+      }
+    },
+    "fb0663b3-9833-4679-853e-d7c46c759535": {
+      "type": "form-create-custom-3d",
+      "settings": {
+        "full_width": true,
+        "image": "shopify:\/\/shop_images\/BG.png",
+        "mobile_image": "shopify:\/\/shop_images\/BG_1.png",
+        "title": "Can’t find the correct 3D plant models<br><span>you are looking for on our store?<\/span>",
+        "show_custom_form": true,
+        "custom_3D_form": "Create Custom 3D Plant Models with Globe Plants in Just <span>Two Steps<\/span>"
+      }
+    },
+    "dfb5343e-95e3-44d8-828f-f172102b7c0a": {
+      "type": "heading-richtext",
+      "settings": {
+        "heading_richtext_subtitle": "BENEFITS",
+        "heading_richtext_title": "Why choose <span>Globe Plants<\/span> Custom 3D Plant Models?",
+        "bg_color_heading_richtext": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "9c21afed-aa8a-4d62-ba04-b8491cdbcf5a": {
+      "type": "multi-column-benefit",
+      "blocks": {
+        "template--20029015982370__9c21afed-aa8a-4d62-ba04-b8491cdbcf5a-item-1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_36.svg",
+            "column_size": "4",
+            "title": "Experts in the field",
+            "heading_tag": "h5",
+            "content": "<p>We use our years of experience in 3D visualisation, modelling and plant species to create the most accurate and highest quality 3D Models<\/p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "template--20029015982370__9c21afed-aa8a-4d62-ba04-b8491cdbcf5a-item-2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_35.svg",
+            "column_size": "4",
+            "title": "Exceptional variety",
+            "heading_tag": "h5",
+            "content": "<p>Choose from a wide range of species from all regions of the world in different variations of shape, season and age to suit any scene<\/p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "template--20029015982370__9c21afed-aa8a-4d62-ba04-b8491cdbcf5a-item-3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_37.svg",
+            "column_size": "4",
+            "title": "Meticulous Perfection",
+            "heading_tag": "h5",
+            "content": "<p>Enjoy the freedom of being able to manipulate the geometry of the foilage with the GrowFX format to your liking<\/p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "164388b8-8fc0-4200-aff8-e6470be133d9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_38.svg",
+            "column_size": "4",
+            "title": "Ready 3D Renders",
+            "heading_tag": "h5",
+            "content": "<p>All models include user-friendly instructions, all pre-made material setups and highly realistic textures, ready for you to implement and use<\/p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "template--20029015982370__9c21afed-aa8a-4d62-ba04-b8491cdbcf5a-item-1",
+        "template--20029015982370__9c21afed-aa8a-4d62-ba04-b8491cdbcf5a-item-2",
+        "template--20029015982370__9c21afed-aa8a-4d62-ba04-b8491cdbcf5a-item-3",
+        "164388b8-8fc0-4200-aff8-e6470be133d9"
+      ],
+      "settings": {
+        "full_width": false,
+        "stack_on_mobile": false,
+        "is_promotion_grid": false,
+        "img_with_title": true,
+        "horizontal_scroll_bar": false,
+        "gap": "medium",
+        "font_weight_title_column": "bold",
+        "text_alignment": "start",
+        "classname_multi_column": "multi-column__custom-request",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "#f4f4f4",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "2d9f4f3a-e563-4de6-9676-d20b306d8461": {
+      "type": "heading-richtext",
+      "settings": {
+        "heading_richtext_subtitle": "OUR PROCESS",
+        "heading_richtext_title": "How 3D custom plants modeling works",
+        "bg_color_heading_richtext": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "6b209b90-f754-4824-af8b-05dba7011c04": {
+      "type": "coverflow-slide",
+      "blocks": {
+        "template--20029015982370__6b209b90-f754-4824-af8b-05dba7011c04-slide-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/globeplants-custom-3d-plant-modelling-step-1-1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/globeplants-custom-3d-plant-modelling-step-1-1.jpg",
+            "icon_content_text": "shopify:\/\/shop_images\/Frame_254.svg",
+            "text_heading_cvf_slide": "Design Request",
+            "text_content_cvf_slide": "<p>Send us the species that you would like to create in Botanical or Common names, as well as any references (photos) if you have<\/p>"
+          }
+        },
+        "template--20029015982370__6b209b90-f754-4824-af8b-05dba7011c04-slide-2": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/globeplants-custom-3d-plant-modelling-step-2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/globeplants-custom-3d-plant-modelling-step-2.jpg",
+            "icon_content_text": "shopify:\/\/shop_images\/Frame_255.svg",
+            "text_heading_cvf_slide": "Design Process",
+            "text_content_cvf_slide": "<p>We create the exact same plants you want and send you multiple drafts for reviews and changes<\/p>"
+          }
+        },
+        "template--20029015982370__6b209b90-f754-4824-af8b-05dba7011c04-slide-3": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/globeplants-custom-3d-plant-modelling-step-3.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/globeplants-custom-3d-plant-modelling-step-3.jpg",
+            "icon_content_text": "shopify:\/\/shop_images\/Frame_256.svg",
+            "text_heading_cvf_slide": "Approval",
+            "text_content_cvf_slide": "<p>The final designs are sent to you for approval<\/p>"
+          }
+        },
+        "76ac8d29-e351-4015-8000-1e1c6a501e79": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/globeplants-custom-3d-plant-modelling-step-4.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/globeplants-custom-3d-plant-modelling-step-4.jpg",
+            "icon_content_text": "shopify:\/\/shop_images\/Frame_257.svg",
+            "text_heading_cvf_slide": "Delivery",
+            "text_content_cvf_slide": "<p>We send you the finalised designs in the file formats requested<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20029015982370__6b209b90-f754-4824-af8b-05dba7011c04-slide-1",
+        "template--20029015982370__6b209b90-f754-4824-af8b-05dba7011c04-slide-2",
+        "template--20029015982370__6b209b90-f754-4824-af8b-05dba7011c04-slide-3",
+        "76ac8d29-e351-4015-8000-1e1c6a501e79"
+      ],
+      "settings": {}
+    },
+    "953bef69-6616-483f-a6a1-8a215deed4ad": {
+      "type": "heading-richtext",
+      "settings": {
+        "heading_richtext_subtitle": "LICENCES",
+        "heading_richtext_title": "We offer <span>3 licences<\/span> for our service",
+        "bg_heading_richtext": "shopify:\/\/shop_images\/Vector_1.png",
+        "bg_color_heading_richtext": "#f4f4f4",
+        "padding_top": 126,
+        "padding_bottom": 0,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "9ebea56e-8a38-4346-8048-cd65336831f6": {
+      "type": "multi-column-our-service",
+      "blocks": {
+        "template--20029015982370__9ebea56e-8a38-4346-8048-cd65336831f6-plan-1": {
+          "type": "plan",
+          "settings": {
+            "title": "Edit Existing Plants",
+            "price": "$15 - $30",
+            "subtext_price": "per unique species",
+            "plan_content": "<h5>Custom Modification<\/h5>\nTailored adjustments to existing plant models to meet your specific requirements.\n\n<h5>Quick turnaround<\/h5>\nSwift edits to align with your project deadlines.\n\n<h5>Wide Variety<\/h5>\nAbility to modify a diverse range of plant models on our store to suit your needs.",
+            "button": "Get Started",
+            "form_name": "Edit Existing Plants"
+          }
+        },
+        "template--20029015982370__9ebea56e-8a38-4346-8048-cd65336831f6-plan-2": {
+          "type": "plan",
+          "settings": {
+            "title": "Standard Commercial",
+            "price": "$150 - $320",
+            "subtext_price": "per unique species",
+            "plan_content": "<h5>Cost Effective<\/h5>\nAccurate pricing depends on the complexity of each species.\n\n<h5>Technical Support<\/h5>\n60 days after completion\n\n<h5>Non-Exclusive Rights<\/h5>\nPermits extensive usage, however, the models may be purchased by others 45 days post-completion.\n\n<h5>Strictly Non-Resalable<\/h5>",
+            "button": "Get Started",
+            "form_name": "Standard Commercial"
+          }
+        },
+        "template--20029015982370__9ebea56e-8a38-4346-8048-cd65336831f6-plan-3": {
+          "type": "plan",
+          "settings": {
+            "title": "Exclusive Commercial",
+            "price": "$2000 - $5000",
+            "subtext_price": "per unique species",
+            "plan_content": "<h5>Exclusive Use<\/h5>\nYou will be the sole owner of the custom plant models, which will not be sold or made available to any other customer.\n\n<h5>Lifetime Support<\/h5>\nPriority from our dedicated team for any queries or issues related to the models.\n\n<h5>Resale and Redistribute<\/h5>\nPermits for optional reselling or redistribution of the models.",
+            "button": "Get Started",
+            "form_name": "Exclusive Commercial"
+          }
+        },
+        "c5649cf3-629b-4d9f-ac74-464856f47e27": {
+          "type": "feature",
+          "settings": {
+            "feature_title": "High-Quality Models",
+            "feature_description": "<p>Benefit from our high-end, meticulously crafted plant models that reflect real-world accuracy, providing an unmatched level of detail and realism to your projects.<\/p>"
+          }
+        },
+        "dde0e4e9-955b-4390-8f89-cb7fb4ed25e0": {
+          "type": "feature",
+          "settings": {
+            "feature_title": "Comprehensive Access",
+            "feature_description": "<p>You are granted broad utilization rights of our custom plant models in your commercial projects, enhancing your design flexibility.<\/p>"
+          }
+        },
+        "b3ac6de4-8089-4a98-ada0-9a748d1f9eca": {
+          "type": "feature",
+          "settings": {
+            "feature_title": "Continual Free Updates",
+            "feature_description": "<p>Receive all minor updates to your custom models, ensuring they stay current and optimized.<\/p>"
+          }
+        },
+        "faa2f694-c95d-4041-bf2a-65e4af20e073": {
+          "type": "feature",
+          "settings": {
+            "feature_title": "Perpetual License",
+            "feature_description": "<p>Once purchased, the license never expires. You have lifetime access to the models for your commercial projects.<\/p>"
+          }
+        },
+        "ad478feb-b717-47a0-b724-2a1c31e67c62": {
+          "type": "feature",
+          "settings": {
+            "feature_title": "Choose from a wide range of format we support below",
+            "feature_description": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20029015982370__9ebea56e-8a38-4346-8048-cd65336831f6-plan-1",
+        "template--20029015982370__9ebea56e-8a38-4346-8048-cd65336831f6-plan-2",
+        "template--20029015982370__9ebea56e-8a38-4346-8048-cd65336831f6-plan-3",
+        "c5649cf3-629b-4d9f-ac74-464856f47e27",
+        "dde0e4e9-955b-4390-8f89-cb7fb4ed25e0",
+        "b3ac6de4-8089-4a98-ada0-9a748d1f9eca",
+        "faa2f694-c95d-4041-bf2a-65e4af20e073",
+        "ad478feb-b717-47a0-b724-2a1c31e67c62"
+      ],
+      "settings": {
+        "background_section": "#f4f4f4",
+        "title_block_feature": "All features"
+      }
+    },
+    "7090b876-7232-48c5-81d2-550d092d27ad": {
+      "type": "heading-richtext",
+      "settings": {
+        "heading_richtext_subtitle": "FORMATS WE DELIVER",
+        "heading_richtext_title": "Customized 3D plant models for your software and rendering needs.",
+        "bg_color_heading_richtext": "#ffffff",
+        "padding_top": 110,
+        "padding_bottom": 0,
+        "padding_top_mobile": 60,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "3b0172f8-f1f3-4bb9-bd85-fcd20d63cb34": {
+      "type": "logo-list-alt",
+      "blocks": {
+        "template--20029015982370__3b0172f8-f1f3-4bb9-bd85-fcd20d63cb34-logo-1": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/globe-plants-collection-logo-3dsmax.png",
+            "logo_width": 138,
+            "link": ""
+          }
+        },
+        "template--20029015982370__3b0172f8-f1f3-4bb9-bd85-fcd20d63cb34-logo-2": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Growfx.png",
+            "logo_width": 138,
+            "link": ""
+          }
+        },
+        "template--20029015982370__3b0172f8-f1f3-4bb9-bd85-fcd20d63cb34-logo-3": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/globe-plants-collection-logo-fbx.png",
+            "logo_width": 138,
+            "link": ""
+          }
+        },
+        "template--20029015982370__3b0172f8-f1f3-4bb9-bd85-fcd20d63cb34-logo-4": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/globe-plants-collections-logo-sketchup.png",
+            "logo_width": 138,
+            "link": ""
+          }
+        },
+        "template--20029015982370__3b0172f8-f1f3-4bb9-bd85-fcd20d63cb34-logo-5": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/globe-plants-collections-logo-cinema4d.png",
+            "logo_width": 138,
+            "link": ""
+          }
+        },
+        "9eea9ca7-59cc-4c44-9848-7b372a4c0fbb": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/globe-plants-collections-logo-blender.png",
+            "logo_width": 138,
+            "link": ""
+          }
+        },
+        "b607fa66-8b92-4531-937a-085a1a91044f": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/globe-plants-collections-logo-twinmotion.png",
+            "logo_width": 138,
+            "link": ""
+          }
+        },
+        "f8f1478c-ea4c-4564-8610-16f4ca6f9bd7": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/globe-plants-collections-logo-rhinoceros3D.png",
+            "logo_width": 138,
+            "link": ""
+          }
+        },
+        "cd248cb8-20bd-4598-a6a8-3a3f309ff903": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/globe-plants-collections-logo-redshift.png",
+            "logo_width": 138,
+            "link": ""
+          }
+        },
+        "c22e7ac8-2e89-4596-a5b8-65f116815297": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/globe-plants-collections-logo-unreal-engine5.png",
+            "logo_width": 138,
+            "link": ""
+          }
+        },
+        "5609b93b-7cb4-4741-8125-4044b8690fee": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/globe-plants-collections-logo-revit-enscape_bbd8e0f9-61a7-45c7-a6bc-dfc45049143f.png",
+            "logo_width": 138,
+            "link": ""
+          }
+        },
+        "0b8c3319-3bf3-4b04-bb2e-bb47370c3bfc": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/globe-plants-collections-logo-sketchup-enscape.png",
+            "logo_width": 138,
+            "link": ""
+          }
+        },
+        "d2d621c5-1146-494a-80a9-a8d3ed6f8720": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/globe-plants-collections-logo-rhino3d-enscape.png",
+            "logo_width": 138,
+            "link": ""
+          }
+        },
+        "fa3b19f2-e8df-4b41-ab7d-d4b65dc14cc4": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/globe-plants-collections-logo-archicad-enscape.png",
+            "logo_width": 138,
+            "link": ""
+          }
+        },
+        "973ad013-b411-44a1-b47c-4fd4bb34e277": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/globe-plants-collections-logo-vectorworks-enscape.png",
+            "logo_width": 138,
+            "link": ""
+          }
+        },
+        "a0baa53a-26d3-4e22-bf68-a6eb65cda338": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/globe-plants-collections-logo-HDRI.png",
+            "logo_width": 138,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20029015982370__3b0172f8-f1f3-4bb9-bd85-fcd20d63cb34-logo-1",
+        "template--20029015982370__3b0172f8-f1f3-4bb9-bd85-fcd20d63cb34-logo-2",
+        "template--20029015982370__3b0172f8-f1f3-4bb9-bd85-fcd20d63cb34-logo-3",
+        "template--20029015982370__3b0172f8-f1f3-4bb9-bd85-fcd20d63cb34-logo-4",
+        "template--20029015982370__3b0172f8-f1f3-4bb9-bd85-fcd20d63cb34-logo-5",
+        "9eea9ca7-59cc-4c44-9848-7b372a4c0fbb",
+        "b607fa66-8b92-4531-937a-085a1a91044f",
+        "f8f1478c-ea4c-4564-8610-16f4ca6f9bd7",
+        "cd248cb8-20bd-4598-a6a8-3a3f309ff903",
+        "c22e7ac8-2e89-4596-a5b8-65f116815297",
+        "5609b93b-7cb4-4741-8125-4044b8690fee",
+        "0b8c3319-3bf3-4b04-bb2e-bb47370c3bfc",
+        "d2d621c5-1146-494a-80a9-a8d3ed6f8720",
+        "fa3b19f2-e8df-4b41-ab7d-d4b65dc14cc4",
+        "973ad013-b411-44a1-b47c-4fd4bb34e277",
+        "a0baa53a-26d3-4e22-bf68-a6eb65cda338"
+      ],
+      "settings": {
+        "full_width": false,
+        "stack_mobile": true,
+        "title": "",
+        "content": "",
+        "content_bottom": "<p>We can also provide additional formats outside of the above if you require. Please get in touch with us with your request<\/p>",
+        "text_alignment": "start",
+        "classname_logolist_alt": "logo-list-alt__custom",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "logo_item_background": "",
+        "logo_item_border": ""
+      }
+    },
+    "3141ab0c-5898-45f9-8f9b-86c3a68abf1d": {
+      "type": "press",
+      "blocks": {
+        "template--20029015982370__3141ab0c-5898-45f9-8f9b-86c3a68abf1d-quote-1": {
+          "type": "quote",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/review-skatter-logo.png",
+            "logo_width": 40,
+            "author": "Thomas - Skatter For SketchUp",
+            "content": "Globe Plants are filling a gap in the visualisation market with unique vegetation species and great detailed products. All this care for quality and respect for artists in promoting excellent 3D models make Globe Plants one of my favourite companies.",
+            "show_rating": false,
+            "rating": 4
+          }
+        },
+        "template--20029015982370__3141ab0c-5898-45f9-8f9b-86c3a68abf1d-quote-2": {
+          "type": "quote",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/a1.png",
+            "logo_width": 40,
+            "author": "Stab Studio",
+            "content": "All models from Globe Plants are high quality and easy to work with. The team also make custom models quickly at a reasonable price. They are really friendly and always go above and beyond!",
+            "show_rating": false,
+            "rating": 4
+          }
+        },
+        "template--20029015982370__3141ab0c-5898-45f9-8f9b-86c3a68abf1d-quote-3": {
+          "type": "quote",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/AVA_signet.svg",
+            "logo_width": 40,
+            "author": "Agnieszka Klich - Arch Viz Artist",
+            "content": "Globe Plants' 3D plant models are a game-changer for my 3D art. The attention to detail, photorealism, and ease of integration into my workflow are outstanding. The wide range of plant species and excellent customer service make them my go-to source for high-quality plant models. Not to mention the availability of GrowFX files, which adds, even more, versatility to their offerings. Highly recommended!",
+            "show_rating": false,
+            "rating": 4
+          }
+        }
+      },
+      "block_order": [
+        "template--20029015982370__3141ab0c-5898-45f9-8f9b-86c3a68abf1d-quote-1",
+        "template--20029015982370__3141ab0c-5898-45f9-8f9b-86c3a68abf1d-quote-2",
+        "template--20029015982370__3141ab0c-5898-45f9-8f9b-86c3a68abf1d-quote-3"
+      ],
+      "custom_css": [
+        ".press {gap: var(--spacing-8);}"
+      ],
+      "settings": {
+        "full_width": true,
+        "content_size": "medium",
+        "title": "<p>Words From <strong>Our customers<\/strong><\/p>",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "",
+        "background_gradient": "",
+        "background_image": "shopify:\/\/shop_images\/customer-reviews-bg.jpg",
+        "text_color": "#ffffff",
+        "heading_color": "#ffffff",
+        "heading_gradient": "",
+        "logo_item_background": "#ffffff",
+        "logo_item_border": ""
+      }
+    },
+    "d61c4449-1fc2-4911-8bfa-55665d240359": {
+      "type": "main-faqs",
+      "blocks": {
+        "template--20029015982370__d61c4449-1fc2-4911-8bfa-55665d240359-faqs-1": {
+          "type": "faqs",
+          "settings": {
+            "question_faqs": "What's your average turnaround time?",
+            "answer_faqs": "<p>Our delivery timeline is influenced by the intricacy of the species in question. Some species, due to their complexity, require a more extended modeling process. However, we consistently strive to meet your preferred deadline, ensuring both timeliness and the highest quality in our models. We usually aim for 5 to 7 business days for less than 5 custom species.<\/p>"
+          }
+        },
+        "template--20029015982370__d61c4449-1fc2-4911-8bfa-55665d240359-faqs-2": {
+          "type": "faqs",
+          "settings": {
+            "question_faqs": "Can I get a discount for ordering large quantity of custom plants?",
+            "answer_faqs": "<p>Regrettably, custom plant modeling demands significant dedication and precision to ensure the species are accurately represented. Our pricing mirrors the meticulous effort and time invested. We prioritize quality and adhere to our high standards, ensuring we never compromise on delivering excellence. However, we value our clients and encourage you to contact us; we'll endeavor to accommodate your budget while maintaining our commitment to quality.<\/p>"
+          }
+        },
+        "template--20029015982370__d61c4449-1fc2-4911-8bfa-55665d240359-faqs-3": {
+          "type": "faqs",
+          "settings": {
+            "question_faqs": "How can I receive the custom made models?",
+            "answer_faqs": "<p>Upon approval of the final draft, we will send you the Dropbox link to download your custom made models.<\/p>"
+          }
+        },
+        "fc9ce5d1-eeb5-4574-823e-6f2f946c21ab": {
+          "type": "faqs",
+          "settings": {
+            "question_faqs": "I do not have the budget for your custom service but I really want a specific species. What can I do?",
+            "answer_faqs": "<p>Should budget be your concern, we invite you to recommend your desired species for inclusion in our production pipeline. However, given the extensive nature of our current pipeline, it may take us 1-2 years to address your requests. Opting for our custom modeling service accelerates this process by giving priority to your unique needs.<\/p>"
+          }
+        },
+        "822a0775-a796-4e2d-90aa-16c3a3276645": {
+          "type": "faqs",
+          "disabled": true,
+          "settings": {
+            "question_faqs": "How can I receive purchased products?",
+            "answer_faqs": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20029015982370__d61c4449-1fc2-4911-8bfa-55665d240359-faqs-1",
+        "template--20029015982370__d61c4449-1fc2-4911-8bfa-55665d240359-faqs-2",
+        "template--20029015982370__d61c4449-1fc2-4911-8bfa-55665d240359-faqs-3",
+        "fc9ce5d1-eeb5-4574-823e-6f2f946c21ab",
+        "822a0775-a796-4e2d-90aa-16c3a3276645"
+      ],
+      "settings": {
+        "bg_main_faqs": "shopify:\/\/shop_images\/Custom_request_banner_Globe_plants.jpg",
+        "title_faqs": "Have a question? <span>Check our FAQs below.<span><\/span><\/span>",
+        "title_faqs_note": "Still have question?",
+        "content_faqs_note": "Chat with us",
+        "link_faqs": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "fb0663b3-9833-4679-853e-d7c46c759535",
+    "dfb5343e-95e3-44d8-828f-f172102b7c0a",
+    "9c21afed-aa8a-4d62-ba04-b8491cdbcf5a",
+    "2d9f4f3a-e563-4de6-9676-d20b306d8461",
+    "6b209b90-f754-4824-af8b-05dba7011c04",
+    "953bef69-6616-483f-a6a1-8a215deed4ad",
+    "9ebea56e-8a38-4346-8048-cd65336831f6",
+    "7090b876-7232-48c5-81d2-550d092d27ad",
+    "3b0172f8-f1f3-4bb9-bd85-fcd20d63cb34",
+    "3141ab0c-5898-45f9-8f9b-86c3a68abf1d",
+    "d61c4449-1fc2-4911-8bfa-55665d240359"
+  ]
+}
