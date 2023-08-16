@@ -159,6 +159,15 @@
 					}
 				}
 			}
+			.h2, .prose h2:not(.h0,.h1,.h2,.h3,.h4,.h5,.h6) {
+				font-size: 1.75rem;
+			}
+			.h3, .prose h3:not(.h0,.h1,.h2,.h3,.h4,.h5,.h6) {
+				font-size: 1.5rem;
+			}
+			.h4, .prose h4:not(.h0,.h1,.h2,.h3,.h4,.h5,.h6) {
+				font-size: 1.25rem;
+			}
 		}
 		.article-feature-product-wrapper {
 			margin-top: 32px;
@@ -601,7 +610,7 @@
 		.blog-posts__container {
 			padding: 0 var(--spacing-16) var(--spacing-20);
 			margin-bottom: 0;
-			max-width: 1800px;
+			max-width: 1928px;
 			margin-left: auto;
 			margin-right: auto;
 			@media screen and (max-width: 1200px) {
