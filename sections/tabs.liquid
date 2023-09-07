@@ -125,6 +125,15 @@
                       </div>
                     {%- endunless -%}
 
+                    {%- if product.metafields.custom.triangle_count != blank -%}
+                      <div class="item">
+                        <span class="item-title">{{ 'Triangle Count' }}</span>
+                        <div class="item-content">
+                          <strong>{{ product.metafields.custom.triangle_count }}</strong>
+                        </div>
+                      </div>
+                    {%- endif -%}
+
                       <div class="item">
                         <span class="item-title">{{ 'Region' }}</span>
                         <div class="item-content">

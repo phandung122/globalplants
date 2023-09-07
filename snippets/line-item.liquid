@@ -131,7 +131,7 @@ Supported variables
       </ul>
     {%- endunless -%}
 
-    <div class="text-sm text-subdued sm:hidden">
+    <div class="text-sm text-subdued sm:hidden{% if show_desktop_quantity %} hidden{% endif %}">
       {%- if line_item.url_to_remove -%}
         <line-item-quantity class="h-stack">
           <input class="quantity-input" type="hidden" is="quantity-input" inputmode="numeric" {% if line_max_quantity %}max="{{ line_max_quantity }}"{% endif %} data-line-key="{{ line_item.key }}" aria-label="{{ 'cart.order.change_quantity' | t | escape }}" value="{{ line_item.quantity }}">
@@ -158,7 +158,7 @@ Supported variables
   </div>
 
   {%- if show_desktop_quantity -%}
-    <div class="line-item__actions text-subdued hidden sm:block">
+    <div class="line-item__actions text-subdued">
       <line-item-quantity class="v-stack gap-2">
         <input class="quantity-input" type="hidden" is="quantity-input" inputmode="numeric" {% if line_max_quantity %}max="{{ line_max_quantity }}"{% endif %} data-line-key="{{ line_item.key }}" aria-label="{{ 'cart.order.change_quantity' | t | escape }}" value="{{ line_item.quantity }}">
 

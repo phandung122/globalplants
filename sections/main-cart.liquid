@@ -156,28 +156,6 @@
                             </ul>
                           {%- endunless -%}
 
-                          <div class="text-sm text-subdued sm:hidden">
-                            {%- if line_item.url_to_remove -%}
-                              <line-item-quantity class="h-stack">
-                                <input class="quantity-input" type="hidden" is="quantity-input" inputmode="numeric" {% if line_max_quantity %}max="{{ line_max_quantity }}"{% endif %} data-line-key="{{ line_item.key }}" aria-label="{{ 'cart.order.change_quantity' | t | escape }}" value="{{ line_item.quantity }}">
-
-                                <a href="{{ line_item.url_to_remove }}" title="{{ 'Remove' }}">
-                                  <div>
-                                    <span class="sr-only">{{ 'cart.order.remove' | t }}</span>
-                                    {%- render 'icon' with 'trash' -%}
-                                  </div>
-                                  <span class="button__loader">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                  </span>
-                                </a>
-                              </line-item-quantity>
-                            {%- else -%}
-                              {{- 'customer.order.quantity' | t }}: {{ line_item.quantity -}}
-                            {%- endif -%}
-                          </div>
-
                           {%- if line_item.line_level_discount_allocations != blank -%}
                             <ul class="contents" role="list">
                               {%- for discount_allocation in line_item.line_level_discount_allocations -%}
@@ -204,7 +182,7 @@
                       </line-item>
                     </td>
 
-                    <td class="hidden align-center text-center sm:table-cell">
+                    <td class="align-center text-center">
                       {%- unless line_item.product.has_only_default_variant or line_item.gift_card -%}
                         <div class="h-stack gap-2 line-item__variant-edit">
                           {%- assign value = line_item.variant.title -%}
@@ -290,9 +268,12 @@
                       {%- endunless -%}
                     </td>
 
-                    <td class="hidden align-center text-end sm:table-cell">{{ line_item.final_line_price | money }}</td>
+                    <td class="order-summary__price align-center text-end">
+                      <span class="sm:hidden">{{ 'Price' }}</span>
+                      {{ line_item.final_line_price | money }}
+                    </td>
 
-                    <td class="hidden align-center text-end sm:table-cell">
+                    <td class="align-center text-center sm:text-end">
                       <line-item-quantity class="v-stack">
                         <input class="quantity-input" type="hidden" is="quantity-input" inputmode="numeric" {% if line_max_quantity != blank %}max="{{ line_max_quantity }}"{% endif %} data-line-key="{{ line_item.key }}" aria-label="{{ 'cart.order.change_quantity' | t | escape }}" value="{{ line_item.quantity }}">
 
@@ -331,8 +312,21 @@
           <safe-sticky class="cart-order__recap v-stack gap-6">
             <form action="{{ routes.cart_url }}" method="POST" class="cart-form rounded">
               <div class="cart-order__title">
-                <h2 class="h5">{{ 'Order Summary' }}</h2>
+                <h2 class="h5 hidden sm:block">{{ 'Order Summary' }}</h2>
+                <button type="button" class="cart-order__title-toggle sm:hidden">
+                  {%- render 'icon' with 'chevron-nav-bottom' -%}
+                </button>
               </div>
+              <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                  const btnSummaryToggle = document.querySelector('.cart-order__title-toggle');
+                  const cartOrderRecap = document.querySelector('.cart-order__recap');
+
+                  btnSummaryToggle.addEventListener('click', function () {
+                    cartOrderRecap.classList.toggle('open');
+                  });
+                });
+              </script>
 
               {%- assign noteBlock =  section.blocks | where: 'type', 'cart_note' | first -%}
               {%- for block in section.blocks -%}
@@ -351,7 +345,7 @@
 
                       <div class="h-stack gap-4 justify-between cart-form__subtotal">
                         <span>{{ 'cart.general.subtotal' | t }}</span>
-                        <span class="medium">{{ cart.items_subtotal_price | money }}</span>
+                        <span class="medium price">{{ cart.items_subtotal_price | money }}</span>
                       </div>
 
                       {%- if noteBlock != blank -%}
@@ -373,7 +367,7 @@
 
                       <div class="h-stack gap-4 justify-between cart--form__total">
                         <span class="h6 semibold">{{ 'cart.general.total' | t }}</span>
-                        <span class="h6 semibold">{{- cart.total_price | money_with_currency -}}</span>
+                        <span class="h6 semibold price">{{- cart.total_price | money_with_currency -}}</span>
                       </div>
 
                       {%- if block.settings.show_shipping_text -%}
@@ -387,6 +381,13 @@
                           <span class="cart-form__shipping">{{ 'cart.general.taxes_and_shipping_at_checkout' | t }}</span>
                         {%- endif -%}
                       {%- endif -%}
+                    </div>
+
+                    <div class="cart-form__totals-minimize sm:hidden">
+                      <div class="h-stack gap-4 justify-between cart--form__total">
+                        <span class="h6 semibold">{{ 'cart.general.total' | t }}</span>
+                        <span class="h6 semibold price">{{- cart.total_price | money_with_currency -}}</span>
+                      </div>
                     </div>
 
                   {%- when 'text' -%}

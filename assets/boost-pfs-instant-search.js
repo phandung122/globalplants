@@ -2,8 +2,10 @@
 // Override Settings
 var boostPFSInstantSearchConfig = {
   search: {
-    // suggestionMode: 'test',
     suggestionPosition: 'left'
+  },
+  general: {
+    breakpointMobile: '299'
   }
 };
 

@@ -20,7 +20,7 @@ the underlying logic of the menu.
 
   #shopify-section-{{ section.id }} {
     --header-grid-template: "logo secondary-nav main-nav" / minmax(0, 1fr) auto auto;
-    --header-padding-block: {% if section.settings.reduce_padding %}var(--spacing-3){% else %}var(--spacing-4-5){% endif %};
+    --header-padding-block: {% if section.settings.reduce_padding %}var(--spacing-3){% else %}var(--spacing-3){% endif %};
     --header-background-opacity: {{ section.settings.background_opacity | divided_by: 100.0 }};
     --header-background-blur-radius: {{ section.settings.background_blur_radius }}px;
     --header-transparent-text-color: {{ section.settings.transparent_header_text_color.rgb }};
@@ -275,7 +275,7 @@ the underlying logic of the menu.
             </a>
           {%- endif -%}
 
-          <a href="{{ routes.cart_url }}" data-no-instant class="hidden sm:block relative tap-area" {% if settings.cart_type != 'page' and request.page_type != 'cart' %}aria-controls="cart-drawer"{% endif %}>
+          <a href="{{ routes.cart_url }}" data-no-instant class="relative tap-area" {% if settings.cart_type != 'page' and request.page_type != 'cart' %}aria-controls="cart-drawer"{% endif %}>
             <span class="sr-only">{{ 'header.general.open_cart' | t }}</span>
             {%- render 'icon' with 'cart' -%}
 

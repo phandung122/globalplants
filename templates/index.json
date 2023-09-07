@@ -6,15 +6,15 @@
         "slide-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GlobePlants_Summer_2023.jpg",
+            "image": "shopify:\/\/shop_images\/globe-plants-3d-plant-model-bundle-54-agricultural-plants-slide.jpg",
             "content_max_width": 760,
             "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center-start sm:text-start",
-            "subheading": "",
-            "title": "",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "BUNDLE 54",
+            "title": "Agricultural Plants",
             "heading_tag": "h2",
-            "button_text": "",
-            "button_link": "",
+            "button_text": "EXPLORE BUNDLE 54",
+            "button_link": "shopify:\/\/products\/bundle-54-agricultural-plants-3d-model",
             "text_color": "#ffffff",
             "button_background": "#56842c",
             "button_text_color": "#ffffff",
@@ -107,6 +107,34 @@
         "search_form_placeholder": "Search for trees, shrubs or preferred formats ...",
         "background": "#f2f2f2",
         "background_gradient": "linear-gradient(60deg, rgba(60, 65, 68, 1), rgba(23, 29, 33, 1) 98%)"
+      }
+    },
+    "1693392939c6c42900": {
+      "type": "apps",
+      "blocks": {
+        "12b267b5-a131-4838-affa-9b7bd64a87a1": {
+          "type": "shopify:\/\/apps\/dialogue-ai-personalization\/blocks\/app-block-asset\/43034bfa-b90a-4a14-aaa8-527eac735f6f",
+          "settings": {
+            "asset_id": "f-15345",
+            "demo_mode": true
+          }
+        }
+      },
+      "block_order": [
+        "12b267b5-a131-4838-affa-9b7bd64a87a1"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "enable_review_integration": true,
+        "review_header_gradient": "linear-gradient(135deg, rgba(255, 194, 102, 1), rgba(255, 163, 26, 1) 100%)",
+        "review_header_text_color": "#000000",
+        "review_button_background": "#000000",
+        "review_button_text_color": "#ffffff"
       }
     },
     "5c74096b-a499-4486-b6b4-1280958051d0": {
@@ -681,6 +709,7 @@
   },
   "order": [
     "slideshow",
+    "1693392939c6c42900",
     "5c74096b-a499-4486-b6b4-1280958051d0",
     "90d79e0c-5e3a-4560-b655-63f7bbf50d63",
     "b05d61ba-07bc-42a6-900c-3969255b9133",

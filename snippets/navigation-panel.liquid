@@ -43,19 +43,6 @@ Supported variables
           {%- endunless -%}
         {%- endif -%}
 
-        <div class="sm:hidden panel-header__cart">
-          <a href="{{ routes.cart_url }}" data-no-instant class="h-stack gap-2 relative tap-area" {% if settings.cart_type != 'page' and request.page_type != 'cart' %}aria-controls="cart-drawer"{% endif %}>
-            {%- render 'icon' with 'cart' -%}
-            <span class="medium">{{ 'My Cart' }}</span>
-
-            <div class="header__cart-count">
-              <cart-count class="count-bubble {% if cart.item_count == 0 %}opacity-0{% endif %}" aria-hidden="true">
-                {{- cart.item_count -}}
-              </cart-count>
-            </div>
-          </a>
-        </div>
-
         {%- if country_selector or locale_selector -%}
           <div class="panel-header__localization-wrapper v-stack md:hidden">
             {%- if country_selector -%}

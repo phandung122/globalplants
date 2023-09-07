@@ -2035,8 +2035,8 @@ var LineItemQuantity = class extends HTMLElement {
 
       if (cartContentRender["item_count"] > 0) {
         document.querySelector('.order-summary').replaceChildren(...tempDiv.querySelector(".order-summary").children);
-        document.querySelector('.cart-form__subtotal .money').innerHTML = formatMoney(cartContentRender["items_subtotal_price"], currencyFormat);
-        document.querySelector('.cart--form__total .money').innerHTML = formatMoney(cartContentRender["total_price"], currencyFormat);
+        document.querySelector('.cart-form__subtotal .price').innerHTML = formatMoney(cartContentRender["items_subtotal_price"], currencyFormat);
+        document.querySelector('.cart--form__total .price').innerHTML = formatMoney(cartContentRender["total_price"], moneyWithCurrencyFormat);
       } else {
         document.querySelector('.shopify-section--main-cart').replaceChildren(...tempDiv.querySelector(".shopify-section--main-cart").children);
       }
@@ -2823,7 +2823,7 @@ var ProductForm = class extends HTMLFormElement {
       this.dispatchEvent(new CustomEvent("cart:error", {
         bubbles: true,
         detail: {
-          error: 'You can not add more than 1 item to cart'
+          error: 'You already added this format to your cart'
         }
       }));
       submitButtons.forEach((submitButton) => {
@@ -2943,6 +2943,7 @@ if (!window.customElements.get("pickup-availability")) {
   window.customElements.define("pickup-availability", PickupAvailability);
 }
 var currencyFormat = window.themeVariables.settings.currencyCodeEnabled ? window.themeVariables.settings.moneyWithCurrencyFormat : window.themeVariables.settings.moneyFormat;
+var moneyWithCurrencyFormat = window.themeVariables.settings.moneyWithCurrencyFormat;
 var SalePrice = class extends HTMLElement {
   constructor() {
     super();
@@ -3749,7 +3750,7 @@ var UpdateCartButton = class extends HTMLButtonElement {
         update_id = parseInt(this.getAttribute("update-variant-id"));
 
     if (current_id === update_id) {
-      this._onCartError('You can not add more than 1 item to cart');
+      this._onCartError('You already added this format to your cart');
       return;
     }
 
@@ -3802,8 +3803,8 @@ var UpdateCartButton = class extends HTMLButtonElement {
         document.querySelector('.order-summary').replaceChildren(...tempDiv.querySelector(".order-summary").children);
 
         const cartContentAfter = await (await fetch(`${Shopify.routes.root}cart.js`)).json();
-        document.querySelector('.cart-form__subtotal .money').innerHTML = formatMoney(cartContentAfter["items_subtotal_price"], currencyFormat);
-        document.querySelector('.cart--form__total .money').innerHTML = formatMoney(cartContentAfter["total_price"], currencyFormat);
+        document.querySelector('.cart-form__subtotal .price').innerHTML = formatMoney(cartContentAfter["items_subtotal_price"], currencyFormat);
+        document.querySelector('.cart--form__total .price').innerHTML = formatMoney(cartContentAfter["total_price"], moneyWithCurrencyFormat);
 
         document.querySelector('[is="close-button"]').click();
       } else {
@@ -3811,7 +3812,7 @@ var UpdateCartButton = class extends HTMLButtonElement {
       }
 
     } else {
-      this._onCartError('You can not add more than 1 item to cart');
+      this._onCartError('You already added this format to your cart');
     }
   }
 
