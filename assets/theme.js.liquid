@@ -3436,7 +3436,13 @@ var QuickBuyDrawer = class extends Drawer {
       Shopify.PaymentButton?.init();
       this._hasLoaded = true;
     }
-    return super.show();
+    super.show();
+    if ( document.querySelectorAll('quick-buy-drawer[open]').length > 1 ) {
+      return super.hide()?.then(() => {
+        this.style.display = "none";
+      });
+    }
+    return;
   }
   async hide() {
     return super.hide()?.then(() => {
