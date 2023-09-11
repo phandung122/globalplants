@@ -58,6 +58,7 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     {{- 'main.css' | asset_url | stylesheet_tag: preload: true -}}
     {{- 'app.css' | asset_url | stylesheet_tag: preload: true -}}
     {{- 'app-terms.css' | asset_url | stylesheet_tag: preload: true -}}
+    {{- 'app-dialog.css' | asset_url | stylesheet_tag: preload: true -}}
 
     {% if template contains 'blog' or template contains 'article' %}
       {{- 'app-blog.css' | asset_url | stylesheet_tag: preload: true -}}
@@ -98,11 +99,6 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     {%- if request.page_type == 'collection' or request.page_type == 'search' -%}
     {%- endif -%}
 
-    {% if template contains 'customers' %}
-      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-      <script type="module" src="{{ 'app.js' | asset_url }}"></script>
-    {% endif %}
-
     {%- if request.page_type == 'customers/account' or request.page_type == 'customers/order' or request.page_type == 'customers/addresses' -%}
       <script type="module" src="{{ 'custom-account.js' | asset_url }}"></script>
     {%- endif -%}
@@ -124,6 +120,14 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
 
     {% if template contains 'blog' or template contains 'article' %}
       <script type="module" src="{{ 'app-blog.js' | asset_url }}"></script>
+    {% endif %}
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="module" src="{{ 'app-dialog.js' | asset_url }}"></script>
+
+    {% if template contains 'customers' %}
+      <script type="module" src="{{ 'app.js' | asset_url }}"></script>
     {% endif %}
   </body>
 </html>
