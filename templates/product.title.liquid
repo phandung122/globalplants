@@ -1,0 +1,17 @@
+{% layout none %}
+<product-card data-id="{{ product.id }}" handle="{{ product.handle | escape }}">
+<span class="product-card__title">
+  <a href="{{ product.url }}" class="bold" data-instant>
+    {%- if product.metafields.custom.plants_name != blank -%}
+      {{ product.metafields.custom.plants_name }}
+      {%- for field in product.metafields.custom.common_namess.value -%}
+        <span class="common_names"> • {{ field }}</span>
+      {%- endfor -%}
+    {%- else -%}
+      {{ product.title }}
+    {%- endif -%}
+  </a>
+</span>
+
+{%- render 'price-list', product: product, text_alignment: text_alignment -%}
+</product-card>

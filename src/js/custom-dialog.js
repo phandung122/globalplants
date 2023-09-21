@@ -15,6 +15,7 @@ function removeDuplicates(arr) {
 function createElementFromHTML(htmlString) {
   var div = document.createElement('div');
   div.innerHTML = htmlString.trim();
+  // Change this to div.firstChild to support 1 top-level nodes.
   // Change this to div.childNodes to support multiple top-level nodes.
   return div.firstChild;
 }
@@ -30,7 +31,12 @@ function checkProduct() {
 			sectionWrapperFull.style.paddingLeft = 0;
 			sectionWrapperFull.style.paddingRight = 0;
 		}
-		daiCarousel.style.display = 'none';
+		if ( daiCarousel != null ) {
+			daiCarousel.style.display = 'none';
+		} else {
+			return 0;
+		}
+		
 		
 		var cardProductList = document.createElement('product-list');
 		cardProductList.classList.add('product-list');
@@ -52,7 +58,7 @@ function checkProduct() {
 			    upsellLinks.push(link);
 			});
 			upsellLinks=removeDuplicates(upsellLinks);
-			console.log(upsellLinks.length);
+			//console.log(upsellLinks.length);
 			var count = 0;
 			upsellLinks.forEach(function(url,index){
 				var link = url+'/?view=card';
@@ -63,6 +69,9 @@ function checkProduct() {
 				  .then(html => {
 				  	//productCardHTML += html;
 				  	var cardElement = createElementFromHTML(html);
+				  	if ( cardElement == null ) {
+				  		return 0;
+				  	}
 				    if ( !daiProductList.querySelectorAll('[handle="'+handle+'"]').length ) {
 				    	daiProductList.appendChild(createElementFromHTML(html));
 				    }
@@ -143,42 +152,203 @@ function checkProduct() {
 	});
 }
 
-//UNSED FUNCTION
-var products = [];
-async function _getCurrentProduct(url) {
-    //const url = `https://${window.location.host + window.location.pathname}.json`;
-    return new Promise(async (resolve, reject) => {
-        let response = await fetch(url+'.json');
-        let { product } = await response.json();
-        resolve(product);
-        products.push(product);
-        //console.log(product);
-        //console.log(product.variants[0].id);
-        var slides = document.querySelectorAll('.dai-slide[data-sku="'+product.variants[0].id+'"]');
-        slides.forEach(function(slide,index){
-        	var elemButton = document.createElement('button');
-        	elemButton.innerHTML = product.variants[0].id;
-	        var button = '<button style="opacity:1;" type="button" aria-controls="quick-buy-'+product.id+'" aria-expanded="false" is="custom-button" class="product-card__quickview" aria-busy="false">SHOW QUICK VIEW'+product.id+'</button>';
-		    	var elemButton = document.createElement('div');
-		      elemButton.innerHTML = button;
-        	if ( !slide.classList.contains('customized') ) {
-	        	//slide.appendChild(elemButton);
-	        	slide.classList.add('customized');
-	        	slide.style.backgroundColor = 'red';
-        		slide.appendChild(elemButton);
-        	}
-        })
-        var html = '<quick-buy-drawer id="quick-buy-'+product.id+'" header-bordered="" open-from="left" handle="'+product.handle+'" role="dialog" aria-live="polite" class="quick-buy-drawer drawer" aria-modal="true"></quick-buy-drawer>';
-        var elemDiv = document.createElement('div');
-        elemDiv.innerHTML = html;
 
-	      var button = '<button style="position:relative;opacity:1;" type="button" aria-controls="quick-buy-'+product.id+'" aria-expanded="false" is="custom-button" class="product-card__quickview" aria-busy="false">SHOW QUICK VIEW'+product.id+'</button>';
-		    var elemButton = document.createElement('div');
-		    elemButton.innerHTML = button;
-				
-        if ( !document.querySelectorAll('[id="quick-buy-'+product.id+'"]').length ) {
-				document.body.appendChild(elemDiv);
-        	document.body.appendChild(elemButton);
-        }
-    })
+
+document.addEventListener('dialog:load-success', (event) => {
+	setTimeout(function(){
+		checkBundle();
+		checkBundleMobie();
+	},200);
+})
+
+var timeoutID = null;
+window.addEventListener('resize', (event) => {
+	clearTimeout(timeoutID);
+	timeoutID = setTimeout(function(){
+		checkBundle();
+		checkBundleMobie();
+	},200);
+})
+
+async function getProductById(id) {
+	const handle = (await fetch(`/search/suggest.json?q=id:${id}&resources[type]=product&limit=1`)
+		.then(response => response.json())
+		.then(response => response.resources.results.products.shift())).handle;
+
+	return await fetch(`/products/${handle}.js`).then(response => response.json());
 }
+async function getProductByTitle(element, title) {
+	const handle = (await fetch(`/search/suggest.json?q=title:${title}&resources[type]=product&limit=1`)
+		.then(response => response.json())
+		.then(response => response.resources.results.products.shift())).handle;
+	console.log(handle);
+	const product = (await fetch(`/products/${handle}.js`).then(response => response.json()));
+	console.log(product);
+	console.log(product.variants[0].id);
+	const productID = product.id;
+	const firstVariantID = product.variants[0].id;
+	var link = handle + '/?view=bundle';
+	fetch(link)
+		.then(res => res.text())
+		.then(html => {
+			//productCardHTML += html;
+			var cardElement = createElementFromHTML(html);
+			if ( cardElement == null ) {
+				return 0;
+			}
+			console.log(cardElement);
+			if ( element.classList.contains('customized') ) {
+				return 0;
+			} else {
+				element.prepend(cardElement);
+				element.classList.add('customized');
+			}
+		});
+
+	return 0;
+}
+async function getProductHTMLTitle(element, title) {
+	const handle = (await fetch(`/search/suggest.json?q=title:${title}&resources[type]=product&limit=1`)
+		.then(response => response.json())
+		.then(response => response.resources.results.products.shift())).handle;
+	console.log(handle);
+	const product = (await fetch(`/products/${handle}.js`).then(response => response.json()));
+	console.log(product);
+	console.log(product.variants[0].id);
+	const productID = product.id;
+	const firstVariantID = product.variants[0].id;
+	var link = handle + '/?view=title';
+	fetch(link)
+		.then(res => res.text())
+		.then(html => {
+			//productCardHTML += html;
+			var cardElement = createElementFromHTML(html);
+			if ( cardElement == null ) {
+				return 0;
+			}
+			console.log(cardElement);
+			if ( element.classList.contains('customized') ) {
+				return 0;
+			} else {
+				element.querySelector('.bundle-checkbox-text').style.display = 'none';
+				element.querySelector('.bundle-checkbox-label').append(cardElement);
+				element.classList.add('customized');
+			}
+		});
+
+	return 0;
+}
+
+
+function checkBundle() {
+	var productCardHTML = '';
+	var daiContainters = document.querySelectorAll('div[id^="dialogue_widget_"]');
+	daiContainters.forEach(function(daiContainterInner,index) {
+		var daiContainter = daiContainterInner.parentElement;
+		//console.log(daiContainter);
+		var bundleContainer = daiContainter.querySelector('.bundle-5-container');
+		var sectionWrapperFull = daiContainter.closest('.section.section-full');
+		if ( sectionWrapperFull != null ) {
+			sectionWrapperFull.style.paddingLeft = 0;
+			sectionWrapperFull.style.paddingRight = 0;
+		}
+		if ( bundleContainer == null || bundleContainer.classList.contains('checked') ) {
+			return 0;
+		} else {
+			bundleContainer.classList.add('checked');
+		}
+
+		console.log(bundleContainer);
+		if ( bundleContainer.querySelectorAll('.b-product-col').length ) {
+			var bundleItems = bundleContainer.querySelectorAll('.b-product-col');
+			bundleItems.forEach(function(item,index){
+			    const title = item.querySelector('.bundle-checkbox-text').textContent;
+			    //console.log(title);
+			    var product = getProductByTitle(item, title);
+					var dropdown = item.querySelector('.bundle-dd');
+					var className = 'type-' + dropdown.querySelector('.bundle-dd__current').textContent.trim().toLowerCase().replaceAll(' ','-').replaceAll('(','').replaceAll(')','');
+					dropdown.querySelector('.bundle-dd__current').classList.add(className);
+
+					dropdown.addEventListener('click', function(event) {
+						var currentDropdown = this;
+						var className = 'type-' + this.querySelector('.bundle-dd__current').textContent.trim().toLowerCase().replaceAll(' ','-').replaceAll('(','').replaceAll(')','');
+						removeClassByPrefix(this.querySelector('.bundle-dd__current'),'type-');
+						this.querySelector('.bundle-dd__current').classList.add(className);
+						console.log(className);
+						setTimeout(function(){
+				      var dropdownItems = currentDropdown.querySelectorAll('.bundle-dd__item');
+				      dropdownItems.forEach(function(dropdownItem,index) {
+				      	var className = 'type-' + dropdownItem.textContent.trim().toLowerCase().replaceAll(' ','-').replaceAll('(','').replaceAll(')','');
+								dropdownItem.classList.add(className);
+				      });
+				    },40);
+					});
+			});
+		}
+	});
+}
+
+
+function checkBundleMobie() {
+	var productCardHTML = '';
+	var daiContainters = document.querySelectorAll('div[id^="dialogue_widget_"]');
+	daiContainters.forEach(function(daiContainterInner,index) {
+		var daiContainter = daiContainterInner.parentElement;
+		//console.log(daiContainter);
+		var bundleContainer = daiContainter.querySelector('.template-four-wrapper');
+		var sectionWrapperFull = daiContainter.closest('.section.section-full');
+		if ( sectionWrapperFull != null ) {
+			sectionWrapperFull.style.paddingLeft = 0;
+			sectionWrapperFull.style.paddingRight = 0;
+		}
+		if ( bundleContainer == null || bundleContainer.classList.contains('checked') ) {
+			return 0;
+		} else {
+			bundleContainer.classList.add('checked');
+		}
+
+		console.log(bundleContainer);
+		if ( bundleContainer.querySelectorAll('.bundle-item-checkbox').length ) {
+			var bundleItems = bundleContainer.querySelectorAll('.bundle-item-checkbox');
+			bundleItems.forEach(function(item,index){
+			    const title = item.querySelector('.bundle-checkbox-text').textContent;
+			    //console.log(title);
+			    var product = getProductHTMLTitle(item, title);
+					var dropdown = item.querySelector('.bundle-dd');
+					var className = 'type-' + dropdown.querySelector('.bundle-dd__current').textContent.trim().toLowerCase().replaceAll(' ','-').replaceAll('(','').replaceAll(')','');
+					dropdown.querySelector('.bundle-dd__current').classList.add(className);
+
+					dropdown.addEventListener('click', function(event) {
+						var currentDropdown = this;
+						var className = 'type-' + this.querySelector('.bundle-dd__current').textContent.trim().toLowerCase().replaceAll(' ','-').replaceAll('(','').replaceAll(')','');
+						removeClassByPrefix(this.querySelector('.bundle-dd__current'),'type-');
+						this.querySelector('.bundle-dd__current').classList.add(className);
+						console.log(className);
+						setTimeout(function(){
+				      var dropdownItems = currentDropdown.querySelectorAll('.bundle-dd__item');
+				      dropdownItems.forEach(function(dropdownItem,index) {
+				      	var className = 'type-' + dropdownItem.textContent.trim().toLowerCase().replaceAll(' ','-').replaceAll('(','').replaceAll(')','');
+								dropdownItem.classList.add(className);
+				      });
+				    },40);
+					});
+			});
+		}
+	});
+}
+
+function removeClassByPrefix(element, prefix) {
+	element.classList.forEach(function(value){
+	  if(value.indexOf(prefix) == 0) {
+	    element.classList.remove(value);
+	  };
+ 	});
+}
+
+$('.bundle-dd').on('click',function(){
+console.log($(this).html());
+    var bundleSelector = $(this);
+    setTimeout(function(){
+        console.log(bundleSelector.html());
+    },20);
+});
