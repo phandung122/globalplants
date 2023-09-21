@@ -2,7 +2,7 @@
 document.addEventListener('dialog:load-success', (event) => {
 	setTimeout(function(){
 		checkProduct();
-	},100);
+	},200);
 	/* 
 	if(event.detail.wid == [WIDGET_ID_HERE]){
 	}
@@ -23,13 +23,14 @@ function checkProduct() {
 	var daiContainters = document.querySelectorAll('div[id^="dialogue_widget_"]');
 	daiContainters.forEach(function(daiContainterInner,index) {
 		var daiContainter = daiContainterInner.parentElement;
-		//console.log(daiContainter);
 		var daiCarousel = daiContainter.querySelector('.carousel');
 		var sectionWrapperFull = daiContainter.closest('.section.section-full');
 		if ( sectionWrapperFull != null ) {
 			sectionWrapperFull.style.paddingLeft = 0;
 			sectionWrapperFull.style.paddingRight = 0;
 		}
+		console.log(daiContainter);
+		console.log(daiCarousel);
 		daiCarousel.style.display = 'none';
 		
 		var cardProductList = document.createElement('product-list');
@@ -52,7 +53,7 @@ function checkProduct() {
 			    upsellLinks.push(link);
 			});
 			upsellLinks=removeDuplicates(upsellLinks);
-			console.log(upsellLinks.length);
+			//console.log(upsellLinks.length);
 			var count = 0;
 			upsellLinks.forEach(function(url,index){
 				var link = url+'/?view=card';
