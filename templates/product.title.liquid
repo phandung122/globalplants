@@ -1,5 +1,50 @@
 {% layout none %}
 <product-card data-id="{{ product.id }}" handle="{{ product.handle | escape }}">
+  <div class="product-card__figure">
+      <a href="{{ product.url }}" data-instant>
+        {%- capture sizes -%}
+          {%- if stacked -%}
+            (max-width: 699px) calc(100vw / {{ section.settings.products_per_row_mobile }} - 40px), (max-width: 1200px) calc(100vw / {{ 3 | at_most: section.settings.products_per_row_desktop }} - 64px), calc(min(100vw - 96px, {{ settings.page_width }}px) / {{ section.settings.products_per_row_desktop }} - (24px / {{ section.settings.products_per_row_desktop }} * {{ section.settings.products_per_row_desktop | minus: 1 }}))
+          {%- else -%}
+            (max-width: 699px) 74vw, (max-width: 999px) 38vw, calc(min(100vw - 96px, {{ settings.page_width }}px) / {{ section.settings.products_per_row_desktop }} - (24px / {{ section.settings.products_per_row_desktop }} * {{ section.settings.products_per_row_desktop | minus: 1 }}))
+          {%- endif -%}
+        {%- endcapture -%}
+
+        {%- capture main_image_classes -%}product-card__image product-card__image--primary {% if settings.product_image_aspect_ratio contains 'crop' %}object-fill-safe{% endif %} aspect-{{ settings.product_image_aspect_ratio | split: '_' | first }}{%- endcapture -%}
+        {{- product.featured_media | image_url: width: product.featured_media.width | image_tag: loading: 'lazy', sizes: sizes, widths: '1000,1000,1000,800,800,800,900,1000,1200,1400,1600,1800', class: main_image_classes -}}
+
+        {%- if show_secondary_image and product.media.size > 1 -%}
+          {%- assign next_media = product.media[product.featured_media.position] | default: product.media[1] -%}
+          {{- next_media | image_url: width: next_media.width | image_tag: class: 'product-card__image product-card__image--secondary object-fill', loading: 'lazy', fetchpriority: 'low', sizes: sizes, widths: '1000,1000,1000,800,800,800,900,1000,1200,1400,1600,1800' -}}
+        {%- endif -%}
+      </a>
+
+      <!--Now Check for the desired tag name-->
+      {%- if isLowPoly -%}
+        <div class="product-tag tag-low">
+          <span>{{ 'Low Poly' }}</span>
+        </div>
+      {%- elsif is2DImages -%}
+        <div class="product-tag tag-2d">
+          <span>{{ '2D Images' }}</span>
+        </div>
+      {%- else -%}
+        <div class="product-tag tag-high">
+          <span>{{ 'High Poly' }}</span>
+        </div>
+      {%- endif -%}
+      {% comment %}
+      <button type="button" aria-controls="quick-buy-{{ product.id }}{% if extend_class != blank %}-{{ extend_class }}{% endif %}" aria-expanded="false" is="custom-button" aria-busy="false" class="product-card__quickview">
+        <span class="quickview__text"><span>{{ 'Quick view' }}</span></span>
+        <span class="quickview__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none" viewBox="0 0 16 17">
+            <path fill="#6B6B6B" fill-rule="evenodd" d="M1.5 8.5c0-.16.05-.316.144-.448.485-.675 1.319-1.698 2.42-2.548C5.164 4.653 6.5 4 8 4s2.835.653 3.937 1.504c1.1.85 1.934 1.873 2.42 2.548a.774.774 0 0 1 0 .896c-.486.675-1.32 1.698-2.42 2.548C10.835 12.347 9.5 13 8 13s-2.835-.653-3.937-1.504c-1.1-.85-1.934-1.873-2.42-2.548A.774.774 0 0 1 1.5 8.5ZM8 3c-1.797 0-3.343.782-4.548 1.713-1.206.931-2.105 2.038-2.62 2.756L.83 7.47a1.774 1.774 0 0 0 0 2.058l.001.002c.516.718 1.415 1.825 2.62 2.756C4.658 13.218 6.204 14 8 14c1.797 0 3.343-.782 4.548-1.713 1.206-.931 2.105-2.038 2.62-2.756l.002-.002a1.774 1.774 0 0 0 0-2.058l-.001-.002c-.516-.718-1.415-1.825-2.62-2.756C11.342 3.782 9.796 3 8 3ZM5.5 8.5a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0ZM8 5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z" clip-rule="evenodd"/>
+          </svg>
+        </span>
+      </button>
+      {% endcomment %}
+    </div>
+    
 <span class="product-card__title">
   <a href="{{ product.url }}" class="bold" data-instant>
     {%- if product.metafields.custom.plants_name != blank -%}
