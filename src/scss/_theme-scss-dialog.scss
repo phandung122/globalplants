@@ -211,3 +211,1031 @@ div[id^="js_feed_widget"], div[id^="dialogue_widget_"], div[id^="dia_feed_"] {
 	  }
 	}
 }
+
+div[id^="dialogue_widget_"], div[id^=dia_feed_] {
+	.dai-asset-container.bundle-container {
+		max-width: 100%;
+		--product-list-gap: var(--product-list-row-gap) var(--product-list-column-gap);
+		--product-list-items-per-row: 1;
+		--product-list-grid: auto-flow dense / repeat(var(--product-list-items-per-row), minmax(0, 1fr));
+		--context-section-spacing-inline: var(--container-gutter);
+		--calculated-section-spacing-inline: var(--section-spacing-inline--, var(--context-section-spacing-inline));
+		padding-inline: max(var(--calculated-section-spacing-inline),50% - var(--container-max-width)/2) !important;
+		display: none;
+		.bundle-main-title {
+			padding-inline: 0 !important;
+    		@media screen and (max-width: 560px) {
+    			margin-bottom: 16px !important;
+    		}
+			.bundle-main-title-line {
+				display: none;
+			}
+			.bundle-main-title-inner {
+				font-weight: 600 !important;
+				text-transform: uppercase !important;
+				padding: 0 !important;
+				width: 100%;
+    			max-width: unset;
+    			@media screen and (max-width: 560px) {
+    				font-size: 20px;
+					line-height: 140%;
+    			}
+			}
+		}
+		.bundle-5-container {
+			> .b-row {
+				.b-products {
+					> .b-row {
+						display: flex;
+						gap: 8px;
+						.b-product-col {
+							position: relative;
+							padding: 16px;
+							padding-right: 16px !important;
+    						padding-left: 16px !important;
+							padding-bottom: calc( 24px + 56px + 16px );
+							background-color: white;
+							border: 1px solid white;
+							border-radius: 16px;
+							font-family: 'Poppins';
+							margin-bottom: 0 !important;
+							min-width: 260px;
+							&:hover {
+								box-shadow: 0 2px 12px #0000000f;
+							}
+							&:first-child {
+								border-color: var(--Green-1, #608239);
+								background: var(--Gray-7, #FAFAFA);
+								border-radius: 0px 16px 16px 16px;
+								&:before {
+									content: 'This item';
+									display: block;
+									position: absolute;
+									bottom: 100%;
+									left: -1px;
+									color: var(--White, #FFF);
+									text-align: center;
+									font-family: Poppins;
+									font-size: 14px;
+									font-style: normal;
+									font-weight: 500;
+									line-height: 140%;
+									border-radius: 12px 12px 0px 0px;
+									border: 1px solid var(--Green-1, #608239);
+									background: var(--Green-1, #608239);
+									padding: 4px 8px;
+								}
+							}
+							&.customized {
+								.b-product {
+									.b-product-head {
+									}
+									.bundle-item.dai-bundle-item {
+									}
+								}
+								.bundle-checkbox-label {
+								}
+							}
+							.product-card {
+								border-radius: 0;
+								gap: 8px;
+								&:hover {
+									box-shadow: unset;
+								}
+								.product-card__figure {
+									border-radius: 0;
+									border-top: 0;
+									display: flex;
+									flex-direction: row;
+									gap: 16px;
+									align-items: flex-start;
+									> a {
+										border-radius: 4px;
+										border: 1px solid var(--Gray-5, #CCC);
+										width: 85px;
+										position: relative;
+										> img {
+											border-radius: 4px;
+										}
+									}
+									.product-tag {
+										position: relative;
+									}
+								}
+								.product-card__info {
+									padding: 0;
+									.product-card__title {
+										font-size: 14px;
+									}
+									.product-tags {
+										margin-bottom: 0;
+									}
+									.price-list {
+										flex-direction: row;
+										align-items: center;
+										compare-at-price {
+											font-size: 14px;
+										}
+									}
+								}
+							}
+							.b-product {
+								margin: 0 !important;
+								.b-product-head {
+									top: 16px;
+									right: 16px;
+									input:checked {
+										+ label .checkbox-2 {
+											background-color: #608239;
+    										border-color: #608239;
+										    &:after {
+										    	content: "";
+											    position: absolute;
+											    left: 50%;
+											    top: 50%;
+											    transform: translate(-50%, -50%);
+											    height: 16px;
+											    width: 16px;
+											    border: 0;
+											    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 14 14"><path fill="%23fff" fill-rule="evenodd" stroke="%23fff" stroke-linecap="round" stroke-linejoin="round" d="M12.698 3.325a.5.5 0 0 1-.023.707l-7.11 6.666a.5.5 0 0 1-.685 0L1.325 7.365a.5.5 0 1 1 .684-.73l3.213 3.013 6.77-6.346a.5.5 0 0 1 .706.023Z" clip-rule="evenodd"/></svg>') no-repeat center;
+										    }
+										}
+									}
+									label {
+										margin-right: 0;
+										.checkbox-2 {
+											position: relative;
+										    height: 20px;
+										    width: 20px;
+										    background-color: #F4F4F4;
+										    border: 2px solid #CCCCCC;
+										    border-radius: 4px;
+										}
+									}
+								}
+								.bundle-item.dai-bundle-item {
+									display: none;
+								}
+							}
+							.bundle-checkbox-label {
+								display: none;
+							}
+							.bundle-5-variants {
+								position: absolute;
+								bottom: 24px;
+								left: 16px;
+								right: 16px;
+								.bundle-dd {
+									&:before {
+										content: 'Formats selected';
+										color: var(--Gray-3, #6B6B6B);
+										font-family: Poppins;
+										font-size: 12px;
+										font-style: normal;
+										font-weight: 400;
+										line-height: 140%;
+										position: absolute;
+									    top: 50%;
+									    left: 16px;
+									    z-index: 0;
+									    transform: translateY(-50%);
+									}
+									&:after {
+										content: "";
+									    position: absolute;
+									    display: block;
+									    top: 32px;
+									    right: 28px;
+									    transform: translate(50%, -50%);
+									    width: 24px;
+									    height: 24px;
+									    border: 0;
+									    transition: all 0.25s ease-in-out;
+									    transform-origin: center;
+									    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="%23121212" fill-rule="evenodd" d="M5.47 8.47a.75.75 0 0 1 1.06 0L12 13.94l5.47-5.47a.75.75 0 1 1 1.06 1.06l-6 6a.75.75 0 0 1-1.06 0l-6-6a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"></path></svg>') no-repeat center;
+									}
+									&.open {
+										box-shadow: unset;
+										&:after {
+									    	transform: translate(50%, -50%) rotate(180deg);
+										}
+										.bundle-dd__current {
+											border-color: #608239;
+										    border-bottom-left-radius: 0;
+										    border-bottom-right-radius: 0;
+										    border-bottom-color: transparent;
+										}
+									}
+									.bundle-dd__current {
+										position: relative;
+									    padding: 6px 14px !important;
+									    height: 56px;
+									    display: flex;
+									    align-items: center;
+									    column-gap: 12px;
+									    border: 2px solid #CCCCCC;
+									    border-radius: 8px;
+									    padding-right: 60px !important;
+									    background-color: transparent;
+
+									    font-size: 0px;
+									    background-size: 24px;
+									    background-repeat: no-repeat;
+									    background-position: 130px center;
+									    &:before {
+									    	content: '';
+									    	display: block;
+									    	width: 32px;
+									    	height: 32px;
+									    	border-radius: 8px;
+											border: 2px solid var(--Green-1, #608239);
+											margin-left: 112px;
+									    }
+									    &:after {
+									    	content: "";
+										    position: absolute;
+										    right: 50px;
+										    top: 6px;
+										    bottom: 6px;
+										    width: 2px;
+										    background-color: #CCCCCC;
+									    }
+									    &.type-3ds-max-v-ray--corona {
+									    	background-image: url('//globeplants.com/cdn/shop/files/format-3DS-Max.png');
+									    }
+									    &.type-fbx {
+									    	background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
+									    }
+									    &.type-cinema-4d-vray--corona {
+									    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
+									    }
+									    &.type-cinema-4d-v-ray--corona {
+									    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
+									    }
+									    &.type-sketchup-thea--vray--enscape {
+									    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+									    }
+									    &.type-sketchup-v-ray--full-geometry-skp-mesh {
+									    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+									    }
+									    &.type-blender-cycles {
+									    	background-image: url('https://globeplants.com/cdn/shop/files/format-BLENDER.png');
+									    }
+									    &.type-growfx {
+									    	background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
+									    }
+									    &.type-twinmotion {
+									    	background-image: url('https://globeplants.com/cdn/shop/files/format-TWINMOTION.png');
+									    }
+									    &.type-redshift {
+									    	background-image: url('https://globeplants.com/cdn/shop/files/format-REDSHIFT.png');
+									    }
+									    &.type-sketchup-v-ray--fullgeometry-skp-mesh {
+									    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+									    }
+									    &.type-sketchup--growfx {
+									    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+									    }
+									    &.type-rhinoceros-3d-v-ray--rhino-renderer-only {
+									    	background-image: url('https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png');
+									    }
+									    &.type-mesh--growfx {
+									    	background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
+									    }
+									}
+									.bundle-dd__list {
+										position: absolute;
+									    top: calc(100% - 2px);
+									    left: 0;
+									    width: 100%;
+									    max-height: 260px;
+									    overflow-y: auto;
+									    background-color: #FFF;
+									    border: 2px solid #608239;
+									    border-top: 0;
+									    border-radius: 0 0 8px 8px;
+									    .bundle-dd__item {
+									    	padding: 12px 16px;
+										    display: flex;
+										    align-items: center;
+										    column-gap: 8px;
+										    border-top: 1px solid #F4F4F4;
+										    position: relative;
+										    &:hover {
+										    	background-color: #CCCCCC;
+										    	&:before {
+										    		border-color: #608239;
+										    	}
+										    	span {
+
+										    	}
+										    }
+										    &:before {
+										    	content: '';
+										    	display: block;
+										    	width: 32px;
+										    	height: 32px;
+    											padding: 4px;
+											    flex-shrink: 0;
+											    background-color: #FFF;
+											    background-size: 20px;
+											    background-repeat: no-repeat;
+											    background-position: center;
+										    	border: 2px solid #F4F4F4;
+    											border-radius: 8px;
+    											position: absolute;
+    											top: 50%;
+    											left: 30px;
+    											transform: translate(-50%, -50%);
+										    }
+										    > span {
+										    	padding: 4px 12px;
+											    flex-grow: 1;
+											    font-weight: 500;
+											    font-size: 10px;
+											    line-height: 1.4;
+											    text-align: center;
+											    background-color: #F4F4F4;
+											    border-radius: 12px;
+											    margin-left: 40px;
+										    }
+										    &.type-3ds-max-v-ray--corona {
+										    	&:before {
+										    	background-image: url('//globeplants.com/cdn/shop/files/format-3DS-Max.png');
+										    	}
+										    }
+										    &.type-fbx {
+										    	&:before {
+										    	background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
+										    	}
+										    }
+										    &.type-cinema-4d-vray--corona {
+										    	&:before {
+										    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
+										    	}
+										    }
+										    &.type-cinema-4d-v-ray--corona {
+										    	&:before {
+										    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
+										    	}
+										    }
+										    &.type-sketchup-thea--vray--enscape {
+										    	&:before {
+										    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+										    	}
+										    }
+										    &.type-sketchup-v-ray--full-geometry-skp-mesh {
+										    	&:before {
+										    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+										    	}
+										    }
+										    &.type-blender-cycles {
+										    	&:before {
+										    	background-image: url('https://globeplants.com/cdn/shop/files/format-BLENDER.png');
+										    	}
+										    }
+										    &.type-growfx {
+										    	&:before {
+										    	background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
+										    	}
+										    }
+										    &.type-twinmotion {
+										    	&:before {
+										    	background-image: url('https://globeplants.com/cdn/shop/files/format-TWINMOTION.png');
+										    	}
+										    }
+										    &.type-redshift {
+										    	&:before {
+										    	background-image: url('https://globeplants.com/cdn/shop/files/format-REDSHIFT.png');
+										    	}
+										    }
+										    &.type-sketchup-v-ray--fullgeometry-skp-mesh {
+										    	&:before {
+										    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+										    	}
+										    }
+										    &.type-sketchup--growfx {
+										    	&:before {
+										    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+										    	}
+										    }
+										    &.type-rhinoceros-3d-v-ray--rhino-renderer-only {
+										    	&:before {
+										    	background-image: url('https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png');
+										    	}
+										    }
+										    &.type-mesh--growfx {
+										    	&:before {
+										    	background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
+										    	}
+										    }
+									    }
+									}
+								}
+							}
+						}
+						.bundle-col-plus {
+							width: auto;
+							display: flex;
+    						align-items: center;
+							> span {
+								position: relative;
+								left: unset;
+								top: unset;
+								transform: unset;
+								width: 32px;
+								height: 32px;
+								background-color: white;
+								color: white;
+								&:before {
+									content: '';
+									display: block;
+									width: 20px;
+									height: 2px;
+									background-color: #608239;
+									border-radius: 2px;
+									position: absolute;
+									top: 50%;
+									left: 50%;
+									transform: translate(-50%, -50%);
+								}
+								&:after {
+									content: '';
+									display: block;
+									width: 2px;
+									height: 20px;
+									background-color: #608239;
+									border-radius: 2px;
+									position: absolute;
+									top: 50%;
+									left: 50%;
+									transform: translate(-50%, -50%);
+								}
+							}
+						}
+					}
+				}
+			}
+			> .b-total {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+				padding: 24px 16px;
+				.b-total-price {
+					width: 100%;
+					justify-content: flex-start;
+					.dai-pricing-wrapper {
+						text-align: left;
+						display: flex;
+						align-items: center;
+						&:before {
+							content: 'Total all:';
+							margin-right: 16px;
+							color: var(--Gray-1, #2B2B2B);
+							font-family: Poppins;
+							font-size: 16px;
+							font-style: normal;
+							font-weight: 600;
+							line-height: 140%;
+							order: 5;
+						}
+						.dai-pricing-price {
+							color: var(--Gray-4, #9C9C9C) !important;
+							font-family: Poppins;
+							font-size: 16px !important;
+							font-style: normal !important;
+							font-weight: 500 !important;
+							line-height: 140% !important;
+							text-decoration: line-through;
+							padding: 0 !important;
+						}
+						.gap {
+							width: 8px;
+						}
+						.dai-pricing-sale-price {
+							color: var(--Gray-1, #2B2B2B) !important;
+							font-family: Poppins;
+							font-size: 20px !important;
+							font-style: normal !important;
+							font-weight: 600 !important;
+							line-height: 140% !important;
+							padding: 0 !important;
+						}
+					}
+				}
+				.b-total-btn {
+					width: 100%;
+					.button-buy-wrapper {
+						text-align: left;
+						.dai-btn {
+							font-size: 14px!important;
+						    line-height: 22px;
+						    --button-background: var(--button-background-primary) / var(--button-background-opacity, 1);
+						    --button-text-color: var(--button-text-primary);
+						    --button-outline-color: var(--button-background-primary);
+						    -webkit-appearance: none;
+						    appearance: none;
+						    border-radius: var(--rounded-button);
+						    background-color: rgb(var(--button-background));
+						    color: rgb(var(--button-text-color));
+						    text-align: center;
+						    font-size: var(--text-sm);
+						    letter-spacing: var(--text-letter-spacing);
+						    padding-block-start: var(--spacing-2-5);
+						    padding-block-end: var(--spacing-2-5);
+						    padding-inline-start: var(--spacing-5);
+						    padding-inline-end: var(--spacing-5);
+						    font-weight: 700;
+						    transition: background-color .15s ease-in-out,color .15s ease-in-out,box-shadow .15s ease-in-out;
+						    display: inline-block;
+						    position: relative;
+						    width: auto !important;
+						    &:hover {
+						    	--button-background-opacity: 0.8;
+						    }
+						}
+					}
+				}
+			}
+		}
+		.template-four-wrapper {
+			display: flex;
+			flex-direction: column;
+			padding-inline: 0 !important;
+			.bundle-row {
+				&:not(.bundle-row-total) {
+					display: none !important;
+				}
+				&.bundle-row-total {
+					order: 3;
+					.bundle-col-auto {
+						flex: 0 0 100% !important;
+    					max-width: 100% !important;
+    					.total-price {
+    						width: 100%;
+						    display: flex;
+						    align-items: center;
+    						.total-price-text {
+    							display: none;
+    						}
+							.dai-pricing-wrapper {
+								text-align: left;
+								display: flex;
+								align-items: center;
+								&:before {
+									content: 'Total all:';
+									margin-right: 16px;
+									color: var(--Gray-1, #2B2B2B);
+									font-family: Poppins;
+									font-size: 20px;
+									font-style: normal;
+									font-weight: 600;
+									line-height: 140%;
+									order: 5;
+								}
+								.dai-pricing-price {
+									color: var(--Gray-4, #9C9C9C) !important;
+									font-family: Poppins;
+									font-size: 14px !important;
+									font-style: normal !important;
+									font-weight: 500 !important;
+									line-height: 140% !important;
+									text-decoration: line-through;
+									padding: 0 !important;
+								}
+								.gap {
+									width: 8px;
+								}
+								.dai-pricing-sale-price {
+									color: var(--Gray-1, #2B2B2B) !important;
+									font-family: Poppins;
+									font-size: 20px !important;
+									font-style: normal !important;
+									font-weight: 600 !important;
+									line-height: 140% !important;
+									padding: 0 !important;
+								}
+							}
+    					}
+					}
+					.button-buy-wrapper {
+						text-align: left;
+						.dai-btn {
+							font-size: 14px!important;
+						    line-height: 22px;
+						    --button-background: var(--button-background-primary) / var(--button-background-opacity, 1);
+						    --button-text-color: var(--button-text-primary);
+						    --button-outline-color: var(--button-background-primary);
+						    -webkit-appearance: none;
+						    appearance: none;
+						    border-radius: var(--rounded-button);
+						    background-color: rgb(var(--button-background));
+						    color: rgb(var(--button-text-color));
+						    text-align: center;
+						    font-size: var(--text-sm);
+						    letter-spacing: var(--text-letter-spacing);
+						    padding-block-start: var(--spacing-2-5);
+						    padding-block-end: var(--spacing-2-5);
+						    padding-inline-start: var(--spacing-5);
+						    padding-inline-end: var(--spacing-5);
+						    font-weight: 700;
+						    transition: background-color .15s ease-in-out,color .15s ease-in-out,box-shadow .15s ease-in-out;
+						    display: inline-block;
+						    position: relative;
+						    width: 100% !important;
+						    max-width: unset;
+						    &:hover {
+						    	--button-background-opacity: 0.8;
+						    }
+						}
+					}
+				}
+			}
+			.bundle-main-title {
+				order: 1;
+			}
+			.bundle-item-wrapper {
+				order: 2;
+				.bundle-item-checkbox {
+					margin-bottom: 16px !important;
+					position: relative;
+				    padding: 8px;
+				    padding-bottom: 3px;
+				    background-color: white;
+				    border: 1px solid white;
+				    border-radius: 16px;
+				    font-family: 'Poppins';
+				    left: 0;
+				    max-width: unset;
+				    &:first-child {
+						border-color: var(--Green-1, #608239);
+						background: var(--Gray-7, #FAFAFA);
+						border-radius: 0px 16px 16px 16px;
+						margin-top: 20px;
+						&:before {
+							content: 'This item';
+							display: block;
+							position: absolute;
+							bottom: 100%;
+							left: -1px;
+							color: var(--White, #FFF);
+							text-align: center;
+							font-family: Poppins;
+							font-size: 14px;
+							font-style: normal;
+							font-weight: 500;
+							line-height: 140%;
+							border-radius: 12px 12px 0px 0px;
+							border: 1px solid var(--Green-1, #608239);
+							background: var(--Green-1, #608239);
+							padding: 4px 8px;
+						}
+					}
+					&:last-child {
+						margin-bottom: 0 !important;
+					}
+					.this-item {
+						display: none;
+					}
+					input:checked {
+						+ label .checkbox-1 {
+							background-color: #608239;
+    						border-color: #608239;
+						    &:after {
+						    	content: "";
+							    position: absolute;
+							    left: 50%;
+							    top: 50%;
+							    transform: translate(-50%, -50%);
+							    height: 16px;
+							    width: 16px;
+							    border: 0;
+							    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 14 14"><path fill="%23fff" fill-rule="evenodd" stroke="%23fff" stroke-linecap="round" stroke-linejoin="round" d="M12.698 3.325a.5.5 0 0 1-.023.707l-7.11 6.666a.5.5 0 0 1-.685 0L1.325 7.365a.5.5 0 1 1 .684-.73l3.213 3.013 6.77-6.346a.5.5 0 0 1 .706.023Z" clip-rule="evenodd"/></svg>') no-repeat center;
+						    }
+						}
+					}
+					label {
+						.checkbox-1 {
+							position: relative;
+						    height: 20px;
+						    width: 20px;
+						    background-color: #F4F4F4;
+						    border: 2px solid #CCCCCC;
+						    border-radius: 4px;
+						}
+					}
+					> div {
+						.bundle-checkbox-label {
+							product-card {
+								display: flex;
+    							flex-direction: column;
+								border-radius: 0;
+								gap: 8px;
+								&:hover {
+									box-shadow: unset;
+								}
+								.product-card__figure {
+									border-radius: 0;
+									border-top: 0;
+									display: flex;
+									flex-direction: row;
+									gap: 16px;
+									align-items: flex-start;
+									> a {
+										border-radius: 4px;
+										border: 1px solid var(--Gray-5, #CCC);
+										width: 85px;
+										position: relative;
+										> img {
+											border-radius: 4px;
+										}
+									}
+									.product-tag {
+										position: relative;
+									}
+								}
+								.product-card__title {
+									color: var(--Gray-1, #2B2B2B);
+									font-family: Poppins;
+									font-size: 14px;
+									font-style: normal;
+									font-weight: 600;
+									line-height: 140%;
+								}
+								.price-list {
+									flex-direction: row;
+									align-items: center;
+									sale-price {
+										color: var(--Gray-1, #2B2B2B);
+										font-family: Poppins;
+										font-size: 18px;
+										font-style: normal;
+										font-weight: 500;
+										line-height: 140%;
+									}
+									compare-at-price {
+										color: var(--Gray-4, #9C9C9C);
+										font-family: Poppins;
+										font-size: 16px;
+										font-style: normal;
+										font-weight: 500;
+										line-height: 140%; /* 22.4px */
+										text-decoration: line-through;
+									}
+								}
+							}
+
+						}
+						.bundle-dd {
+							width: 100%;
+							&:before {
+								content: 'Formats selected';
+								color: var(--Gray-3, #6B6B6B);
+								font-family: Poppins;
+								font-size: 12px;
+								font-style: normal;
+								font-weight: 400;
+								line-height: 140%;
+								position: absolute;
+							    top: 50%;
+							    left: 16px;
+							    z-index: 0;
+							    transform: translateY(-50%);
+							}
+							&:after {
+								content: "";
+							    position: absolute;
+							    display: block;
+							    top: 27px;
+							    right: 28px;
+							    transform: translate(50%, -50%);
+							    width: 24px;
+							    height: 24px;
+							    border: 0;
+							    transition: all 0.25s ease-in-out;
+							    transform-origin: center;
+							    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="%23121212" fill-rule="evenodd" d="M5.47 8.47a.75.75 0 0 1 1.06 0L12 13.94l5.47-5.47a.75.75 0 1 1 1.06 1.06l-6 6a.75.75 0 0 1-1.06 0l-6-6a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"></path></svg>') no-repeat center;
+							}
+							&.open {
+								box-shadow: unset;
+								&:after {
+							    	transform: translate(50%, -50%) rotate(180deg);
+								}
+								.bundle-dd__current {
+									border-color: #608239;
+								    border-bottom-left-radius: 0;
+								    border-bottom-right-radius: 0;
+								    border-bottom-color: transparent;
+								}
+							}
+							.bundle-dd__current {
+								position: relative;
+							    padding: 6px 14px !important;
+							    /* height: 56px; */
+							    display: flex;
+							    align-items: center;
+							    column-gap: 12px;
+							    border: 2px solid #CCCCCC;
+							    border-radius: 8px;
+							    padding-right: 60px !important;
+							    background-color: transparent;
+							    font-size: 0px;
+							    background-size: 24px;
+							    background-repeat: no-repeat;
+							    background-position: 130px center;
+							    &:before {
+							    	content: '';
+							    	display: block;
+							    	width: 32px;
+							    	height: 32px;
+							    	border-radius: 8px;
+									border: 2px solid var(--Green-1, #608239);
+									margin-left: 112px;
+							    }
+							    &:after {
+							    	content: "";
+								    position: absolute;
+								    right: 50px;
+								    top: 6px;
+								    bottom: 6px;
+								    width: 2px;
+								    background-color: #CCCCCC;
+							    }
+							    &.type-3ds-max-v-ray--corona {
+							    	background-image: url('//globeplants.com/cdn/shop/files/format-3DS-Max.png');
+							    }
+							    &.type-fbx {
+							    	background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
+							    }
+							    &.type-cinema-4d-vray--corona {
+							    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
+							    }
+							    &.type-cinema-4d-v-ray--corona {
+							    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
+							    }
+							    &.type-sketchup-thea--vray--enscape {
+							    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+							    }
+							    &.type-sketchup-v-ray--full-geometry-skp-mesh {
+							    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+							    }
+							    &.type-blender-cycles {
+							    	background-image: url('https://globeplants.com/cdn/shop/files/format-BLENDER.png');
+							    }
+							    &.type-growfx {
+							    	background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
+							    }
+							    &.type-twinmotion {
+							    	background-image: url('https://globeplants.com/cdn/shop/files/format-TWINMOTION.png');
+							    }
+							    &.type-redshift {
+							    	background-image: url('https://globeplants.com/cdn/shop/files/format-REDSHIFT.png');
+							    }
+							    &.type-sketchup-v-ray--fullgeometry-skp-mesh {
+							    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+							    }
+							    &.type-sketchup--growfx {
+							    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+							    }
+							    &.type-rhinoceros-3d-v-ray--rhino-renderer-only {
+							    	background-image: url('https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png');
+							    }
+							    &.type-mesh--growfx {
+							    	background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
+							    }
+							}
+							.bundle-dd__list {
+								position: absolute;
+							    top: calc(100% - 2px);
+							    left: 0;
+							    width: 100%;
+							    max-height: 260px;
+							    overflow-y: auto;
+							    background-color: #FFF;
+							    border: 2px solid #608239;
+							    border-top: 0;
+							    border-radius: 0 0 8px 8px;
+							    .bundle-dd__item {
+							    	padding: 12px 16px;
+								    display: flex;
+								    align-items: center;
+								    column-gap: 8px;
+								    border-top: 1px solid #F4F4F4;
+								    position: relative;
+								    &:hover {
+								    	background-color: #CCCCCC;
+								    	&:before {
+								    		border-color: #608239;
+								    	}
+								    	span {
+
+								    	}
+								    }
+								    &:before {
+								    	content: '';
+								    	display: block;
+								    	width: 32px;
+								    	height: 32px;
+    									padding: 4px;
+									    flex-shrink: 0;
+									    background-color: #FFF;
+									    background-size: 20px;
+									    background-repeat: no-repeat;
+									    background-position: center;
+								    	border: 2px solid #F4F4F4;
+    									border-radius: 8px;
+    									position: absolute;
+    									top: 50%;
+    									left: 30px;
+    									transform: translate(-50%, -50%);
+								    }
+								    > span {
+								    	padding: 4px 12px;
+									    flex-grow: 1;
+									    font-weight: 500;
+									    font-size: 10px;
+									    line-height: 1.4;
+									    text-align: center;
+									    background-color: #F4F4F4;
+									    border-radius: 12px;
+									    margin-left: 40px;
+								    }
+								    &.type-3ds-max-v-ray--corona {
+								    	&:before {
+								    	background-image: url('//globeplants.com/cdn/shop/files/format-3DS-Max.png');
+								    	}
+								    }
+								    &.type-fbx {
+								    	&:before {
+								    	background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
+								    	}
+								    }
+								    &.type-cinema-4d-vray--corona {
+								    	&:before {
+								    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
+								    	}
+								    }
+								    &.type-cinema-4d-v-ray--corona {
+								    	&:before {
+								    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
+								    	}
+								    }
+								    &.type-sketchup-thea--vray--enscape {
+								    	&:before {
+								    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+								    	}
+								    }
+								    &.type-sketchup-v-ray--full-geometry-skp-mesh {
+								    	&:before {
+								    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+								    	}
+								    }
+								    &.type-blender-cycles {
+								    	&:before {
+								    	background-image: url('https://globeplants.com/cdn/shop/files/format-BLENDER.png');
+								    	}
+								    }
+								    &.type-growfx {
+								    	&:before {
+								    	background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
+								    	}
+								    }
+								    &.type-twinmotion {
+								    	&:before {
+								    	background-image: url('https://globeplants.com/cdn/shop/files/format-TWINMOTION.png');
+								    	}
+								    }
+								    &.type-redshift {
+								    	&:before {
+								    	background-image: url('https://globeplants.com/cdn/shop/files/format-REDSHIFT.png');
+								    	}
+								    }
+								    &.type-sketchup-v-ray--fullgeometry-skp-mesh {
+								    	&:before {
+								    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+								    	}
+								    }
+								    &.type-sketchup--growfx {
+								    	&:before {
+								    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+								    	}
+								    }
+								    &.type-rhinoceros-3d-v-ray--rhino-renderer-only {
+								    	&:before {
+								    	background-image: url('https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png');
+								    	}
+								    }
+								    &.type-mesh--growfx {
+								    	&:before {
+								    	background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
+								    	}
+								    }
+							    }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

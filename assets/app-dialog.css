@@ -1,1 +1,1528 @@
-.slick-slider{box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;touch-action:pan-y;-webkit-tap-highlight-color:transparent}.slick-list,.slick-slider{position:relative;display:block}.slick-list{overflow:hidden;margin:0;padding:0}.slick-list:focus{outline:none}.slick-list.dragging{cursor:pointer;cursor:hand}.slick-slider .slick-list,.slick-slider .slick-track{transform:translateZ(0)}.slick-track{position:relative;top:0;left:0;display:block;margin-left:auto;margin-right:auto}.slick-track:after,.slick-track:before{display:table;content:""}.slick-track:after{clear:both}.slick-loading .slick-track{visibility:hidden}.slick-slide{display:none;float:left;height:100%;min-height:1px}[dir=rtl] .slick-slide{float:right}.slick-slide img{display:block}.slick-slide.slick-loading img{display:none}.slick-slide.dragging img{pointer-events:none}.slick-initialized .slick-slide{display:block}.slick-loading .slick-slide{visibility:hidden}.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}.slick-arrow.slick-hidden{display:none}div[id^=dia_feed_] .dai-asset-container,div[id^=dialogue_widget_] .dai-asset-container,div[id^=js_feed_widget] .dai-asset-container{min-height:0!important}div[id^=dia_feed_] .dai-asset-container>div:first-child,div[id^=dialogue_widget_] .dai-asset-container>div:first-child,div[id^=js_feed_widget] .dai-asset-container>div:first-child{--context-section-spacing-inline:var(--container-gutter);--calculated-section-spacing-inline:var(--section-spacing-inline--,var(--context-section-spacing-inline));padding-inline:max(var(--calculated-section-spacing-inline),50% - var(--container-max-width)/2)!important}div[id^=dia_feed_] .dai-asset-container h2,div[id^=dialogue_widget_] .dai-asset-container h2,div[id^=js_feed_widget] .dai-asset-container h2{font-weight:600!important}div[id^=dia_feed_] .dai-asset-container .carousel,div[id^=dialogue_widget_] .dai-asset-container .carousel,div[id^=js_feed_widget] .dai-asset-container .carousel{display:none!important}div[id^=dia_feed_] .product-list,div[id^=dialogue_widget_] .product-list,div[id^=js_feed_widget] .product-list{max-width:100%;margin:0 auto;padding-bottom:var(--spacing-6);--product-list-gap:var(--product-list-row-gap) var(--product-list-column-gap);--product-list-items-per-row:1;--product-list-grid:auto-flow dense/repeat(var(--product-list-items-per-row),minmax(0,1fr));--context-section-spacing-inline:var(--container-gutter);--calculated-section-spacing-inline:var(--section-spacing-inline--,var(--context-section-spacing-inline));padding-inline:max(var(--calculated-section-spacing-inline),50% - var(--container-max-width)/2)!important}@media (min-width:300px){div[id^=dia_feed_] .product-list,div[id^=dialogue_widget_] .product-list,div[id^=js_feed_widget] .product-list{margin-left:0}}@media screen and (min-width:700px){div[id^=dia_feed_] .product-list,div[id^=dialogue_widget_] .product-list,div[id^=js_feed_widget] .product-list{--product-list-items-per-row:2}}@media screen and (min-width:1000px){div[id^=dia_feed_] .product-list,div[id^=dialogue_widget_] .product-list,div[id^=js_feed_widget] .product-list{--product-list-items-per-row:3}}@media screen and (min-width:1150px){div[id^=dia_feed_] .product-list,div[id^=dialogue_widget_] .product-list,div[id^=js_feed_widget] .product-list{--product-list-items-per-row:4}}div[id^=dia_feed_] .product-list .product-card--blends:hover .product-card__select-format__link .select-format-text span,div[id^=dialogue_widget_] .product-list .product-card--blends:hover .product-card__select-format__link .select-format-text span,div[id^=js_feed_widget] .product-list .product-card--blends:hover .product-card__select-format__link .select-format-text span{padding-left:4px}div[id^=dia_feed_] .product-list .slick-list,div[id^=dialogue_widget_] .product-list .slick-list,div[id^=js_feed_widget] .product-list .slick-list{margin:0 -12px;display:flex}div[id^=dia_feed_] .product-list .slick-list .slick-track,div[id^=dialogue_widget_] .product-list .slick-list .slick-track,div[id^=js_feed_widget] .product-list .slick-list .slick-track{display:flex;align-items:stretch}div[id^=dia_feed_] .product-list .slick-list .slick-track product-card,div[id^=dialogue_widget_] .product-list .slick-list .slick-track product-card,div[id^=js_feed_widget] .product-list .slick-list .slick-track product-card{margin:0 12px}div[id^=dia_feed_] .product-list .slick-list .slick-track .slick-slide,div[id^=dialogue_widget_] .product-list .slick-list .slick-track .slick-slide,div[id^=js_feed_widget] .product-list .slick-list .slick-track .slick-slide{display:flex}div[id^=dia_feed_] .product-list .slick-arrow,div[id^=dialogue_widget_] .product-list .slick-arrow,div[id^=js_feed_widget] .product-list .slick-arrow{position:absolute;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;background-color:#608239;background-position:50%;background-size:20px;background-repeat:no-repeat;z-index:2;font-size:0}div[id^=dia_feed_] .product-list .slick-arrow.slick-prev,div[id^=dialogue_widget_] .product-list .slick-arrow.slick-prev,div[id^=js_feed_widget] .product-list .slick-arrow.slick-prev{--context-section-spacing-inline:var(--container-gutter);--calculated-section-spacing-inline:var(--section-spacing-inline--,var(--context-section-spacing-inline));left:calc(max(var(--calculated-section-spacing-inline), 50% - var(--container-max-width) / 2) - 40px);background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMS45NDIgMy41NThhLjYyNS42MjUgMCAwMTAgLjg4NEw3LjM4NCA5bDQuNTU4IDQuNTU4YS42MjUuNjI1IDAgMTEtLjg4NC44ODRsLTUtNWEuNjI1LjYyNSAwIDAxMC0uODg0bDUtNWEuNjI1LjYyNSAwIDAxLjg4NCAweiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==")}@media screen and (max-width:999px){div[id^=dia_feed_] .product-list .slick-arrow.slick-prev,div[id^=dialogue_widget_] .product-list .slick-arrow.slick-prev,div[id^=js_feed_widget] .product-list .slick-arrow.slick-prev{left:5px}}div[id^=dia_feed_] .product-list .slick-arrow.slick-next,div[id^=dialogue_widget_] .product-list .slick-arrow.slick-next,div[id^=js_feed_widget] .product-list .slick-arrow.slick-next{--context-section-spacing-inline:var(--container-gutter);--calculated-section-spacing-inline:var(--section-spacing-inline--,var(--context-section-spacing-inline));right:calc(max(var(--calculated-section-spacing-inline), 50% - var(--container-max-width) / 2) - 40px);background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik02LjA1OCAzLjU1OGEuNjI1LjYyNSAwIDAxLjg4NCAwbDUgNWEuNjI1LjYyNSAwIDAxMCAuODg0bC01IDVhLjYyNS42MjUgMCAxMS0uODg0LS44ODRMMTAuNjE2IDkgNi4wNTggNC40NDJhLjYyNS42MjUgMCAwMTAtLjg4NHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=")}@media screen and (max-width:999px){div[id^=dia_feed_] .product-list .slick-arrow.slick-next,div[id^=dialogue_widget_] .product-list .slick-arrow.slick-next,div[id^=js_feed_widget] .product-list .slick-arrow.slick-next{right:5px}}
+/* Slider */
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: "";
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+[dir=rtl] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+div[id^=js_feed_widget] .dai-asset-container,
+div[id^=dialogue_widget_] .dai-asset-container,
+div[id^=dia_feed_] .dai-asset-container {
+  min-height: 0 !important;
+}
+
+div[id^=js_feed_widget] .dai-asset-container > div:first-child,
+div[id^=dialogue_widget_] .dai-asset-container > div:first-child,
+div[id^=dia_feed_] .dai-asset-container > div:first-child {
+  --context-section-spacing-inline: var(--container-gutter);
+  --calculated-section-spacing-inline: var(--section-spacing-inline--, var(--context-section-spacing-inline));
+  padding-inline: max(var(--calculated-section-spacing-inline), 50% - var(--container-max-width) / 2) !important;
+}
+
+div[id^=js_feed_widget] .dai-asset-container h2,
+div[id^=dialogue_widget_] .dai-asset-container h2,
+div[id^=dia_feed_] .dai-asset-container h2 {
+  font-weight: 600 !important;
+}
+
+div[id^=js_feed_widget] .dai-asset-container .carousel,
+div[id^=dialogue_widget_] .dai-asset-container .carousel,
+div[id^=dia_feed_] .dai-asset-container .carousel {
+  display: none !important;
+}
+
+div[id^=js_feed_widget] .product-list,
+div[id^=dialogue_widget_] .product-list,
+div[id^=dia_feed_] .product-list {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-bottom: var(--spacing-6);
+  --product-list-gap: var(--product-list-row-gap) var(--product-list-column-gap);
+  --product-list-items-per-row: 1;
+  --product-list-grid: auto-flow dense / repeat(var(--product-list-items-per-row), minmax(0, 1fr));
+  --context-section-spacing-inline: var(--container-gutter);
+  --calculated-section-spacing-inline: var(--section-spacing-inline--, var(--context-section-spacing-inline));
+  padding-inline: max(var(--calculated-section-spacing-inline), 50% - var(--container-max-width) / 2) !important;
+}
+
+@media (min-width: 300px) {
+  div[id^=js_feed_widget] .product-list,
+  div[id^=dialogue_widget_] .product-list,
+  div[id^=dia_feed_] .product-list {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  div[id^=js_feed_widget] .product-list,
+  div[id^=dialogue_widget_] .product-list,
+  div[id^=dia_feed_] .product-list {
+    --product-list-items-per-row: 2;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  div[id^=js_feed_widget] .product-list,
+  div[id^=dialogue_widget_] .product-list,
+  div[id^=dia_feed_] .product-list {
+    --product-list-items-per-row: 3;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  div[id^=js_feed_widget] .product-list,
+  div[id^=dialogue_widget_] .product-list,
+  div[id^=dia_feed_] .product-list {
+    --product-list-items-per-row: 4;
+  }
+}
+
+div[id^=js_feed_widget] .product-list .product-card--blends:hover .product-card__select-format__link .select-format-text span,
+div[id^=dialogue_widget_] .product-list .product-card--blends:hover .product-card__select-format__link .select-format-text span,
+div[id^=dia_feed_] .product-list .product-card--blends:hover .product-card__select-format__link .select-format-text span {
+  padding-left: 4px;
+}
+
+div[id^=js_feed_widget] .product-list .slick-list,
+div[id^=dialogue_widget_] .product-list .slick-list,
+div[id^=dia_feed_] .product-list .slick-list {
+  margin: 0 -12px;
+  display: flex;
+}
+
+div[id^=js_feed_widget] .product-list .slick-list .slick-track,
+div[id^=dialogue_widget_] .product-list .slick-list .slick-track,
+div[id^=dia_feed_] .product-list .slick-list .slick-track {
+  display: flex;
+  align-items: stretch;
+}
+
+div[id^=js_feed_widget] .product-list .slick-list .slick-track product-card,
+div[id^=dialogue_widget_] .product-list .slick-list .slick-track product-card,
+div[id^=dia_feed_] .product-list .slick-list .slick-track product-card {
+  margin: 0 12px;
+}
+
+div[id^=js_feed_widget] .product-list .slick-list .slick-track .slick-slide,
+div[id^=dialogue_widget_] .product-list .slick-list .slick-track .slick-slide,
+div[id^=dia_feed_] .product-list .slick-list .slick-track .slick-slide {
+  display: flex;
+}
+
+div[id^=js_feed_widget] .product-list .slick-arrow,
+div[id^=dialogue_widget_] .product-list .slick-arrow,
+div[id^=dia_feed_] .product-list .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #608239;
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  z-index: 2;
+  font-size: 0;
+}
+
+div[id^=js_feed_widget] .product-list .slick-arrow.slick-prev,
+div[id^=dialogue_widget_] .product-list .slick-arrow.slick-prev,
+div[id^=dia_feed_] .product-list .slick-arrow.slick-prev {
+  --context-section-spacing-inline: var(--container-gutter);
+  --calculated-section-spacing-inline: var(--section-spacing-inline--, var(--context-section-spacing-inline));
+  left: calc(max(var(--calculated-section-spacing-inline), 50% - var(--container-max-width) / 2) - 40px);
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4IiBmaWxsPSJub25lIj4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTExLjk0MTkgMy41NTgwNkMxMi4xODYgMy44MDIxNCAxMi4xODYgNC4xOTc4NiAxMS45NDE5IDQuNDQxOTRMNy4zODM4OCA5TDExLjk0MTkgMTMuNTU4MUMxMi4xODYgMTMuODAyMSAxMi4xODYgMTQuMTk3OSAxMS45NDE5IDE0LjQ0MTlDMTEuNjk3OSAxNC42ODYgMTEuMzAyMSAxNC42ODYgMTEuMDU4MSAxNC40NDE5TDYuMDU4MDYgOS40NDE5NEM1LjgxMzk4IDkuMTk3ODcgNS44MTM5OCA4LjgwMjE0IDYuMDU4MDYgOC41NTgwNkwxMS4wNTgxIDMuNTU4MDZDMTEuMzAyMSAzLjMxMzk4IDExLjY5NzkgMy4zMTM5OCAxMS45NDE5IDMuNTU4MDZaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4=");
+}
+
+@media screen and (max-width: 999px) {
+  div[id^=js_feed_widget] .product-list .slick-arrow.slick-prev,
+  div[id^=dialogue_widget_] .product-list .slick-arrow.slick-prev,
+  div[id^=dia_feed_] .product-list .slick-arrow.slick-prev {
+    left: 5px;
+  }
+}
+
+div[id^=js_feed_widget] .product-list .slick-arrow.slick-next,
+div[id^=dialogue_widget_] .product-list .slick-arrow.slick-next,
+div[id^=dia_feed_] .product-list .slick-arrow.slick-next {
+  --context-section-spacing-inline: var(--container-gutter);
+  --calculated-section-spacing-inline: var(--section-spacing-inline--, var(--context-section-spacing-inline));
+  right: calc(max(var(--calculated-section-spacing-inline), 50% - var(--container-max-width) / 2) - 40px);
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4IiBmaWxsPSJub25lIj4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTYuMDU4MDYgMy41NTgwNkM2LjMwMjE0IDMuMzEzOTggNi42OTc4NiAzLjMxMzk4IDYuOTQxOTQgMy41NTgwNkwxMS45NDE5IDguNTU4MDZDMTIuMTg2IDguODAyMTQgMTIuMTg2IDkuMTk3ODcgMTEuOTQxOSA5LjQ0MTk0TDYuOTQxOTQgMTQuNDQxOUM2LjY5Nzg2IDE0LjY4NiA2LjMwMjE0IDE0LjY4NiA2LjA1ODA2IDE0LjQ0MTlDNS44MTM5OCAxNC4xOTc5IDUuODEzOTggMTMuODAyMSA2LjA1ODA2IDEzLjU1ODFMMTAuNjE2MSA5TDYuMDU4MDYgNC40NDE5NEM1LjgxMzk4IDQuMTk3ODYgNS44MTM5OCAzLjgwMjE0IDYuMDU4MDYgMy41NTgwNloiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg==");
+}
+
+@media screen and (max-width: 999px) {
+  div[id^=js_feed_widget] .product-list .slick-arrow.slick-next,
+  div[id^=dialogue_widget_] .product-list .slick-arrow.slick-next,
+  div[id^=dia_feed_] .product-list .slick-arrow.slick-next {
+    right: 5px;
+  }
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container,
+div[id^=dia_feed_] .dai-asset-container.bundle-container {
+  max-width: 100%;
+  --product-list-gap: var(--product-list-row-gap) var(--product-list-column-gap);
+  --product-list-items-per-row: 1;
+  --product-list-grid: auto-flow dense / repeat(var(--product-list-items-per-row), minmax(0, 1fr));
+  --context-section-spacing-inline: var(--container-gutter);
+  --calculated-section-spacing-inline: var(--section-spacing-inline--, var(--context-section-spacing-inline));
+  padding-inline: max(var(--calculated-section-spacing-inline), 50% - var(--container-max-width) / 2) !important;
+  display: none;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-main-title,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-main-title {
+  padding-inline: 0 !important;
+}
+
+@media screen and (max-width: 560px) {
+  div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-main-title,
+  div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-main-title {
+    margin-bottom: 16px !important;
+  }
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-main-title .bundle-main-title-line,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-main-title .bundle-main-title-line {
+  display: none;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-main-title .bundle-main-title-inner,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-main-title .bundle-main-title-inner {
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  padding: 0 !important;
+  width: 100%;
+  max-width: unset;
+}
+
+@media screen and (max-width: 560px) {
+  div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-main-title .bundle-main-title-inner,
+  div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-main-title .bundle-main-title-inner {
+    font-size: 20px;
+    line-height: 140%;
+  }
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row {
+  display: flex;
+  gap: 8px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col {
+  position: relative;
+  padding: 16px;
+  padding-right: 16px !important;
+  padding-left: 16px !important;
+  padding-bottom: 96px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 16px;
+  font-family: "Poppins";
+  margin-bottom: 0 !important;
+  min-width: 260px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col:hover,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.0588235294);
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col:first-child,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col:first-child {
+  border-color: var(--Green-1, #608239);
+  background: var(--Gray-7, #FAFAFA);
+  border-radius: 0px 16px 16px 16px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col:first-child:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col:first-child:before {
+  content: "This item";
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  left: -1px;
+  color: var(--White, #FFF);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  border-radius: 12px 12px 0px 0px;
+  border: 1px solid var(--Green-1, #608239);
+  background: var(--Green-1, #608239);
+  padding: 4px 8px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card {
+  border-radius: 0;
+  gap: 8px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card:hover,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card:hover {
+  box-shadow: unset;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__figure,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__figure {
+  border-radius: 0;
+  border-top: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__figure > a,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__figure > a {
+  border-radius: 4px;
+  border: 1px solid var(--Gray-5, #CCC);
+  width: 85px;
+  position: relative;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__figure > a > img,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__figure > a > img {
+  border-radius: 4px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__figure .product-tag,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__figure .product-tag {
+  position: relative;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__info,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__info {
+  padding: 0;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__info .product-card__title,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__info .product-card__title {
+  font-size: 14px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__info .product-tags,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__info .product-tags {
+  margin-bottom: 0;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__info .price-list,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__info .price-list {
+  flex-direction: row;
+  align-items: center;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__info .price-list compare-at-price,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .product-card .product-card__info .price-list compare-at-price {
+  font-size: 14px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .b-product,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .b-product {
+  margin: 0 !important;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .b-product .b-product-head,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .b-product .b-product-head {
+  top: 16px;
+  right: 16px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .b-product .b-product-head input:checked + label .checkbox-2,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .b-product .b-product-head input:checked + label .checkbox-2 {
+  background-color: #608239;
+  border-color: #608239;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .b-product .b-product-head input:checked + label .checkbox-2:after,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .b-product .b-product-head input:checked + label .checkbox-2:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 16px;
+  width: 16px;
+  border: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 14 14"><path fill="%23fff" fill-rule="evenodd" stroke="%23fff" stroke-linecap="round" stroke-linejoin="round" d="M12.698 3.325a.5.5 0 0 1-.023.707l-7.11 6.666a.5.5 0 0 1-.685 0L1.325 7.365a.5.5 0 1 1 .684-.73l3.213 3.013 6.77-6.346a.5.5 0 0 1 .706.023Z" clip-rule="evenodd"/></svg>') no-repeat center;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .b-product .b-product-head label,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .b-product .b-product-head label {
+  margin-right: 0;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .b-product .b-product-head label .checkbox-2,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .b-product .b-product-head label .checkbox-2 {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background-color: #F4F4F4;
+  border: 2px solid #CCCCCC;
+  border-radius: 4px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .b-product .bundle-item.dai-bundle-item,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .b-product .bundle-item.dai-bundle-item {
+  display: none;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-checkbox-label,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-checkbox-label {
+  display: none;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants {
+  position: absolute;
+  bottom: 24px;
+  left: 16px;
+  right: 16px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd:before {
+  content: "Formats selected";
+  color: var(--Gray-3, #6B6B6B);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd:after,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 32px;
+  right: 28px;
+  transform: translate(50%, -50%);
+  width: 24px;
+  height: 24px;
+  border: 0;
+  transition: all 0.25s ease-in-out;
+  transform-origin: center;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="%23121212" fill-rule="evenodd" d="M5.47 8.47a.75.75 0 0 1 1.06 0L12 13.94l5.47-5.47a.75.75 0 1 1 1.06 1.06l-6 6a.75.75 0 0 1-1.06 0l-6-6a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"></path></svg>') no-repeat center;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd.open,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd.open {
+  box-shadow: unset;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd.open:after,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd.open:after {
+  transform: translate(50%, -50%) rotate(180deg);
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd.open .bundle-dd__current,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd.open .bundle-dd__current {
+  border-color: #608239;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-color: transparent;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current {
+  position: relative;
+  padding: 6px 14px !important;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  border: 2px solid #CCCCCC;
+  border-radius: 8px;
+  padding-right: 60px !important;
+  background-color: transparent;
+  font-size: 0px;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: 130px center;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current:before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 2px solid var(--Green-1, #608239);
+  margin-left: 112px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current:after,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current:after {
+  content: "";
+  position: absolute;
+  right: 50px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background-color: #CCCCCC;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-3ds-max-v-ray--corona,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-3ds-max-v-ray--corona {
+  background-image: url("//globeplants.com/cdn/shop/files/format-3DS-Max.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-fbx,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-fbx {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-FBX.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-cinema-4d-vray--corona,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-cinema-4d-vray--corona {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-cinema-4d-v-ray--corona,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-cinema-4d-v-ray--corona {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-sketchup-thea--vray--enscape,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-sketchup-thea--vray--enscape {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Sketchup.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-sketchup-v-ray--full-geometry-skp-mesh,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-sketchup-v-ray--full-geometry-skp-mesh {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Sketchup.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-blender-cycles,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-blender-cycles {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-BLENDER.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-growfx,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-growfx {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Growfx.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-twinmotion,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-twinmotion {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-TWINMOTION.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-redshift,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-redshift {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-REDSHIFT.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-sketchup-v-ray--fullgeometry-skp-mesh,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-sketchup-v-ray--fullgeometry-skp-mesh {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Sketchup.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-sketchup--growfx,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-sketchup--growfx {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Sketchup.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-rhinoceros-3d-v-ray--rhino-renderer-only,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-rhinoceros-3d-v-ray--rhino-renderer-only {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-mesh--growfx,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__current.type-mesh--growfx {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Growfx.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list {
+  position: absolute;
+  top: calc(100% - 2px);
+  left: 0;
+  width: 100%;
+  max-height: 260px;
+  overflow-y: auto;
+  background-color: #FFF;
+  border: 2px solid #608239;
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  border-top: 1px solid #F4F4F4;
+  position: relative;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item:hover,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item:hover {
+  background-color: #CCCCCC;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item:hover:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item:hover:before {
+  border-color: #608239;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item:before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  flex-shrink: 0;
+  background-color: #FFF;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #F4F4F4;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translate(-50%, -50%);
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item > span,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item > span {
+  padding: 4px 12px;
+  flex-grow: 1;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.4;
+  text-align: center;
+  background-color: #F4F4F4;
+  border-radius: 12px;
+  margin-left: 40px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-3ds-max-v-ray--corona:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-3ds-max-v-ray--corona:before {
+  background-image: url("//globeplants.com/cdn/shop/files/format-3DS-Max.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-fbx:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-fbx:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-FBX.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-cinema-4d-vray--corona:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-cinema-4d-vray--corona:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-cinema-4d-v-ray--corona:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-cinema-4d-v-ray--corona:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-sketchup-thea--vray--enscape:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-sketchup-thea--vray--enscape:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Sketchup.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-sketchup-v-ray--full-geometry-skp-mesh:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-sketchup-v-ray--full-geometry-skp-mesh:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Sketchup.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-blender-cycles:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-blender-cycles:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-BLENDER.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-growfx:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-growfx:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Growfx.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-twinmotion:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-twinmotion:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-TWINMOTION.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-redshift:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-redshift:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-REDSHIFT.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-sketchup-v-ray--fullgeometry-skp-mesh:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-sketchup-v-ray--fullgeometry-skp-mesh:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Sketchup.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-sketchup--growfx:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-sketchup--growfx:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Sketchup.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-rhinoceros-3d-v-ray--rhino-renderer-only:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-rhinoceros-3d-v-ray--rhino-renderer-only:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-mesh--growfx:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .b-product-col .bundle-5-variants .bundle-dd .bundle-dd__list .bundle-dd__item.type-mesh--growfx:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Growfx.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .bundle-col-plus,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .bundle-col-plus {
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .bundle-col-plus > span,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .bundle-col-plus > span {
+  position: relative;
+  left: unset;
+  top: unset;
+  transform: unset;
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  color: white;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .bundle-col-plus > span:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .bundle-col-plus > span:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #608239;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .bundle-col-plus > span:after,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-row .b-products > .b-row .bundle-col-plus > span:after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 20px;
+  background-color: #608239;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-total,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-total {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 16px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-price,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-price {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-price .dai-pricing-wrapper,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-price .dai-pricing-wrapper {
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-price .dai-pricing-wrapper:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-price .dai-pricing-wrapper:before {
+  content: "Total all:";
+  margin-right: 16px;
+  color: var(--Gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  order: 5;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-price .dai-pricing-wrapper .dai-pricing-price,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-price .dai-pricing-wrapper .dai-pricing-price {
+  color: var(--Gray-4, #9C9C9C) !important;
+  font-family: Poppins;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 140% !important;
+  text-decoration: line-through;
+  padding: 0 !important;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-price .dai-pricing-wrapper .gap,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-price .dai-pricing-wrapper .gap {
+  width: 8px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-price .dai-pricing-wrapper .dai-pricing-sale-price,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-price .dai-pricing-wrapper .dai-pricing-sale-price {
+  color: var(--Gray-1, #2B2B2B) !important;
+  font-family: Poppins;
+  font-size: 20px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 140% !important;
+  padding: 0 !important;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-btn,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-btn {
+  width: 100%;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-btn .button-buy-wrapper,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-btn .button-buy-wrapper {
+  text-align: left;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-btn .button-buy-wrapper .dai-btn,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-btn .button-buy-wrapper .dai-btn {
+  font-size: 14px !important;
+  line-height: 22px;
+  --button-background: var(--button-background-primary) / var(--button-background-opacity, 1);
+  --button-text-color: var(--button-text-primary);
+  --button-outline-color: var(--button-background-primary);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border-radius: var(--rounded-button);
+  background-color: rgb(var(--button-background));
+  color: rgb(var(--button-text-color));
+  text-align: center;
+  font-size: var(--text-sm);
+  letter-spacing: var(--text-letter-spacing);
+  padding-block-start: var(--spacing-2-5);
+  padding-block-end: var(--spacing-2-5);
+  padding-inline-start: var(--spacing-5);
+  padding-inline-end: var(--spacing-5);
+  font-weight: 700;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: inline-block;
+  position: relative;
+  width: auto !important;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-btn .button-buy-wrapper .dai-btn:hover,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .bundle-5-container > .b-total .b-total-btn .button-buy-wrapper .dai-btn:hover {
+  --button-background-opacity: 0.8;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 0 !important;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row:not(.bundle-row-total),
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row:not(.bundle-row-total) {
+  display: none !important;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total {
+  order: 3;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .bundle-col-auto,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .bundle-col-auto {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .bundle-col-auto .total-price,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .bundle-col-auto .total-price {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .bundle-col-auto .total-price .total-price-text,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .bundle-col-auto .total-price .total-price-text {
+  display: none;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .bundle-col-auto .total-price .dai-pricing-wrapper,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .bundle-col-auto .total-price .dai-pricing-wrapper {
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .bundle-col-auto .total-price .dai-pricing-wrapper:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .bundle-col-auto .total-price .dai-pricing-wrapper:before {
+  content: "Total all:";
+  margin-right: 16px;
+  color: var(--Gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  order: 5;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .bundle-col-auto .total-price .dai-pricing-wrapper .dai-pricing-price,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .bundle-col-auto .total-price .dai-pricing-wrapper .dai-pricing-price {
+  color: var(--Gray-4, #9C9C9C) !important;
+  font-family: Poppins;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 140% !important;
+  text-decoration: line-through;
+  padding: 0 !important;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .bundle-col-auto .total-price .dai-pricing-wrapper .gap,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .bundle-col-auto .total-price .dai-pricing-wrapper .gap {
+  width: 8px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .bundle-col-auto .total-price .dai-pricing-wrapper .dai-pricing-sale-price,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .bundle-col-auto .total-price .dai-pricing-wrapper .dai-pricing-sale-price {
+  color: var(--Gray-1, #2B2B2B) !important;
+  font-family: Poppins;
+  font-size: 20px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 140% !important;
+  padding: 0 !important;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .button-buy-wrapper,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .button-buy-wrapper {
+  text-align: left;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .button-buy-wrapper .dai-btn,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .button-buy-wrapper .dai-btn {
+  font-size: 14px !important;
+  line-height: 22px;
+  --button-background: var(--button-background-primary) / var(--button-background-opacity, 1);
+  --button-text-color: var(--button-text-primary);
+  --button-outline-color: var(--button-background-primary);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border-radius: var(--rounded-button);
+  background-color: rgb(var(--button-background));
+  color: rgb(var(--button-text-color));
+  text-align: center;
+  font-size: var(--text-sm);
+  letter-spacing: var(--text-letter-spacing);
+  padding-block-start: var(--spacing-2-5);
+  padding-block-end: var(--spacing-2-5);
+  padding-inline-start: var(--spacing-5);
+  padding-inline-end: var(--spacing-5);
+  font-weight: 700;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: inline-block;
+  position: relative;
+  width: 100% !important;
+  max-width: unset;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .button-buy-wrapper .dai-btn:hover,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-row.bundle-row-total .button-buy-wrapper .dai-btn:hover {
+  --button-background-opacity: 0.8;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-main-title,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-main-title {
+  order: 1;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper {
+  order: 2;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox {
+  margin-bottom: 16px !important;
+  position: relative;
+  padding: 8px;
+  padding-bottom: 3px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 16px;
+  font-family: "Poppins";
+  left: 0;
+  max-width: unset;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox:first-child,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox:first-child {
+  border-color: var(--Green-1, #608239);
+  background: var(--Gray-7, #FAFAFA);
+  border-radius: 0px 16px 16px 16px;
+  margin-top: 20px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox:first-child:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox:first-child:before {
+  content: "This item";
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  left: -1px;
+  color: var(--White, #FFF);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  border-radius: 12px 12px 0px 0px;
+  border: 1px solid var(--Green-1, #608239);
+  background: var(--Green-1, #608239);
+  padding: 4px 8px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox:last-child,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox:last-child {
+  margin-bottom: 0 !important;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox .this-item,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox .this-item {
+  display: none;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox input:checked + label .checkbox-1,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox input:checked + label .checkbox-1 {
+  background-color: #608239;
+  border-color: #608239;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox input:checked + label .checkbox-1:after,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox input:checked + label .checkbox-1:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 16px;
+  width: 16px;
+  border: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 14 14"><path fill="%23fff" fill-rule="evenodd" stroke="%23fff" stroke-linecap="round" stroke-linejoin="round" d="M12.698 3.325a.5.5 0 0 1-.023.707l-7.11 6.666a.5.5 0 0 1-.685 0L1.325 7.365a.5.5 0 1 1 .684-.73l3.213 3.013 6.77-6.346a.5.5 0 0 1 .706.023Z" clip-rule="evenodd"/></svg>') no-repeat center;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox label .checkbox-1,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox label .checkbox-1 {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background-color: #F4F4F4;
+  border: 2px solid #CCCCCC;
+  border-radius: 4px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+  gap: 8px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card:hover,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card:hover {
+  box-shadow: unset;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card .product-card__figure,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card .product-card__figure {
+  border-radius: 0;
+  border-top: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card .product-card__figure > a,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card .product-card__figure > a {
+  border-radius: 4px;
+  border: 1px solid var(--Gray-5, #CCC);
+  width: 85px;
+  position: relative;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card .product-card__figure > a > img,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card .product-card__figure > a > img {
+  border-radius: 4px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card .product-card__figure .product-tag,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card .product-card__figure .product-tag {
+  position: relative;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card .product-card__title,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card .product-card__title {
+  color: var(--Gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card .price-list,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card .price-list {
+  flex-direction: row;
+  align-items: center;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card .price-list sale-price,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card .price-list sale-price {
+  color: var(--Gray-1, #2B2B2B);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card .price-list compare-at-price,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-checkbox-label product-card .price-list compare-at-price {
+  color: var(--Gray-4, #9C9C9C);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 22.4px */
+  text-decoration: line-through;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd {
+  width: 100%;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd:before {
+  content: "Formats selected";
+  color: var(--Gray-3, #6B6B6B);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd:after,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 27px;
+  right: 28px;
+  transform: translate(50%, -50%);
+  width: 24px;
+  height: 24px;
+  border: 0;
+  transition: all 0.25s ease-in-out;
+  transform-origin: center;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="%23121212" fill-rule="evenodd" d="M5.47 8.47a.75.75 0 0 1 1.06 0L12 13.94l5.47-5.47a.75.75 0 1 1 1.06 1.06l-6 6a.75.75 0 0 1-1.06 0l-6-6a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"></path></svg>') no-repeat center;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd.open,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd.open {
+  box-shadow: unset;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd.open:after,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd.open:after {
+  transform: translate(50%, -50%) rotate(180deg);
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd.open .bundle-dd__current,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd.open .bundle-dd__current {
+  border-color: #608239;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-color: transparent;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current {
+  position: relative;
+  padding: 6px 14px !important;
+  /* height: 56px; */
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  border: 2px solid #CCCCCC;
+  border-radius: 8px;
+  padding-right: 60px !important;
+  background-color: transparent;
+  font-size: 0px;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: 130px center;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current:before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 2px solid var(--Green-1, #608239);
+  margin-left: 112px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current:after,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current:after {
+  content: "";
+  position: absolute;
+  right: 50px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background-color: #CCCCCC;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-3ds-max-v-ray--corona,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-3ds-max-v-ray--corona {
+  background-image: url("//globeplants.com/cdn/shop/files/format-3DS-Max.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-fbx,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-fbx {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-FBX.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-cinema-4d-vray--corona,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-cinema-4d-vray--corona {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-cinema-4d-v-ray--corona,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-cinema-4d-v-ray--corona {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-sketchup-thea--vray--enscape,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-sketchup-thea--vray--enscape {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Sketchup.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-sketchup-v-ray--full-geometry-skp-mesh,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-sketchup-v-ray--full-geometry-skp-mesh {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Sketchup.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-blender-cycles,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-blender-cycles {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-BLENDER.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-growfx,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-growfx {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Growfx.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-twinmotion,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-twinmotion {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-TWINMOTION.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-redshift,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-redshift {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-REDSHIFT.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-sketchup-v-ray--fullgeometry-skp-mesh,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-sketchup-v-ray--fullgeometry-skp-mesh {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Sketchup.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-sketchup--growfx,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-sketchup--growfx {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Sketchup.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-rhinoceros-3d-v-ray--rhino-renderer-only,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-rhinoceros-3d-v-ray--rhino-renderer-only {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-mesh--growfx,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__current.type-mesh--growfx {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Growfx.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list {
+  position: absolute;
+  top: calc(100% - 2px);
+  left: 0;
+  width: 100%;
+  max-height: 260px;
+  overflow-y: auto;
+  background-color: #FFF;
+  border: 2px solid #608239;
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  border-top: 1px solid #F4F4F4;
+  position: relative;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item:hover,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item:hover {
+  background-color: #CCCCCC;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item:hover:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item:hover:before {
+  border-color: #608239;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item:before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  flex-shrink: 0;
+  background-color: #FFF;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #F4F4F4;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translate(-50%, -50%);
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item > span,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item > span {
+  padding: 4px 12px;
+  flex-grow: 1;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.4;
+  text-align: center;
+  background-color: #F4F4F4;
+  border-radius: 12px;
+  margin-left: 40px;
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-3ds-max-v-ray--corona:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-3ds-max-v-ray--corona:before {
+  background-image: url("//globeplants.com/cdn/shop/files/format-3DS-Max.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-fbx:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-fbx:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-FBX.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-cinema-4d-vray--corona:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-cinema-4d-vray--corona:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-cinema-4d-v-ray--corona:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-cinema-4d-v-ray--corona:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-sketchup-thea--vray--enscape:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-sketchup-thea--vray--enscape:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Sketchup.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-sketchup-v-ray--full-geometry-skp-mesh:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-sketchup-v-ray--full-geometry-skp-mesh:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Sketchup.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-blender-cycles:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-blender-cycles:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-BLENDER.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-growfx:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-growfx:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Growfx.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-twinmotion:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-twinmotion:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-TWINMOTION.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-redshift:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-redshift:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-REDSHIFT.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-sketchup-v-ray--fullgeometry-skp-mesh:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-sketchup-v-ray--fullgeometry-skp-mesh:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Sketchup.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-sketchup--growfx:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-sketchup--growfx:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Sketchup.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-rhinoceros-3d-v-ray--rhino-renderer-only:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-rhinoceros-3d-v-ray--rhino-renderer-only:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png");
+}
+
+div[id^=dialogue_widget_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-mesh--growfx:before,
+div[id^=dia_feed_] .dai-asset-container.bundle-container .template-four-wrapper .bundle-item-wrapper .bundle-item-checkbox > div .bundle-dd .bundle-dd__list .bundle-dd__item.type-mesh--growfx:before {
+  background-image: url("https://globeplants.com/cdn/shop/files/format-Growfx.png");
+}
+
