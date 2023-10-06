@@ -119,7 +119,9 @@
 }
 
 div[id^="js_feed_widget"], div[id^="dialogue_widget_"], div[id^="dia_feed_"] {
-	display: none;
+	.dialogue_asset_wrapper {
+		display: none;
+	}
 	.dai-asset-container {
 		min-height: 0 !important;
 		> div {
