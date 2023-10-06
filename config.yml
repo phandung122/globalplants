@@ -13,3 +13,8 @@ preproduction:
   theme_id: "149809299746"
   store: globe-plants.myshopify.com
   ignore_files:
+bundle-preproduction:
+  password: shptka_bf45dec3f3bff12ad22f81570b4d7125
+  theme_id: "160922632482"
+  store: globe-plants.myshopify.com
+  ignore_files:

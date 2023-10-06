@@ -33,6 +33,8 @@ function checkProduct() {
 		//console.log(daiContainter);
 		if ( daiContainter.classList.contains('checked') ) {
 			return 0;
+		} else {
+			daiContainter.style.display = 'none';
 		}
 		var daiCarousel = daiContainter.querySelector('.carousel');
 		var sectionWrapperFull = daiContainter.closest('.section.section-full');
