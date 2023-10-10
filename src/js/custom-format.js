@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log('hello Format');
+  //console.log('hello Format');
 });
 
 //hide menu item content
@@ -74,4 +74,3 @@ function showFormatFile() {
     formatFileContent.style.height = height+'px';
   }
 };
-

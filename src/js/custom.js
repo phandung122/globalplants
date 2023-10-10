@@ -303,6 +303,3 @@ $( document ).ready(function() {
     $(this).siblings('.form-control-error-status').html('');
   });
 });
-
-
-

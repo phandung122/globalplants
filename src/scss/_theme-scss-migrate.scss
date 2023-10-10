@@ -1725,3 +1725,34 @@
 		}
 	}
 }
+
+html {
+	position:relative;
+}
+.boost-pfs-search-suggestion-open-body:not(.template--search) {
+	position: relative;
+	touch-action: none;
+	-ms-touch-action: none;
+}
+.search-popover {
+	.boost-pfs-search-suggestion-wrapper {
+		.boost-pfs-search-suggestion {
+			@media screen and (min-width: 299px) and (max-width: 767px) {
+				padding-left: 0;
+				padding-right: 0;
+				> div.boost-pfs-search-suggestion-groups-others, >div.boost-pfs-search-suggestion-groups-pro {
+					> div.boost-pfs-search-suggestion-group {
+						padding-left: max(var(--calculated-section-spacing-inline),50% - var(--container-max-width)/2);
+						padding-right: max(var(--calculated-section-spacing-inline),50% - var(--container-max-width)/2);
+						&:not(:first-child) {
+							border-top: 1px solid var(--Gray-5, #CCC);
+						}
+						&[data-group="recent_searches"] {
+							background-color: #FAFAFA;
+						}
+					}
+				}
+			}
+		}
+	}
+}

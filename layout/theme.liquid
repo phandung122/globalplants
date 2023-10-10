@@ -129,5 +129,21 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     {% if template contains 'customers' %}
       <script type="module" src="{{ 'app.js' | asset_url }}"></script>
     {% endif %}
+
+<script>
+window.visualViewport.addEventListener('resize', event => {
+  //console.log(event.target);
+  if ( document.querySelector('body.boost-pfs-search-suggestion-open-body') != null ) {
+    var searchInterval = setInterval(function(){
+      window.scrollTo(0, 0);
+      if ( document.querySelector('body.boost-pfs-search-suggestion-open-body') == null ) {
+        clearInterval(searchInterval);
+      }
+    },100);
+  } else {
+    clearInterval(searchInterval);
+  }
+});
+</script>
   </body>
 </html>
