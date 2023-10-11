@@ -1740,6 +1740,7 @@ html {
 			@media screen and (min-width: 299px) and (max-width: 767px) {
 				padding-left: 0;
 				padding-right: 0;
+				max-height: calc(100vh - 110px - 160px - var(--announcement-bar-height) - var(--header-height))!important;
 				> div.boost-pfs-search-suggestion-groups-others, >div.boost-pfs-search-suggestion-groups-pro {
 					> div.boost-pfs-search-suggestion-group {
 						padding-left: max(var(--calculated-section-spacing-inline),50% - var(--container-max-width)/2);
@@ -1750,6 +1751,9 @@ html {
 						&[data-group="recent_searches"] {
 							background-color: #FAFAFA;
 						}
+					}
+					.boost-pfs-search-suggestion-header-view-all {
+						padding-bottom: 0px;
 					}
 				}
 			}
