@@ -3,6 +3,27 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
+        "0f1677a3-2966-4c0c-a2fb-5818d8baafd2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/globe-plants-3d-plant-model-bundle-55-ornamental-plants-02-slide.jpg",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center-end sm:text-end",
+            "subheading": "Ornamental Pot Plants 02",
+            "title": "BUNDLE 55",
+            "heading_tag": "h2",
+            "button_text": "Shop BUNDLE 55",
+            "button_link": "shopify:\/\/products\/bundle-55-ornamental-plants-3d-model",
+            "text_color": "#ffffff",
+            "button_background": "#56842c",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
         "slide-1": {
           "type": "image",
           "settings": {
@@ -65,34 +86,13 @@
             "background": "",
             "background_gradient": ""
           }
-        },
-        "0f1677a3-2966-4c0c-a2fb-5818d8baafd2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/globe-plants-3d-plant-model-bundle-51-bamboo-world-slide.jpg",
-            "content_max_width": 780,
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center-start sm:text-start",
-            "subheading": "Bamboo World",
-            "title": "BUNDLE 51",
-            "heading_tag": "h2",
-            "button_text": "Shop BUNDLE 51",
-            "button_link": "https:\/\/globeplants.com\/products\/bundle-51-bamboo-world-3d-model",
-            "text_color": "#ffffff",
-            "button_background": "#56842c",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 10,
-            "background": "",
-            "background_gradient": ""
-          }
         }
       },
       "block_order": [
+        "0f1677a3-2966-4c0c-a2fb-5818d8baafd2",
         "slide-1",
         "slide-2",
-        "60ab57ee-8ee5-4d35-869b-16e6908f824f",
-        "0f1677a3-2966-4c0c-a2fb-5818d8baafd2"
+        "60ab57ee-8ee5-4d35-869b-16e6908f824f"
       ],
       "settings": {
         "full_width": true,
