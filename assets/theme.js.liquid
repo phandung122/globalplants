@@ -3509,7 +3509,7 @@ var VariantPicker = class extends HTMLElement {
     this.optionSelectors.forEach((optionSelector) => {
       optionSelector.addEventListener("change", this._onOptionChanged.bind(this), { signal: this._abortController.signal });
     });
-    this.masterSelector.addEventListener("change", this._onMasterSelectorChanged.bind(this), { signal: this._abortController.signal });
+    //this.masterSelector.addEventListener("change", this._onMasterSelectorChanged.bind(this), { signal: this._abortController.signal });
     this._updateDisableSelectors();
     // this.selectVariant(this.selectedVariant["id"]);
   }
