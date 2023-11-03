@@ -166,6 +166,10 @@ div[id^="js_feed_widget"], div[id^="dialogue_widget_"], div[id^="dia_feed_"] {
 	  .product-card--blends:hover .product-card__select-format__link .select-format-text span {
 	  	padding-left: 4px;
 	  }
+	  button[aria-controls^="quick-buy-"],
+	  .button[aria-controls^="quick-buy-"] {
+	  	display: none;
+	  }
 	  .slick-list {
 	  	margin: 0 -12px;
 	  	display: flex;

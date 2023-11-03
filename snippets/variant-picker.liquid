@@ -97,7 +97,7 @@ Supported variables
           </div>
         {%- else -%}
           <div {% unless block.settings.stack_blocks %}class="scroll-area bleed sm:unbleed"{% endunless %}>
-            <div data-option-selector class="variant-picker__option-values {% if block.settings.stack_blocks %}wrap{% else %}scroll-area bleed sm:unbleed{% endif %} {% if selector_type == 'color' and settings.color_swatch_style == 'rectangle' %}variant-picker__option-values--color gap-4{% else %}gap-1{% endif %}">
+            <div data-option-position={{ option.position }} data-option-selector class="variant-picker__option-values {% if block.settings.stack_blocks %}wrap{% else %}scroll-area bleed sm:unbleed{% endif %} {% if selector_type == 'color' and settings.color_swatch_style == 'rectangle' %}variant-picker__option-values--color gap-4{% else %}gap-1{% endif %}">
               {%- assign name = 'option' | append: option.position -%}
 
               {%- for value in option.values -%}
