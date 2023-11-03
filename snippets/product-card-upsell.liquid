@@ -251,7 +251,7 @@ Supported variables
     <div class="quick-add-to-cart-wrapper">
           <div class="product-info__variant-picker">
             {%- capture product_form_id -%}quick-buy-form-{{ product.id }}-{{ section.id }}{%- endcapture -%}
-            {%- render 'variant-picker', product: product, form_id: product_form_id, update_url: false, hide_sold_out_variants: false, hide_size_chart: true, force_dropdown_as_block: true -%}
+            {%- render 'variant-picker-clone', product: product, form_id: product_form_id, update_url: false, hide_sold_out_variants: false, hide_size_chart: true, force_dropdown_as_block: true -%}
             {%- render 'variant-picker-upsell', product: product, form_id: product_form_id, -%}
           </div>
           {%- render 'buy-buttons-upsell', product: product, form_id: product_form_id, show_payment_button: false, button_size: 'lg' -%}
