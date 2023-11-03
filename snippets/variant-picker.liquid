@@ -73,7 +73,7 @@ Supported variables
             </x-drawer>
           {%- endif -%}
         </div>
-
+        {%- assign selector_type = 'dropdown' -%}
         {%- if selector_type == 'dropdown' -%}
           {%- capture popover_id -%}popover-{{ 'now' | date: '%N' }}{%- endcapture -%}
 

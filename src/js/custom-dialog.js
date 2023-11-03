@@ -61,6 +61,7 @@ function checkProduct() {
 		}
 
 		var daiProductList = daiContainter.querySelector('product-list');
+
 		daiProductList.style.display = 'none';
 		if ( document.querySelectorAll('.dai-slide').length ) {
 			var upsellLinks = [];
@@ -107,6 +108,25 @@ function checkProduct() {
 								sectionWrapperFull.style.removeProperty('padding-top');
 								sectionWrapperFull.style.removeProperty('padding-bottom');
 							}
+
+							$(daiProductList).on('init',function(event, slick) {
+								$(this).find('.bundle-dd').on('click',function(event) {
+									$(this).toggleClass('open');
+								});
+								$(this).find('.bundle-dd__item').on('click',function(event) {
+									var dataType = $(this).attr('type');
+									var dataValue = $(this).attr('value');
+									var dataOptionPosition = $(this).attr('option-position');
+									console.log(dataType);
+									var dropdownWrapper = $(this).closest('.bundle-dd');
+									dropdownWrapper.find('input[name^="option"]').val(dataValue);
+									dropdownWrapper.find('.bundle-dd__current').text(dataValue);
+									dropdownWrapper.find('.bundle-dd__current').removeClassStartingWith('type-');
+									dropdownWrapper.find('.bundle-dd__current').addClass(dataType);
+									var quickAddToCartWrapper = $(this).closest('.quick-add-to-cart-wrapper');
+									quickAddToCartWrapper.find('input[name="'+dataOptionPosition+'"] ~ button[value="'+dataValue+'"]').click();
+								});
+							});
 							$(daiProductList).slick({
 							  dots: false,
 							  arrows: true,
@@ -116,7 +136,7 @@ function checkProduct() {
 							  slidesToScroll: 1,
 							  responsive: [
 							    {
-							      breakpoint: 1150,
+							      breakpoint: 1300,
 							      settings: {
 							        slidesToShow: 3,
 							      }
@@ -135,6 +155,7 @@ function checkProduct() {
 							    }
 							  ]
 							});
+
 				    }
 				});
 			});
@@ -148,12 +169,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
   daiContainters.forEach(function(daiContainterInner,index) {
 		var daiContainter = daiContainterInner.parentElement;
 		var sectionWrapperFull = daiContainter.closest('.section.section-full');
-		console.log(sectionWrapperFull);
+		//console.log(sectionWrapperFull);
 		if ( sectionWrapperFull != null ) {
 			sectionWrapperFull.style.paddingLeft = 0;
 			sectionWrapperFull.style.paddingRight = 0;
 			sectionWrapperFull.style.paddingTop = 0;
 			sectionWrapperFull.style.paddingBottom = 0;
+		}
+	});
+	document.querySelector('body').addEventListener('click',function(event) {
+		if ( event.target.classList.contains('popover-listbox__option') || event.target.classList.contains('bundle-dd') || event.target.closest('.bundle-dd') != null ) {
+			document.querySelectorAll('.bundle-dd.open').forEach(function(item, index) {
+				if ( item != event.target && item != event.target.closest('.product-info__variant-picker').querySelector('.bundle-dd') ) {
+					item.classList.remove('open');
+				}
+			});
+		} else {
+			document.querySelectorAll('.bundle-dd.open').forEach(function(item, index) {
+				item.classList.remove('open');
+			});
 		}
 	});
 });
@@ -299,7 +333,7 @@ function checkBundle() {
 		var daiContainter = daiContainterInner.parentElement;
 		var bundleContainer = daiContainter.querySelector('.bundle-5-container');
 		var sectionWrapperFull = daiContainter.closest('.section.section-full');
-		console.log(sectionWrapperFull);
+		//console.log(sectionWrapperFull);
 		if ( sectionWrapperFull != null ) {
 			sectionWrapperFull.style.paddingLeft = 0;
 			sectionWrapperFull.style.paddingRight = 0;
@@ -321,19 +355,19 @@ function checkBundle() {
 			    //console.log(title);
 			    var product = getProductByTitle(item, title, index);
 					var dropdown = item.querySelector('.bundle-dd');
-					var className = 'type-' + dropdown.querySelector('.bundle-dd__current').textContent.trim().toLowerCase().replaceAll(' ','-').replaceAll('(','').replaceAll(')','').replaceAll('+','');
+					var className = 'type-' + dropdown.querySelector('.bundle-dd__current').textContent.trim().toLowerCase().replaceAll(',','').replaceAll(' ','-').replaceAll('(','').replaceAll(')','').replaceAll('+','').replaceAll('--','-');
 					dropdown.querySelector('.bundle-dd__current').classList.add(className);
 
 					dropdown.addEventListener('click', function(event) {
 						var currentDropdown = this;
-						var className = 'type-' + this.querySelector('.bundle-dd__current').textContent.trim().toLowerCase().replaceAll(' ','-').replaceAll('(','').replaceAll(')','').replaceAll('+','');
+						var className = 'type-' + this.querySelector('.bundle-dd__current').textContent.trim().toLowerCase().replaceAll(',','').replaceAll(' ','-').replaceAll('(','').replaceAll(')','').replaceAll('+','').replaceAll('--','-');
 						removeClassByPrefix(this.querySelector('.bundle-dd__current'),'type-');
 						this.querySelector('.bundle-dd__current').classList.add(className);
 						//console.log(className);
 						setTimeout(function(){
 				      var dropdownItems = currentDropdown.querySelectorAll('.bundle-dd__item');
 				      dropdownItems.forEach(function(dropdownItem,index) {
-				      	var className = 'type-' + dropdownItem.textContent.trim().toLowerCase().replaceAll(' ','-').replaceAll('(','').replaceAll(')','').replaceAll('+','');
+				      	var className = 'type-' + dropdownItem.textContent.trim().toLowerCase().replaceAll(',','').replaceAll(' ','-').replaceAll('(','').replaceAll(')','').replaceAll('+','').replaceAll('--','-');
 								dropdownItem.classList.add(className);
 								var text = dropdownItem.innerHTML;
 								var newText = '<span>'+text+'</span>';
@@ -354,7 +388,7 @@ function checkBundleMobie() {
 		var daiContainter = daiContainterInner.parentElement;
 		var bundleContainer = daiContainter.querySelector('.template-four-wrapper');
 		var sectionWrapperFull = daiContainter.closest('.section.section-full');
-		console.log(sectionWrapperFull);
+		//console.log(sectionWrapperFull);
 		if ( sectionWrapperFull != null ) {
 			sectionWrapperFull.style.paddingLeft = 0;
 			sectionWrapperFull.style.paddingRight = 0;
@@ -378,19 +412,19 @@ function checkBundleMobie() {
 			    //console.log(title);
 			    var product = getProductHTMLTitle(item, title);
 					var dropdown = item.querySelector('.bundle-dd');
-					var className = 'type-' + dropdown.querySelector('.bundle-dd__current').textContent.trim().toLowerCase().replaceAll(' ','-').replaceAll('(','').replaceAll(')','').replaceAll('+','');
+					var className = 'type-' + dropdown.querySelector('.bundle-dd__current').textContent.trim().toLowerCase().replaceAll(',','').replaceAll(' ','-').replaceAll('(','').replaceAll(')','').replaceAll('+','').replaceAll('--','-');
 					dropdown.querySelector('.bundle-dd__current').classList.add(className);
 
 					dropdown.addEventListener('click', function(event) {
 						var currentDropdown = this;
-						var className = 'type-' + this.querySelector('.bundle-dd__current').textContent.trim().toLowerCase().replaceAll(' ','-').replaceAll('(','').replaceAll(')','').replaceAll('+','');
+						var className = 'type-' + this.querySelector('.bundle-dd__current').textContent.trim().toLowerCase().replaceAll(',','').replaceAll(' ','-').replaceAll('(','').replaceAll(')','').replaceAll('+','').replaceAll('--','-');
 						removeClassByPrefix(this.querySelector('.bundle-dd__current'),'type-');
 						this.querySelector('.bundle-dd__current').classList.add(className);
 						//console.log(className);
 						setTimeout(function(){
 				      var dropdownItems = currentDropdown.querySelectorAll('.bundle-dd__item');
 				      dropdownItems.forEach(function(dropdownItem,index) {
-				      	var className = 'type-' + dropdownItem.textContent.trim().toLowerCase().replaceAll(' ','-').replaceAll('(','').replaceAll(')','').replaceAll('+','');
+				      	var className = 'type-' + dropdownItem.textContent.trim().toLowerCase().replaceAll(',','').replaceAll(' ','-').replaceAll('(','').replaceAll(')','').replaceAll('+','').replaceAll('--','-');
 								dropdownItem.classList.add(className);
 								var text = dropdownItem.innerHTML;
 								var newText = '<span>'+text+'</span>';
@@ -410,3 +444,10 @@ function removeClassByPrefix(element, prefix) {
 	  };
  	});
 }
+
+$.fn.removeClassStartingWith = function (filter) {
+    $(this).removeClass(function (index, className) {
+        return (className.match(new RegExp("\\S*" + filter + "\\S*", 'g')) || []).join(' ')
+    });
+    return this;
+};

@@ -467,22 +467,23 @@ div[id^="dialogue_widget_"], div[id^=dia_feed_] {
 										    width: 2px;
 										    background-color: #CCCCCC;
 									    }
-									    &.type-3ds-max-v-ray--corona {
+									    &.type-3ds-max-v-ray-corona {
 									    	background-image: url('//globeplants.com/cdn/shop/files/format-3DS-Max.png');
 									    }
 									    &.type-fbx {
 									    	background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
 									    }
-									    &.type-cinema-4d-vray--corona {
+									    &.type-cinema-4d-vray-corona {
 									    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
 									    }
-									    &.type-cinema-4d-v-ray--corona {
+									    &.type-cinema-4d-v-ray-corona {
 									    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
 									    }
-									    &.type-sketchup-thea--vray--enscape {
+									    &.type-sketchup-thea-vray-enscape {
 									    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
 									    }
-									    &.type-sketchup-v-ray--full-geometry-skp-mesh {
+									    &.type-sketchup-v-ray-full-geometry-skp,
+									    &.type-sketchup-v-ray-full-geometry-skp-mesh {
 									    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
 									    }
 									    &.type-blender-cycles {
@@ -497,18 +498,30 @@ div[id^="dialogue_widget_"], div[id^=dia_feed_] {
 									    &.type-redshift {
 									    	background-image: url('https://globeplants.com/cdn/shop/files/format-REDSHIFT.png');
 									    }
-									    &.type-sketchup-v-ray--fullgeometry-skp-mesh {
+									    &.type-sketchup-v-ray-fullgeometry-skp-mesh {
 									    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
 									    }
-									    &.type-sketchup--growfx {
+									    &.type-sketchup-growfx {
 									    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
 									    }
-									    &.type-rhinoceros-3d-v-ray--rhino-renderer-only {
+									    &.type-rhinoceros-3d-v-ray-rhino-renderer-only {
 									    	background-image: url('https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png');
 									    }
-									    &.type-mesh--growfx {
+									    &.type-rhinoceros-3d-v-ray-rhino-renderer {
+									    	background-image: url('https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png');
+									    }
+									    &.type-mesh-growfx {
 									    	background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
 									    }
+										&.type-fbx-low-poly {
+											background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
+										}
+										&.type-twinmotion-low-poly {
+											background-image: url('https://globeplants.com/cdn/shop/files/format-TWINMOTION.png');
+										}
+										&.type-enscape-revit-sketchup-rhino3d-vectorworks-archicad {
+											background-image: url('https://globeplants.com/cdn/shop/files/format-ENSCAPE.png');
+										}
 									}
 									.bundle-dd__list {
 										position: absolute;
@@ -566,7 +579,7 @@ div[id^="dialogue_widget_"], div[id^=dia_feed_] {
 											    border-radius: 12px;
 											    margin-left: 40px;
 										    }
-										    &.type-3ds-max-v-ray--corona {
+										    &.type-3ds-max-v-ray-corona {
 										    	&:before {
 										    	background-image: url('//globeplants.com/cdn/shop/files/format-3DS-Max.png');
 										    	}
@@ -576,22 +589,23 @@ div[id^="dialogue_widget_"], div[id^=dia_feed_] {
 										    	background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
 										    	}
 										    }
-										    &.type-cinema-4d-vray--corona {
+										    &.type-cinema-4d-vray-corona {
 										    	&:before {
 										    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
 										    	}
 										    }
-										    &.type-cinema-4d-v-ray--corona {
+										    &.type-cinema-4d-v-ray-corona {
 										    	&:before {
 										    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
 										    	}
 										    }
-										    &.type-sketchup-thea--vray--enscape {
+										    &.type-sketchup-thea-vray-enscape {
 										    	&:before {
 										    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
 										    	}
 										    }
-										    &.type-sketchup-v-ray--full-geometry-skp-mesh {
+									    	&.type-sketchup-v-ray-full-geometry-skp,
+										    &.type-sketchup-v-ray-full-geometry-skp-mesh {
 										    	&:before {
 										    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
 										    	}
@@ -616,24 +630,44 @@ div[id^="dialogue_widget_"], div[id^=dia_feed_] {
 										    	background-image: url('https://globeplants.com/cdn/shop/files/format-REDSHIFT.png');
 										    	}
 										    }
-										    &.type-sketchup-v-ray--fullgeometry-skp-mesh {
+										    &.type-sketchup-v-ray-fullgeometry-skp-mesh {
 										    	&:before {
 										    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
 										    	}
 										    }
-										    &.type-sketchup--growfx {
+										    &.type-sketchup-growfx {
 										    	&:before {
 										    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
 										    	}
 										    }
-										    &.type-rhinoceros-3d-v-ray--rhino-renderer-only {
+										    &.type-rhinoceros-3d-v-ray-rhino-renderer {
 										    	&:before {
 										    	background-image: url('https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png');
 										    	}
 										    }
-										    &.type-mesh--growfx {
+										    &.type-rhinoceros-3d-v-ray-rhino-renderer-only {
+										    	&:before {
+										    	background-image: url('https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png');
+										    	}
+										    }
+										    &.type-mesh-growfx {
 										    	&:before {
 										    	background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
+										    	}
+										    }
+										    &.type-fbx-low-poly {
+										    	&:before {
+										    	background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
+										    	}
+										    }
+										    &.type-twinmotion-low-poly {
+										    	&:before {
+										    	background-image: url('https://globeplants.com/cdn/shop/files/format-TWINMOTION.png');
+										    	}
+										    }
+										    &.type-enscape-revit-sketchup-rhino3d-vectorworks-archicad {
+										    	&:before {
+										    	background-image: url('https://globeplants.com/cdn/shop/files/format-ENSCAPE.png');
 										    	}
 										    }
 									    }
@@ -1068,48 +1102,61 @@ div[id^="dialogue_widget_"], div[id^=dia_feed_] {
 								    width: 2px;
 								    background-color: #CCCCCC;
 							    }
-							    &.type-3ds-max-v-ray--corona {
-							    	background-image: url('//globeplants.com/cdn/shop/files/format-3DS-Max.png');
-							    }
-							    &.type-fbx {
-							    	background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
-							    }
-							    &.type-cinema-4d-vray--corona {
-							    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
-							    }
-							    &.type-cinema-4d-v-ray--corona {
-							    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
-							    }
-							    &.type-sketchup-thea--vray--enscape {
-							    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
-							    }
-							    &.type-sketchup-v-ray--full-geometry-skp-mesh {
-							    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
-							    }
-							    &.type-blender-cycles {
-							    	background-image: url('https://globeplants.com/cdn/shop/files/format-BLENDER.png');
-							    }
-							    &.type-growfx {
-							    	background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
-							    }
-							    &.type-twinmotion {
-							    	background-image: url('https://globeplants.com/cdn/shop/files/format-TWINMOTION.png');
-							    }
-							    &.type-redshift {
-							    	background-image: url('https://globeplants.com/cdn/shop/files/format-REDSHIFT.png');
-							    }
-							    &.type-sketchup-v-ray--fullgeometry-skp-mesh {
-							    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
-							    }
-							    &.type-sketchup--growfx {
-							    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
-							    }
-							    &.type-rhinoceros-3d-v-ray--rhino-renderer-only {
-							    	background-image: url('https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png');
-							    }
-							    &.type-mesh--growfx {
-							    	background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
-							    }
+								&.type-3ds-max-v-ray-corona {
+									background-image: url('//globeplants.com/cdn/shop/files/format-3DS-Max.png');
+								}
+								&.type-fbx {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
+								}
+								&.type-cinema-4d-vray-corona {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
+								}
+								&.type-cinema-4d-v-ray-corona {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
+								}
+								&.type-sketchup-thea-vray-enscape {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+								}
+								&.type-sketchup-v-ray-full-geometry-skp,
+								&.type-sketchup-v-ray-full-geometry-skp-mesh {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+								}
+								&.type-blender-cycles {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-BLENDER.png');
+								}
+								&.type-growfx {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
+								}
+								&.type-twinmotion {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-TWINMOTION.png');
+								}
+								&.type-redshift {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-REDSHIFT.png');
+								}
+								&.type-sketchup-v-ray-fullgeometry-skp-mesh {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+								}
+								&.type-sketchup-growfx {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+								}
+								&.type-rhinoceros-3d-v-ray-rhino-renderer {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png');
+								}
+								&.type-rhinoceros-3d-v-ray-rhino-renderer-only {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png');
+								}
+								&.type-mesh-growfx {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
+								}
+								&.type-fbx-low-poly {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
+								}
+								&.type-twinmotion-low-poly {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-TWINMOTION.png');
+								}
+								&.type-enscape-revit-sketchup-rhino3d-vectorworks-archicad {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-ENSCAPE.png');
+								}
 							}
 							.bundle-dd__list {
 								position: absolute;
@@ -1167,76 +1214,92 @@ div[id^="dialogue_widget_"], div[id^=dia_feed_] {
 									    border-radius: 12px;
 									    margin-left: 40px;
 								    }
-								    &.type-3ds-max-v-ray--corona {
-								    	&:before {
-								    	background-image: url('//globeplants.com/cdn/shop/files/format-3DS-Max.png');
-								    	}
-								    }
-								    &.type-fbx {
-								    	&:before {
-								    	background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
-								    	}
-								    }
-								    &.type-cinema-4d-vray--corona {
-								    	&:before {
-								    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
-								    	}
-								    }
-								    &.type-cinema-4d-v-ray--corona {
-								    	&:before {
-								    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
-								    	}
-								    }
-								    &.type-sketchup-thea--vray--enscape {
-								    	&:before {
-								    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
-								    	}
-								    }
-								    &.type-sketchup-v-ray--full-geometry-skp-mesh {
-								    	&:before {
-								    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
-								    	}
-								    }
-								    &.type-blender-cycles {
-								    	&:before {
-								    	background-image: url('https://globeplants.com/cdn/shop/files/format-BLENDER.png');
-								    	}
-								    }
-								    &.type-growfx {
-								    	&:before {
-								    	background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
-								    	}
-								    }
-								    &.type-twinmotion {
-								    	&:before {
-								    	background-image: url('https://globeplants.com/cdn/shop/files/format-TWINMOTION.png');
-								    	}
-								    }
-								    &.type-redshift {
-								    	&:before {
-								    	background-image: url('https://globeplants.com/cdn/shop/files/format-REDSHIFT.png');
-								    	}
-								    }
-								    &.type-sketchup-v-ray--fullgeometry-skp-mesh {
-								    	&:before {
-								    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
-								    	}
-								    }
-								    &.type-sketchup--growfx {
-								    	&:before {
-								    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
-								    	}
-								    }
-								    &.type-rhinoceros-3d-v-ray--rhino-renderer-only {
-								    	&:before {
-								    	background-image: url('https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png');
-								    	}
-								    }
-								    &.type-mesh--growfx {
-								    	&:before {
-								    	background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
-								    	}
-								    }
+									&.type-3ds-max-v-ray-corona {
+										&:before {
+										background-image: url('//globeplants.com/cdn/shop/files/format-3DS-Max.png');
+										}
+									}
+									&.type-fbx {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
+										}
+									}
+									&.type-cinema-4d-vray-corona {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
+										}
+									}
+									&.type-cinema-4d-v-ray-corona {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
+										}
+									}
+									&.type-sketchup-thea-vray-enscape {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+										}
+									}
+									&.type-sketchup-v-ray-full-geometry-skp,
+									&.type-sketchup-v-ray-full-geometry-skp-mesh {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+										}
+									}
+									&.type-blender-cycles {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/format-BLENDER.png');
+										}
+									}
+									&.type-growfx {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
+										}
+									}
+									&.type-twinmotion {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/format-TWINMOTION.png');
+										}
+									}
+									&.type-redshift {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/format-REDSHIFT.png');
+										}
+									}
+									&.type-sketchup-v-ray-fullgeometry-skp-mesh {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+										}
+									}
+									&.type-sketchup-growfx {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+										}
+									}
+									&.type-rhinoceros-3d-v-ray-rhino-renderer-only {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png');
+										}
+									}
+									&.type-mesh-growfx {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
+										}
+									}
+									&.type-fbx-low-poly {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
+										}
+									}
+									&.type-twinmotion-low-poly {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/format-TWINMOTION.png');
+										}
+									}
+									&.type-enscape-revit-sketchup-rhino3d-vectorworks-archicad {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/format-ENSCAPE.png');
+										}
+									}
 							    }
 							}
 						}
@@ -1244,5 +1307,355 @@ div[id^="dialogue_widget_"], div[id^=dia_feed_] {
 				}
 			}
 		}
+	}
+}
+
+
+div[id^=js_feed_widget] .product-list .slick-list .slick-track .slick-slide .bundle-5-variants,
+div[id^=dialogue_widget_] .product-list .slick-list .slick-track .slick-slide .bundle-5-variants,
+div[id^=dia_feed_] .product-list .slick-list .slick-track .slick-slide .bundle-5-variants {
+	position: absolute;
+	position: relative;
+/*	bottom: 24px;*/
+/*	left: 16px;*/
+/*	right: 16px;*/
+	.bundle-dd {
+		&:before {
+			content: 'Formats selected';
+			color: var(--Gray-3, #6B6B6B);
+			font-family: Poppins;
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			position: absolute;
+		    top: 50%;
+		    left: 16px;
+		    z-index: 0;
+		    transform: translateY(-50%);
+		}
+		&:after {
+			content: "";
+		    position: absolute;
+		    display: block;
+		    top: 28px;
+		    right: 28px;
+		    transform: translate(50%, -50%);
+		    width: 24px;
+		    height: 24px;
+		    border: 0;
+		    transition: all 0.25s ease-in-out;
+		    transform-origin: center;
+		    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="%23121212" fill-rule="evenodd" d="M5.47 8.47a.75.75 0 0 1 1.06 0L12 13.94l5.47-5.47a.75.75 0 1 1 1.06 1.06l-6 6a.75.75 0 0 1-1.06 0l-6-6a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"></path></svg>') no-repeat center;
+		}
+		&.open {
+			box-shadow: unset;
+			&:after {
+		    	transform: translate(50%, -50%) rotate(180deg);
+			}
+			.bundle-dd__current {
+				border-color: #608239;
+			    border-bottom-left-radius: 0;
+			    border-bottom-right-radius: 0;
+			    border-bottom-color: transparent;
+			}
+		}
+		.bundle-dd__current {
+			position: relative;
+		    padding: 6px 14px !important;
+		    height: 56px;
+		    display: flex;
+		    align-items: center;
+		    column-gap: 12px;
+		    border: 2px solid #CCCCCC;
+		    border-radius: 8px;
+		    padding-right: 60px !important;
+		    background-color: transparent;
+
+		    font-size: 0px;
+		    background-size: 24px;
+		    background-repeat: no-repeat;
+		    background-position: 130px center;
+		    &:before {
+		    	content: '';
+		    	display: block;
+		    	width: 32px;
+		    	height: 32px;
+		    	border-radius: 8px;
+				border: 2px solid var(--Green-1, #608239);
+				margin-left: 112px;
+		    }
+		    &:after {
+		    	content: "";
+			    position: absolute;
+			    right: 50px;
+			    top: 6px;
+			    bottom: 6px;
+			    width: 2px;
+			    background-color: #CCCCCC;
+		    }
+			&.type-3ds-max-v-ray-corona {
+				background-image: url('//globeplants.com/cdn/shop/files/format-3DS-Max.png');
+			}
+			&.type-fbx {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
+			}
+			&.type-cinema-4d-vray-corona {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
+			}
+			&.type-cinema-4d-v-ray-corona {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
+			}
+			&.type-sketchup-thea-vray-enscape {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+			}
+			&.type-sketchup-v-ray-full-geometry-skp,
+			&.type-sketchup-v-ray-full-geometry-skp-mesh {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+			}
+			&.type-blender-cycles {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-BLENDER.png');
+			}
+			&.type-growfx {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
+			}
+			&.type-twinmotion {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-TWINMOTION.png');
+			}
+			&.type-redshift {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-REDSHIFT.png');
+			}
+			&.type-sketchup-v-ray-fullgeometry-skp-mesh {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+			}
+			&.type-sketchup-growfx {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+			}
+			&.type-rhinoceros-3d-v-ray-rhino-renderer {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png');
+			}
+			&.type-rhinoceros-3d-v-ray-rhino-renderer-only {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png');
+			}
+			&.type-mesh-growfx {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
+			}
+			&.type-fbx-low-poly {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
+			}
+			&.type-twinmotion-low-poly {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-TWINMOTION.png');
+			}
+			&.type-enscape-revit-sketchup-rhino3d-vectorworks-archicad {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-ENSCAPE.png');
+			}
+		}
+		.bundle-dd__list {
+			position: absolute;
+		    top: calc(100% - 2px);
+		    left: 0;
+		    width: 100%;
+		    max-height: 260px;
+		    overflow-y: auto;
+		    background-color: #FFF;
+		    border: 2px solid #608239;
+		    border-top: 0;
+		    border-radius: 0 0 8px 8px;
+		    .bundle-dd__item {
+		    	padding: 12px 16px;
+			    display: flex;
+			    align-items: center;
+			    column-gap: 8px;
+			    border-top: 1px solid #F4F4F4;
+			    position: relative;
+			    &:hover {
+			    	background-color: #CCCCCC;
+			    	&:before {
+			    		border-color: #608239;
+			    	}
+			    	span {
+
+			    	}
+			    }
+			    &:before {
+			    	content: '';
+			    	display: block;
+			    	width: 32px;
+			    	height: 32px;
+					padding: 4px;
+				    flex-shrink: 0;
+				    background-color: #FFF;
+				    background-size: 20px;
+				    background-repeat: no-repeat;
+				    background-position: center;
+			    	border: 2px solid #F4F4F4;
+					border-radius: 8px;
+					position: absolute;
+					top: 50%;
+					left: 30px;
+					transform: translate(-50%, -50%);
+			    }
+			    > span {
+			    	padding: 4px 12px;
+				    flex-grow: 1;
+				    font-weight: 500;
+				    font-size: 10px;
+				    line-height: 1.4;
+				    text-align: center;
+				    background-color: #F4F4F4;
+				    border-radius: 12px;
+				    margin-left: 40px;
+			    }
+				&.type-3ds-max-v-ray-corona {
+					&:before {
+					background-image: url('//globeplants.com/cdn/shop/files/format-3DS-Max.png');
+					}
+				}
+				&.type-fbx {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
+					}
+				}
+				&.type-cinema-4d-vray-corona {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
+					}
+				}
+				&.type-cinema-4d-v-ray-corona {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
+					}
+				}
+				&.type-sketchup-thea-vray-enscape {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+					}
+				}
+				&.type-sketchup-v-ray-full-geometry-skp,
+				&.type-sketchup-v-ray-full-geometry-skp-mesh {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+					}
+				}
+				&.type-blender-cycles {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-BLENDER.png');
+					}
+				}
+				&.type-growfx {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
+					}
+				}
+				&.type-twinmotion {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-TWINMOTION.png');
+					}
+				}
+				&.type-redshift {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-REDSHIFT.png');
+					}
+				}
+				&.type-sketchup-v-ray-fullgeometry-skp-mesh {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+					}
+				}
+				&.type-sketchup-growfx {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
+					}
+				}
+				&.type-rhinoceros-3d-v-ray-rhino-renderer {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png');
+					}
+				}
+				&.type-rhinoceros-3d-v-ray-rhino-renderer-only {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-RHINOCEROS-3D.png');
+					}
+				}
+				&.type-mesh-growfx {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-Growfx.png');
+					}
+				}
+				&.type-fbx-low-poly {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-FBX.png');
+					}
+				}
+				&.type-twinmotion-low-poly {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-TWINMOTION.png');
+					}
+				}
+				&.type-enscape-revit-sketchup-rhino3d-vectorworks-archicad {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-ENSCAPE.png');
+					}
+				}
+		    }
+		}
+	}
+}
+body {
+	overflow-x: hidden;
+}
+div[id^=js_feed_widget] , div[id^=dialogue_widget_] , div[id^=dia_feed_] {
+	.product-list {
+		.slick-arrow.slick-prev {
+			z-index: 3;
+		}
+		.slick-list {
+			overflow: visible;
+			z-index: 2;
+			.slick-slide {
+				&:not(.slick-active) {
+					opacity: 0;
+				}
+				.product-card__info {
+					align-content: space-between;
+					.buy-buttons .button {
+						padding: 6px 20px !important;
+					}
+				}
+				.bundle-5-variants .bundle-dd {
+					.bundle-dd__list {
+						display: none;
+					}
+					&.open {
+						.bundle-dd__list {
+							display: block;
+							z-index: 20;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.quick-add-to-cart-wrapper {
+	width: 100%;
+	.product-info__variant-picker {
+		border-top: 0;
+		padding: 16px 0;
+		margin: 0;
+		width: 100%;
+		variant-picker {
+			display: none;
+		}
+		.bundle-5-variants {
+			cursor: pointer;
+		}
+	}
+}
+
+cart-drawer {
+	div[id^=js_feed_widget] , div[id^=dialogue_widget_] , div[id^=dia_feed_] {
+		display: none !important;
 	}
 }

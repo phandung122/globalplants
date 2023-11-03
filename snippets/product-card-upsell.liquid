@@ -248,6 +248,15 @@ Supported variables
       {%- endfor -%}
     {%- endif -%}
 
+    <div class="quick-add-to-cart-wrapper">
+          <div class="product-info__variant-picker">
+            {%- capture product_form_id -%}quick-buy-form-{{ product.id }}-{{ section.id }}{%- endcapture -%}
+            {%- render 'variant-picker', product: product, form_id: product_form_id, update_url: false, hide_sold_out_variants: false, hide_size_chart: true, force_dropdown_as_block: true -%}
+            {%- render 'variant-picker-upsell', product: product, form_id: product_form_id, -%}
+          </div>
+          {%- render 'buy-buttons-upsell', product: product, form_id: product_form_id, show_payment_button: false, button_size: 'lg' -%}
+    </div>
+
     <div class="product-card__select-format">
       <a aria-controls="quick-buy-{{ product.id }}{% if extend_class != blank %}-{{ extend_class }}{% endif %}" aria-expanded="false" is="custom-button" aria-busy="false" href="{{ product.url }}" class="button product-card__select-format__link">
         <span class="select-format-text">{% comment %}
