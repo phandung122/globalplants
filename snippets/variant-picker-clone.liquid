@@ -22,7 +22,7 @@ Supported variables
 {%- assign size_label_list = 'general.label.size' | t | replace: ', ', ',' | downcase | split: ',' -%}
 
 {%- unless product.has_only_default_variant or hide_sold_out_variants and product.available == false -%}
-  <variant-picker class="variant-picker" handle="{{ product.handle }}" form="{{ form_id }}" {% if update_url %}update-url{% endif %} {% if hide_sold_out_variants %}hide-sold-out-variants{% endif %}>
+  <variant-picker id="variant-picker-{{ form_id }}" class="variant-picker" handle="{{ product.handle }}" form="{{ form_id }}" {% if update_url %}update-url{% endif %} {% if hide_sold_out_variants %}hide-sold-out-variants{% endif %}>
     {%- for option in product.options_with_values -%}
       {%- assign option_downcase = option.name | downcase -%}
       {%- assign selector_type = block.settings.selector_mode -%}

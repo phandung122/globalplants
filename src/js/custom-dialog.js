@@ -124,13 +124,15 @@ function checkProduct() {
 									dropdownWrapper.find('.bundle-dd__current').removeClassStartingWith('type-');
 									dropdownWrapper.find('.bundle-dd__current').addClass(dataType);
 									var quickAddToCartWrapper = $(this).closest('.quick-add-to-cart-wrapper');
+									console.log(quickAddToCartWrapper);
+									console.log(quickAddToCartWrapper.find('input[name="'+dataOptionPosition+'"] ~ button[value="'+dataValue+'"]'));
 									quickAddToCartWrapper.find('input[name="'+dataOptionPosition+'"] ~ button[value="'+dataValue+'"]').click();
 								});
 							});
 							$(daiProductList).slick({
 							  dots: false,
 							  arrows: true,
-							  infinite: true,
+							  infinite: false,
 							  speed: 300,
 							  slidesToShow: 4,
 							  slidesToScroll: 1,

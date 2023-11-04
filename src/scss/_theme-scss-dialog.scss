@@ -479,6 +479,7 @@ div[id^="dialogue_widget_"], div[id^=dia_feed_] {
 									    &.type-cinema-4d-v-ray-corona {
 									    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
 									    }
+									    &.type-sketchup-vray-thea-enscape,
 									    &.type-sketchup-thea-vray-enscape {
 									    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
 									    }
@@ -599,6 +600,7 @@ div[id^="dialogue_widget_"], div[id^=dia_feed_] {
 										    	background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
 										    	}
 										    }
+									    	&.type-sketchup-vray-thea-enscape,
 										    &.type-sketchup-thea-vray-enscape {
 										    	&:before {
 										    	background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
@@ -1114,6 +1116,7 @@ div[id^="dialogue_widget_"], div[id^=dia_feed_] {
 								&.type-cinema-4d-v-ray-corona {
 									background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
 								}
+								&.type-sketchup-vray-thea-enscape,
 								&.type-sketchup-thea-vray-enscape {
 									background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
 								}
@@ -1234,6 +1237,7 @@ div[id^="dialogue_widget_"], div[id^=dia_feed_] {
 										background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
 										}
 									}
+									&.type-sketchup-vray-thea-enscape,
 									&.type-sketchup-thea-vray-enscape {
 										&:before {
 										background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
@@ -1406,6 +1410,7 @@ div[id^=dia_feed_] .product-list .slick-list .slick-track .slick-slide .bundle-5
 			&.type-cinema-4d-v-ray-corona {
 				background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
 			}
+			&.type-sketchup-vray-thea-enscape,
 			&.type-sketchup-thea-vray-enscape {
 				background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
 			}
@@ -1526,6 +1531,7 @@ div[id^=dia_feed_] .product-list .slick-list .slick-track .slick-slide .bundle-5
 					background-image: url('https://globeplants.com/cdn/shop/files/format-CINEMA-4D.png');
 					}
 				}
+				&.type-sketchup-vray-thea-enscape,
 				&.type-sketchup-thea-vray-enscape {
 					&:before {
 					background-image: url('https://globeplants.com/cdn/shop/files/format-Sketchup.png');
@@ -1657,5 +1663,13 @@ div[id^=js_feed_widget] , div[id^=dialogue_widget_] , div[id^=dia_feed_] {
 cart-drawer {
 	div[id^=js_feed_widget] , div[id^=dialogue_widget_] , div[id^=dia_feed_] {
 		display: none !important;
+	}
+}
+
+body.template--cart {
+	.shopify-section--main-cart {
+		@media screen and (min-width: 1000px) {
+			padding-bottom: var(--spacing-16);
+		}
 	}
 }
