@@ -3,6 +3,50 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
+        "slide-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Black-Friday-Banner1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Black-Friday-Banner01-1200x1600.jpg",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-start-end text-end",
+            "desktop_text_position": "sm:place-self-end-center sm:text-center",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h2",
+            "button_text": "",
+            "button_link": "https:\/\/globeplants.com\/collections",
+            "text_color": "#ffffff",
+            "button_background": "#56842c",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
+        "60ab57ee-8ee5-4d35-869b-16e6908f824f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/globe-plants-3d-plant-model-bundle-56-hawaiian-plants-SLIDE.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/globe-plants-3d-plant-model-bundle-56-hawaiian-plants-SLIDE.jpg",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
+            "subheading": "Hawaiian Plants",
+            "title": "BUNDLE 56",
+            "heading_tag": "h2",
+            "button_text": "Shop BUNDLE 56",
+            "button_link": "shopify:\/\/products\/bundle-56-hawaiian-plants-3d-model",
+            "text_color": "#ffffff",
+            "button_background": "#56842c",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 12,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
         "0f1677a3-2966-4c0c-a2fb-5818d8baafd2": {
           "type": "image",
           "settings": {
@@ -44,55 +88,13 @@
             "background": "",
             "background_gradient": ""
           }
-        },
-        "slide-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/globe-plants-3d-plant-model-bundle-53-british-home-and-garden-slide.webp",
-            "content_max_width": 780,
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center-start sm:text-start",
-            "subheading": "British Home & Garden Plants",
-            "title": "BUNDLE 53",
-            "heading_tag": "h2",
-            "button_text": "Shop BUNDLE 53",
-            "button_link": "https:\/\/globeplants.com\/products\/bundle-53-british-home-garden-plants-3d-plant-model",
-            "text_color": "#ffffff",
-            "button_background": "#56842c",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 10,
-            "background": "",
-            "background_gradient": ""
-          }
-        },
-        "60ab57ee-8ee5-4d35-869b-16e6908f824f": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/globe-plants-3d-plant-model-bundle-52-north-american-trees-slide.jpg",
-            "content_max_width": 780,
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center-start sm:text-start",
-            "subheading": "North American Trees",
-            "title": "BUNDLE 52",
-            "heading_tag": "h2",
-            "button_text": "Shop BUNDLE 52",
-            "button_link": "https:\/\/globeplants.com\/products\/bundle-52-north-american-trees-3d-model",
-            "text_color": "#ffffff",
-            "button_background": "#56842c",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 12,
-            "background": "",
-            "background_gradient": ""
-          }
         }
       },
       "block_order": [
-        "0f1677a3-2966-4c0c-a2fb-5818d8baafd2",
-        "slide-1",
         "slide-2",
-        "60ab57ee-8ee5-4d35-869b-16e6908f824f"
+        "60ab57ee-8ee5-4d35-869b-16e6908f824f",
+        "0f1677a3-2966-4c0c-a2fb-5818d8baafd2",
+        "slide-1"
       ],
       "settings": {
         "full_width": true,
@@ -485,7 +487,7 @@
             "title": "Custom <span>Requests<\/span>",
             "content": "<h5>Can’t find the correct 3D plant models you are looking for on our store?<\/h5><p>We understand that it’s very important for architects, landscape designers or 3D visualisation studios to acquire the best and most accurate 3D plant species, forms or even plant sizes that suit their intended design project.<\/p>",
             "link_text": "Find Out More",
-            "link_url": "shopify:\/\/pages\/custom-3d-plant-models-2old",
+            "link_url": "shopify:\/\/pages\/custom-3d-plant-models",
             "button_style": "fill",
             "background": "rgba(0,0,0,0)",
             "background_gradient": "",
@@ -619,7 +621,7 @@
           "settings": {
             "logo": "shopify:\/\/shop_images\/chaos.png",
             "logo_width": 230,
-            "link": ""
+            "link": "https:\/\/chaos.com\/"
           }
         },
         "template--14437691097174__ca12fa9a-e329-4824-80cd-95894537811b-166601486410743d02-0": {
@@ -627,7 +629,7 @@
           "settings": {
             "logo": "shopify:\/\/shop_images\/ava.png",
             "logo_width": 230,
-            "link": ""
+            "link": "https:\/\/archvizartist.com\/"
           }
         },
         "template--14437691097174__ca12fa9a-e329-4824-80cd-95894537811b-166601486410743d02-2": {
@@ -635,7 +637,7 @@
           "settings": {
             "logo": "shopify:\/\/shop_images\/ronenbekerman.png",
             "logo_width": 230,
-            "link": ""
+            "link": "https:\/\/resources.ronenbekerman.com\/"
           }
         },
         "template--14437691097174__ca12fa9a-e329-4824-80cd-95894537811b-166601486410743d02-3": {
@@ -643,7 +645,7 @@
           "settings": {
             "logo": "shopify:\/\/shop_images\/skatter_54f28c59-a935-4764-b667-7098b3eadd3b.png",
             "logo_width": 230,
-            "link": ""
+            "link": "https:\/\/lindale.io\/skatter"
           }
         },
         "template--14437691097174__ca12fa9a-e329-4824-80cd-95894537811b-166601486410743d02-4": {
@@ -651,7 +653,7 @@
           "settings": {
             "logo": "shopify:\/\/shop_images\/cgtricks.png",
             "logo_width": 230,
-            "link": ""
+            "link": "https:\/\/cgtricks.com\/"
           }
         },
         "a71734ec-e0ce-453b-b865-897659913bc3": {
@@ -659,7 +661,7 @@
           "settings": {
             "logo": "shopify:\/\/shop_images\/itoo.png",
             "logo_width": 230,
-            "link": ""
+            "link": "https:\/\/www.itoosoft.com\/"
           }
         },
         "12a104e1-b263-428c-bbfd-ec7f74d2fa93": {
@@ -667,7 +669,7 @@
           "settings": {
             "logo": "shopify:\/\/shop_images\/vectorworks.png",
             "logo_width": 230,
-            "link": ""
+            "link": "http:\/\/vectorworks.net\/"
           }
         },
         "34aedaec-d23d-4785-87a2-be5015956f84": {
