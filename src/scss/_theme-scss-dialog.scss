@@ -1621,6 +1621,7 @@ div[id^=js_feed_widget] , div[id^=dialogue_widget_] , div[id^=dia_feed_] {
 			.slick-slide {
 				&:not(.slick-active) {
 					opacity: 0;
+					visibility: hidden;
 				}
 				.product-card__info {
 					align-content: space-between;
