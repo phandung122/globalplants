@@ -3690,6 +3690,20 @@ var VariantOptionValue = class extends HTMLElement {
   }
   _onVariantChanged(event) {
     this.innerHTML = event.detail.variant[this.getAttribute("for")];
+    if ( event.detail.variant[this.getAttribute("for")] == 'Enscape (Revit, SketchUp, Rhino3D, Vectorworks, ArchiCAD)' ) {
+      if(!this.closest('fieldset').querySelector('.fieldset-variant-notice')) {
+        var notice = document.createElement("div");
+        notice.classList.add('fieldset-variant-notice');
+        notice.innerHTML = 'This format requires users to have Enscape in order to work properly. Currently does not support Mac OS.';
+        this.closest('fieldset').appendChild(notice);
+      } else {
+        this.closest('fieldset').querySelector('.fieldset-variant-notice').innerHTML = 'This format requires users to have Enscape in order to work properly. Currently does not support Mac OS.';
+      }
+    } else {
+      if (this.closest('fieldset').querySelector('.fieldset-variant-notice')) {
+        this.closest('fieldset').querySelector('.fieldset-variant-notice').remove();
+      }
+    }
   }
 };
 if (!window.customElements.get("variant-picker")) {
