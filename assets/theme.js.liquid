@@ -3690,11 +3690,18 @@ var VariantOptionValue = class extends HTMLElement {
   }
   _onVariantChanged(event) {
     this.innerHTML = event.detail.variant[this.getAttribute("for")];
+    var noticeText = '';
     if ( event.detail.variant[this.getAttribute("for")] == 'Enscape (Revit, SketchUp, Rhino3D, Vectorworks, ArchiCAD)' ) {
+      noticeText = 'This format requires users to have Enscape in order to work properly. Currently does not support Mac OS.';
+    }
+    if ( event.detail.variant[this.getAttribute("for")] == 'SketchUp (V-Ray + Full Geometry SKP MESH)' ) {
+      noticeText = 'This format does not work with Enscape.';
+    }
+    if (noticeText != '') {
       if(!this.closest('fieldset').querySelector('.fieldset-variant-notice')) {
         var notice = document.createElement("div");
         notice.classList.add('fieldset-variant-notice');
-        notice.innerHTML = 'This format requires users to have Enscape in order to work properly. Currently does not support Mac OS.';
+        notice.innerHTML = noticeText;
         this.closest('fieldset').appendChild(notice);
       } else {
         this.closest('fieldset').querySelector('.fieldset-variant-notice').innerHTML = 'This format requires users to have Enscape in order to work properly. Currently does not support Mac OS.';
