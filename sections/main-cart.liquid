@@ -420,7 +420,7 @@
 
                   {%- when 'checkout_button' -%}
                     {%- assign checkout_button = 'cart.general.checkout' | t -%}
-                    {%- render 'button', type: 'submit', icon: 'picto-lock', content: checkout_button, name: 'checkout', stretch: true, block: block -%}
+                    {%- render 'button', type: 'button', icon: 'picto-lock', content: checkout_button, name: 'checkout-custom', stretch: true, block: block -%}
                 {%- endcase -%}
               {%- endfor -%}
             </form>
@@ -442,6 +442,14 @@
     </div>
   {%- endif -%}
 </div>
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function(event) {
+    document.querySelector('.button[name="checkout-custom"]').addEventListener('click', function(event){
+      window.location.href = '/checkout';
+    });
+  });
+</script>
 
 {% schema %}
 {

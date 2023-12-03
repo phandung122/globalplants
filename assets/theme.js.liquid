@@ -3707,7 +3707,7 @@ var VariantOptionValue = class extends HTMLElement {
         notice.innerHTML = noticeText;
         this.closest('fieldset').appendChild(notice);
       } else {
-        this.closest('fieldset').querySelector('.fieldset-variant-notice').innerHTML = 'This format requires users to have Enscape in order to work properly. Currently does not support Mac OS.';
+        this.closest('fieldset').querySelector('.fieldset-variant-notice').innerHTML = noticeText;
       }
     } else {
       if (this.closest('fieldset').querySelector('.fieldset-variant-notice')) {

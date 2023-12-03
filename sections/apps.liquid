@@ -48,11 +48,27 @@
     }
   </style>
 
-  <div {% render 'section-properties' %}>
+  <div class="section-{{ section.id }}-padding" {% render 'section-properties' %}>
     {%- for block in section.blocks -%}
       {%- render block -%}
     {%- endfor -%}
   </div>
+
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
 {%- endif -%}
 
 {% schema %}
@@ -137,6 +153,26 @@
       "id": "review_button_text_color",
       "label": "Review count button text_color",
       "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
     }
   ],
   "blocks": [
