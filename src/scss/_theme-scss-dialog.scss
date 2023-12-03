@@ -523,6 +523,12 @@ div[id^="dialogue_widget_"], div[id^=dia_feed_] {
 										&.type-enscape-revit-sketchup-rhino3d-vectorworks-archicad {
 											background-image: url('https://globeplants.com/cdn/shop/files/format-ENSCAPE.png');
 										}
+										&.type-2d-png {
+											background-image: url('https://globeplants.com/cdn/shop/files/format-2DPNG.png');
+										}
+										&.type-vectorworks-image-props-png {
+											background-image: url('https://globeplants.com/cdn/shop/files/formats-Vectorworks.png');
+										}
 									}
 									.bundle-dd__list {
 										position: absolute;
@@ -672,6 +678,16 @@ div[id^="dialogue_widget_"], div[id^=dia_feed_] {
 										    	background-image: url('https://globeplants.com/cdn/shop/files/format-ENSCAPE.png');
 										    	}
 										    }
+											&.type-2d-png {
+										    	&:before {
+												background-image: url('https://globeplants.com/cdn/shop/files/format-2DPNG.png');
+										    	}
+											}
+											&.type-vectorworks-image-props-png {
+										    	&:before {
+												background-image: url('https://globeplants.com/cdn/shop/files/formats-Vectorworks.png');
+										    	}
+											}
 									    }
 									}
 								}
@@ -1160,6 +1176,12 @@ div[id^="dialogue_widget_"], div[id^=dia_feed_] {
 								&.type-enscape-revit-sketchup-rhino3d-vectorworks-archicad {
 									background-image: url('https://globeplants.com/cdn/shop/files/format-ENSCAPE.png');
 								}
+								&.type-2d-png {
+									background-image: url('https://globeplants.com/cdn/shop/files/format-2DPNG.png');
+								}
+								&.type-vectorworks-image-props-png {
+									background-image: url('https://globeplants.com/cdn/shop/files/formats-Vectorworks.png');
+								}
 							}
 							.bundle-dd__list {
 								position: absolute;
@@ -1302,6 +1324,16 @@ div[id^="dialogue_widget_"], div[id^=dia_feed_] {
 									&.type-enscape-revit-sketchup-rhino3d-vectorworks-archicad {
 										&:before {
 										background-image: url('https://globeplants.com/cdn/shop/files/format-ENSCAPE.png');
+										}
+									}
+									&.type-2d-png {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/format-2DPNG.png');
+										}
+									}
+									&.type-vectorworks-image-props-png {
+										&:before {
+										background-image: url('https://globeplants.com/cdn/shop/files/formats-Vectorworks.png');
 										}
 									}
 							    }
@@ -1454,6 +1486,12 @@ div[id^=dia_feed_] .product-list .slick-list .slick-track .slick-slide .bundle-5
 			&.type-enscape-revit-sketchup-rhino3d-vectorworks-archicad {
 				background-image: url('https://globeplants.com/cdn/shop/files/format-ENSCAPE.png');
 			}
+			&.type-2d-png {
+				background-image: url('https://globeplants.com/cdn/shop/files/format-2DPNG.png');
+			}
+			&.type-vectorworks-image-props-png {
+				background-image: url('https://globeplants.com/cdn/shop/files/formats-Vectorworks.png');
+			}
 		}
 		.bundle-dd__list {
 			position: absolute;
@@ -1601,6 +1639,16 @@ div[id^=dia_feed_] .product-list .slick-list .slick-track .slick-slide .bundle-5
 				&.type-enscape-revit-sketchup-rhino3d-vectorworks-archicad {
 					&:before {
 					background-image: url('https://globeplants.com/cdn/shop/files/format-ENSCAPE.png');
+					}
+				}
+				&.type-2d-png {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/format-2DPNG.png');
+					}
+				}
+				&.type-vectorworks-image-props-png {
+					&:before {
+					background-image: url('https://globeplants.com/cdn/shop/files/formats-Vectorworks.png');
 					}
 				}
 		    }

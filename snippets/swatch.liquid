@@ -101,7 +101,7 @@ Color swatch specific parameters:
         {%- assign lastWord = value | split: " " | last | handleize -%}
         {%- assign swatchImage = firstWord | prepend: 'image_swatch_' -%}
         {%- assign swatchImageLast = lastWord | prepend: 'image_swatch_' -%}
-        {%- if firstWord == '3ds' or firstWord == 'growfx' or firstWord == 'fbx' or firstWord == 'cinema' or firstWord == 'sketchup' or firstWord == 'twinmotion' or firstWord == 'blender' or firstWord == 'rhinoceros' or firstWord == 'redshift' or firstWord == 'unreal' or firstWord == 'enscape' or firstWord == 'hdri' -%}
+        {%- if firstWord == '3ds' or firstWord == 'growfx' or firstWord == 'fbx' or firstWord == 'cinema' or firstWord == 'sketchup' or firstWord == 'twinmotion' or firstWord == 'blender' or firstWord == 'rhinoceros' or firstWord == 'redshift' or firstWord == 'unreal' or firstWord == 'enscape' or firstWord == 'hdri' or firstWord =='2d' or firstWord == 'vectorworks' -%}
           {{- settings[swatchImage] | image_url: width: 100 | image_tag: loading: 'lazy', class: 'block-swatch__image', alt: value -}}
         {%- elsif lastWord == 'growfx' -%}
           {{- settings[swatchImageLast] | image_url: width: 100 | image_tag: loading: 'lazy', class: 'block-swatch__image', alt: value -}}

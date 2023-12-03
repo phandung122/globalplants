@@ -662,8 +662,13 @@
       },
       {
         "type": "image_picker",
-        "id": "image_swatch_hdri",
-        "label": "Swatch for HDRI"
+        "id": "image_swatch_2d",
+        "label": "Swatch for 2D PNG"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_swatch_vectorworks",
+        "label": "Swatch for Vectorworks Image Props + PNG"
       }
     ]
   },
