@@ -3,41 +3,18 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "slide-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Black-Friday-Banner1.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Black-Friday-Banner01-1200x1600.jpg",
-            "content_max_width": 780,
-            "mobile_text_position": "place-self-start-end text-end",
-            "desktop_text_position": "sm:place-self-end-center sm:text-center",
-            "subheading": "",
-            "title": "",
-            "heading_tag": "h2",
-            "button_text": "",
-            "button_link": "https:\/\/globeplants.com\/collections",
-            "text_color": "#ffffff",
-            "button_background": "#56842c",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 10,
-            "background": "",
-            "background_gradient": ""
-          }
-        },
         "60ab57ee-8ee5-4d35-869b-16e6908f824f": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/globe-plants-3d-plant-model-bundle-56-hawaiian-plants-SLIDE.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/globe-plants-3d-plant-model-bundle-56-hawaiian-plants-SLIDE.jpg",
+            "image": "shopify:\/\/shop_images\/low-poly-globe-plants-3d-plant-model-bundle-60-new-zealand-native-plants-SLIDE.webp",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center-start sm:text-start",
-            "subheading": "Hawaiian Plants",
-            "title": "BUNDLE 56",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "New Zealand Native Plants",
+            "title": "Low Poly & Enscape Bundle 60",
             "heading_tag": "h2",
-            "button_text": "Shop BUNDLE 56",
-            "button_link": "shopify:\/\/products\/bundle-56-hawaiian-plants-3d-model",
+            "button_text": "Shop Bundle 60",
+            "button_link": "https:\/\/globeplants.com\/products\/low-poly-bundle-60_new-zealand-native-plants-3d-model",
             "text_color": "#ffffff",
             "button_background": "#56842c",
             "button_text_color": "#ffffff",
@@ -50,15 +27,15 @@
         "0f1677a3-2966-4c0c-a2fb-5818d8baafd2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/globe-plants-3d-plant-model-bundle-55-ornamental-plants-02-slide.jpg",
+            "image": "shopify:\/\/shop_images\/globe-plants-3d-plant-model-bundle-60-new-zealand-native-plants-SLIDE.webp",
             "content_max_width": 780,
-            "mobile_text_position": "place-self-center text-center",
+            "mobile_text_position": "place-self-center-end text-end",
             "desktop_text_position": "sm:place-self-center-end sm:text-end",
-            "subheading": "Ornamental Pot Plants 02",
-            "title": "BUNDLE 55",
+            "subheading": "New Zealand Native Plants",
+            "title": "High Poly Bundle 60",
             "heading_tag": "h2",
-            "button_text": "Shop BUNDLE 55",
-            "button_link": "shopify:\/\/products\/bundle-55-ornamental-plants-3d-model",
+            "button_text": "Shop BUNDLE 60",
+            "button_link": "https:\/\/globeplants.com\/products\/bundle-60-new-zealand-native-plants-3d-model",
             "text_color": "#ffffff",
             "button_background": "#56842c",
             "button_text_color": "#ffffff",
@@ -71,15 +48,15 @@
         "slide-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/globe-plants-3d-plant-model-bundle-54-agricultural-plants-slide.jpg",
+            "image": "shopify:\/\/shop_images\/globe-plants-3d-plant-model-bundle-59-african-plants-slide.jpg",
             "content_max_width": 760,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
-            "subheading": "BUNDLE 54",
-            "title": "Agricultural Plants",
+            "subheading": "BUNDLE 59",
+            "title": "African Plants",
             "heading_tag": "h2",
-            "button_text": "EXPLORE BUNDLE 54",
-            "button_link": "shopify:\/\/products\/bundle-54-agricultural-plants-3d-model",
+            "button_text": "EXPLORE BUNDLE 59",
+            "button_link": "shopify:\/\/products\/bundle-59-african-plants-3d-model",
             "text_color": "#ffffff",
             "button_background": "#56842c",
             "button_text_color": "#ffffff",
@@ -88,13 +65,35 @@
             "background": "",
             "background_gradient": ""
           }
+        },
+        "slide-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/globe-plants-3d-plant-model-bundle-58-meadow-plants-slide.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/globe-plants-3d-plant-model-bundle-58-meadow-plants-slide.jpg",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-start-end text-end",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "Meadow Plants",
+            "title": "BUNDLE 58",
+            "heading_tag": "h2",
+            "button_text": "SHOP BUNDLE 58",
+            "button_link": "https:\/\/globeplants.com\/search?q=bundle+58+Meadow",
+            "text_color": "#ffffff",
+            "button_background": "#56842c",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10,
+            "background": "",
+            "background_gradient": ""
+          }
         }
       },
       "block_order": [
-        "slide-2",
         "60ab57ee-8ee5-4d35-869b-16e6908f824f",
         "0f1677a3-2966-4c0c-a2fb-5818d8baafd2",
-        "slide-1"
+        "slide-1",
+        "slide-2"
       ],
       "settings": {
         "full_width": true,
@@ -136,7 +135,9 @@
         "review_header_gradient": "linear-gradient(135deg, rgba(255, 194, 102, 1), rgba(255, 163, 26, 1) 100%)",
         "review_header_text_color": "#000000",
         "review_button_background": "#000000",
-        "review_button_text_color": "#ffffff"
+        "review_button_text_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "5c74096b-a499-4486-b6b4-1280958051d0": {
@@ -269,6 +270,14 @@
             "logo_width": 138,
             "link": "https:\/\/globeplants.com\/collections\/hdri-sky-dome?formats=HDRI&quality=2D+Images"
           }
+        },
+        "logo_VqRCFW": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/VW_imageprops_logo.png",
+            "logo_width": 138,
+            "link": "https:\/\/globeplants.com\/collections\/vectorworks-image-props?formats=VW+Props&quality=2D+Images"
+          }
         }
       },
       "block_order": [
@@ -287,7 +296,8 @@
         "a5f3319d-bcc6-422b-80fc-11caa5574401",
         "99553b51-af5c-49c5-ab31-d7b9fbaa0ad6",
         "ae89fff0-0520-4fb5-8bd1-4b7cb05c8c2c",
-        "46688adf-3c7e-4891-9b79-ac8dbe654000"
+        "46688adf-3c7e-4891-9b79-ac8dbe654000",
+        "logo_VqRCFW"
       ],
       "settings": {
         "full_width": true,

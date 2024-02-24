@@ -37,7 +37,7 @@
           "settings": {
             "models_type": "2d",
             "title": "<h4><strong>2D png<\/strong> & image props<\/h4>",
-            "content": "<p>2D Images: 3000 x 3000 High Resolution of .PNG cutouts with Alpha Channel in .JPG format included. Suitable for:  Photo manipulating or editing software, 2D vegetation billboards and 2D image props. Minimal computer hardware requirements.<\/p>",
+            "content": "<p>2D Images: 3000 x 3000 High Resolution of .PNG cutouts with Alpha Channel in .JPG format included. Suitable for:  Photo manipulating or editing software, 2D vegetation billboards and 2D Vectorworks image props. Minimal computer hardware requirements.<\/p>",
             "text_color": "#b38cb4",
             "background_color": "#eee5ee"
           }
@@ -224,12 +224,20 @@
         },
         "3ffcb3eb-59ac-4fe3-8668-0dce5cd5266a": {
           "type": "item",
-          "disabled": true,
           "settings": {
             "models_type": "2d",
             "image": "shopify:\/\/shop_images\/TWINMOTION_b7eedc11-9e9a-4d52-bd18-0b2d34ad5dc2.png",
             "title": "PNG Cutouts",
-            "content": "<p>Bla bla<\/p>"
+            "content": "<p>High Resolution of 3000 x 3000 cut out png files that ready to be used in photo editing software such as Photoshop, Gimp, Affinity or Lightwave. Alpha channel as jpg also included for easy masking.<\/p>"
+          }
+        },
+        "f0cdd1df-b3ff-4845-bd0f-b13c0231a863": {
+          "type": "item",
+          "settings": {
+            "models_type": "2d",
+            "image": "shopify:\/\/shop_images\/VW_Logo.png",
+            "title": "Vectorworks Image Props",
+            "content": "<p>A .vwx format that includes 2D symbols that can easily be used in Vectorworks for planning or elevations.<\/p>"
           }
         }
       },
@@ -257,7 +265,8 @@
         "81bda7f1-8dc7-4e01-a449-9f9de1524e8a",
         "aa1e113e-979a-431c-9b49-eb8b93913cc1",
         "d2226e9c-6136-46bc-be95-c171670a9679",
-        "3ffcb3eb-59ac-4fe3-8668-0dce5cd5266a"
+        "3ffcb3eb-59ac-4fe3-8668-0dce5cd5266a",
+        "f0cdd1df-b3ff-4845-bd0f-b13c0231a863"
       ],
       "settings": {
         "title": "<h1><strong>Formats<\/strong> Guide<\/h1>",
@@ -330,7 +339,7 @@
         "0734f8f7-c3f3-41d2-84ab-bb3fe6622bb2": {
           "type": "item",
           "settings": {
-            "title": "Revit, Rhino3D, ArchiCAD, Vectorworks",
+            "title": "Revit, Rhino3D, ArchiCAD",
             "content": "<p><strong>Enscape through Asset Library:<\/strong><\/p><ul><li>We highly suggest the Low Poly Enscape (Revit, SketchUp, Rhino3D, Vectorworks, ArchiCAD) format as these are the most “out of the box” format for these software. You must have Enscape to utilise this format.<\/li><\/ul>"
           }
         },
@@ -354,6 +363,13 @@
             "title": "Rhino3D",
             "content": "<p>For V-Ray and Rhino standard renderer users: Please select our Rhinoceros (V-Ray and Rhino Renderer) format.<\/p><p>For Enscape users: Please select our Low Poly \"Enscape (Revit, SketchUp, Rhino3D, ArchiCAD, Vectorworks)\" format for ease of import into Enscape's Custom Asset Library.<\/p>"
           }
+        },
+        "1baaa054-81ff-4025-b59c-4575de94d333": {
+          "type": "item",
+          "settings": {
+            "title": "Vectorworks",
+            "content": "<ul><li>For 3D Models. We highly recommend the Low Poly Enscape (Revit, SketchUp, Rhino3D, Vectorworks, ArchiCAD) format as these are the most “out of the box” format for these software. You must have Enscape to utilise this format.<\/li><li>For 2D Symbols. We suggest our 2D Vectorworks Image Props format under 2D Images.<\/li><\/ul>"
+          }
         }
       },
       "block_order": [
@@ -368,7 +384,8 @@
         "0734f8f7-c3f3-41d2-84ab-bb3fe6622bb2",
         "f5276375-107a-4323-a73e-ce0c9d9b7bda",
         "2b0320dc-faaf-4560-8299-fc5a9afc67b8",
-        "ad1e927d-e864-41cb-8d7f-a976db432605"
+        "ad1e927d-e864-41cb-8d7f-a976db432605",
+        "1baaa054-81ff-4025-b59c-4575de94d333"
       ],
       "settings": {
         "full_width": true,

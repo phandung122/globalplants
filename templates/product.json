@@ -76,6 +76,36 @@
         "input_text_color": ""
       }
     },
+    "1694661648bab0ba3d": {
+      "type": "apps",
+      "blocks": {
+        "e0da5912-70a2-47e3-a827-f07252f79a88": {
+          "type": "shopify:\/\/apps\/dialogue-ai-personalization\/blocks\/app-block-asset\/43034bfa-b90a-4a14-aaa8-527eac735f6f",
+          "settings": {
+            "asset_id": "b-15439",
+            "demo_mode": true
+          }
+        }
+      },
+      "block_order": [
+        "e0da5912-70a2-47e3-a827-f07252f79a88"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "enable_review_integration": true,
+        "review_header_gradient": "linear-gradient(135deg, rgba(255, 194, 102, 1), rgba(255, 163, 26, 1) 100%)",
+        "review_header_text_color": "#000000",
+        "review_button_background": "#000000",
+        "review_button_text_color": "#ffffff",
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
     "2ea01541-95c0-4421-92fa-542becc10131": {
       "type": "tabs",
       "blocks": {
@@ -336,34 +366,6 @@
         "text_color": ""
       }
     },
-    "1694661648bab0ba3d": {
-      "type": "apps",
-      "blocks": {
-        "e0da5912-70a2-47e3-a827-f07252f79a88": {
-          "type": "shopify:\/\/apps\/dialogue-ai-personalization\/blocks\/app-block-asset\/43034bfa-b90a-4a14-aaa8-527eac735f6f",
-          "settings": {
-            "asset_id": "b-15439",
-            "demo_mode": true
-          }
-        }
-      },
-      "block_order": [
-        "e0da5912-70a2-47e3-a827-f07252f79a88"
-      ],
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "enable_review_integration": true,
-        "review_header_gradient": "linear-gradient(135deg, rgba(255, 194, 102, 1), rgba(255, 163, 26, 1) 100%)",
-        "review_header_text_color": "#000000",
-        "review_button_background": "#000000",
-        "review_button_text_color": "#ffffff"
-      }
-    },
     "2f84e136-d813-4cd6-9a77-e877eb4b2948": {
       "type": "related-products",
       "settings": {
@@ -389,8 +391,8 @@
   },
   "order": [
     "main",
-    "2ea01541-95c0-4421-92fa-542becc10131",
     "1694661648bab0ba3d",
+    "2ea01541-95c0-4421-92fa-542becc10131",
     "2f84e136-d813-4cd6-9a77-e877eb4b2948"
   ]
 }

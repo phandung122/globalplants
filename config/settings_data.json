@@ -48,7 +48,8 @@
     "image_swatch_redshift": "shopify:\/\/shop_images\/format-REDSHIFT.png",
     "image_swatch_unreal": "shopify:\/\/shop_images\/format-UNREAL-ENGINE-5.png",
     "image_swatch_enscape": "shopify:\/\/shop_images\/format-ENSCAPE.png",
-    "image_swatch_hdri": "shopify:\/\/shop_images\/format-HDRI.png",
+    "image_swatch_2d": "shopify:\/\/shop_images\/image_82.png",
+    "image_swatch_vectorworks": "shopify:\/\/shop_images\/image_84.png",
     "show_discount": false,
     "product_color_display": "swatch",
     "product_image_aspect_ratio": "natural",
@@ -62,6 +63,7 @@
     "checkout_logo_size": "small",
     "checkout_accent_color": "#56842c",
     "checkout_button_color": "#56842c",
+    "image_swatch_hdri": "shopify:\/\/shop_images\/format-HDRI.png",
     "social_messenger": "https:\/\/www.messenger.com\/t\/1069234473465695",
     "sections": {
       "announcement-bar": {
@@ -230,9 +232,7 @@
       "7ffdadb5-ecef-468e-955c-a05c20d0e682": {
         "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/boost-sd\/7fc998ae-a150-4367-bab8-505d8a4503f7",
         "disabled": true,
-        "settings": {
-          "directionRTL": false
-        }
+        "settings": {}
       },
       "3838990611052461119": {
         "type": "shopify:\/\/apps\/customerhub\/blocks\/app-embed\/0fb3ba0b-4c65-4919-a85a-48bc2d368e9c",
@@ -256,11 +256,6 @@
         "disabled": false,
         "settings": {}
       },
-      "43034bfa-b90a-4a14-aaa8-527eac735f6f": {
-        "type": "shopify:\/\/apps\/dialogue-ai-personalization\/blocks\/dialogueai-embed\/43034bfa-b90a-4a14-aaa8-527eac735f6f",
-        "disabled": false,
-        "settings": {}
-      },
       "855628211100114053": {
         "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
@@ -268,13 +263,13 @@
       },
       "15912215999290715800": {
         "type": "shopify:\/\/apps\/geolocation-orbe\/blocks\/app-embed-modal\/7cb09287-cd2b-4646-837c-f1f9b6ea703e",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "test_mode": true,
           "modal_closeButton": true,
           "option_flag_style": "none",
           "option_currency_type": "iso_symbol_flag",
-          "option_language": true,
+          "option_language": false,
           "title": "Get a tailored experience",
           "text": "Please select your country",
           "helper_text": "<p>Explore plant species from the country of your choice and local currency.<\/p>",
@@ -292,6 +287,11 @@
           "style_colors_cta_button": "#000000",
           "style_colors_text": "#000000"
         }
+      },
+      "43034bfa-b90a-4a14-aaa8-527eac735f6f": {
+        "type": "shopify:\/\/apps\/dialogue-ai-personalization\/blocks\/dialogueai-embed\/43034bfa-b90a-4a14-aaa8-527eac735f6f",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
